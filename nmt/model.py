@@ -22,13 +22,22 @@ class Model(nn.Module):
         fix_norm = self.config['fix_norm']
         max_pos_length = self.config['max_pos_length']
         learned_pos = self.config['learned_pos']
+        sine_pos = self.config['sine_pos']
+        lape_pos = self.config['lape_pos']
 
         # get positonal embedding
-        if not learned_pos:
-            self.pos_embedding = ut.get_positional_encoding(embed_dim, max_pos_length)
-        else:
+        # if not learned_pos:
+        #     self.pos_embedding = ut.get_positional_encoding(embed_dim, max_pos_length)
+        # else:
+        #     self.pos_embedding = Parameter(torch.Tensor(max_pos_length, embed_dim))
+        #     nn.init.normal_(self.pos_embedding, mean=0, std=embed_dim ** -0.5)
+        if learned_pos:
             self.pos_embedding = Parameter(torch.Tensor(max_pos_length, embed_dim))
             nn.init.normal_(self.pos_embedding, mean=0, std=embed_dim ** -0.5)
+        elif sine_pos:
+            self.pos_embedding = ut.get_sine_encoding(embed_dim, max_pos_length)
+        elif lape_pos:
+            self.pos_embedding = ut.get_lape_encoding(embed_dim, max_pos_length)
 
         # get word embeddings
         src_vocab_size, trg_vocab_size = ut.get_vocab_sizes(self.config)

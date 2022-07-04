@@ -7,6 +7,7 @@ import numpy
 import torch
 
 import nmt.all_constants as ac
+import networkx as nx
 
 
 def get_logger(logfile=None):
@@ -76,7 +77,18 @@ def get_vocab_sizes(config):
     return _get_vocab_size(src_vocab_file), _get_vocab_size(trg_vocab_file)
 
 
-def get_positional_encoding(dim, sentence_length):
+# def get_positional_encoding(dim, sentence_length):
+#     div_term = numpy.power(10000.0, - (numpy.arange(dim) // 2).astype(numpy.float32) * 2.0 / dim)
+#     div_term = div_term.reshape(1, -1)
+#     pos = numpy.arange(sentence_length, dtype=numpy.float32).reshape(-1, 1)
+#     encoded_vec = numpy.matmul(pos, div_term)
+#     encoded_vec[:, 0::2] = numpy.sin(encoded_vec[:, 0::2])
+#     encoded_vec[:, 1::2] = numpy.cos(encoded_vec[:, 1::2])
+
+#     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+#     return torch.from_numpy(encoded_vec.reshape([sentence_length, dim])).type(dtype)
+
+def get_sine_encoding(dim, sentence_length):
     div_term = numpy.power(10000.0, - (numpy.arange(dim) // 2).astype(numpy.float32) * 2.0 / dim)
     div_term = div_term.reshape(1, -1)
     pos = numpy.arange(sentence_length, dtype=numpy.float32).reshape(-1, 1)
@@ -87,6 +99,16 @@ def get_positional_encoding(dim, sentence_length):
     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
     return torch.from_numpy(encoded_vec.reshape([sentence_length, dim])).type(dtype)
 
+def get_lape_encoding(dim, sentence_length):
+    r_n = nx.cycle_graph(sentence_length)
+    laplacian = nx.normalized_laplacian_matrix(r_n)
+    evals, evecs = numpy.linalg.eig(laplacian.A)
+    idx = evals.argsort()
+    evals, evecs = evals[idx], numpy.real(evecs[:, idx])
+    pos_enc = torch.from_numpy(evecs[:, 1:dim+1]).float()
+    if sentence_length <= dim:
+        pos_enc = torch.nn.functional.pad(pos_enc, (0, dim - sentence_length + 1), value=float('0'))
+    return pos_enc
 
 def normalize(x, scale=True):
     mean = x.mean(-1, keepdim=True)

@@ -49,6 +49,8 @@ def base_config():
 
     # Whether to learn position encodings
     config['learned_pos']       = False
+    config['sine_pos']          = False
+    config['lape_pos']          = False
     # Position encoding size
     config['max_pos_length']    = 1024
     
@@ -141,9 +143,10 @@ def sk2en():
     return config
 
 
-def en2vi():
+def en2vi_sine():
     config = base_config()
 
+    config['sine_pos']          = True
     config['model_name']        = 'en2vi'
     config['save_to']           = './nmt/saved_models/{}'.format(config['model_name'])
     config['src_lang']          = 'en'
@@ -153,6 +156,11 @@ def en2vi():
     config['val_beam_out']      = os.path.join(config['save_to'], 'beam_trans.txt')
     return config
 
+def en2vi_lape():
+    config = en2vi_sine()
+    config['sine_pos']          = False
+    config['lape_pos']          = True
+    return config
 
 def ar2en():
     config = base_config()
