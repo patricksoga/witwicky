@@ -105,7 +105,8 @@ def get_lape_encoding(dim, sentence_length):
     evals, evecs = numpy.linalg.eig(laplacian.A)
     idx = evals.argsort()
     evals, evecs = evals[idx], numpy.real(evecs[:, idx])
-    pos_enc = torch.from_numpy(evecs[:, 1:dim+1]).float()
+    dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+    pos_enc = torch.from_numpy(evecs[:, 1:dim+1]).type(dtype)
     if sentence_length <= dim:
         pos_enc = torch.nn.functional.pad(pos_enc, (0, dim - sentence_length + 1), value=float('0'))
     return pos_enc
