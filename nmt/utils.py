@@ -76,18 +76,6 @@ def get_vocab_sizes(config):
 
     return _get_vocab_size(src_vocab_file), _get_vocab_size(trg_vocab_file)
 
-
-# def get_positional_encoding(dim, sentence_length):
-#     div_term = numpy.power(10000.0, - (numpy.arange(dim) // 2).astype(numpy.float32) * 2.0 / dim)
-#     div_term = div_term.reshape(1, -1)
-#     pos = numpy.arange(sentence_length, dtype=numpy.float32).reshape(-1, 1)
-#     encoded_vec = numpy.matmul(pos, div_term)
-#     encoded_vec[:, 0::2] = numpy.sin(encoded_vec[:, 0::2])
-#     encoded_vec[:, 1::2] = numpy.cos(encoded_vec[:, 1::2])
-
-#     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
-#     return torch.from_numpy(encoded_vec.reshape([sentence_length, dim])).type(dtype)
-
 def get_sine_encoding(dim, sentence_length):
     div_term = numpy.power(10000.0, - (numpy.arange(dim) // 2).astype(numpy.float32) * 2.0 / dim)
     div_term = div_term.reshape(1, -1)
