@@ -106,8 +106,8 @@ class Model(nn.Module):
             sign_flip[sign_flip >= 0.5] = 1.0
             sign_flip[sign_flip < 0.5] = -1.0
             self.pos_embedding *= sign_flip.unsqueeze(0)
-            pos_embeds = self.pos_embedding[:toks.size()[-1], :].unsqueeze(0) # [1, max_len, embed_dim]
 
+        pos_embeds = self.pos_embedding[:toks.size()[-1], :].unsqueeze(0) # [1, max_len, embed_dim]
         return word_embeds + pos_embeds
 
     def forward(self, src_toks, trg_toks, targets):
