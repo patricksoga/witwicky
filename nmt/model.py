@@ -25,6 +25,8 @@ class Model(nn.Module):
         sine_pos = self.config['sine_pos']
         lape_pos = self.config['lape_pos']
 
+        self.lape_pos = lape_pos
+
         # get positonal embedding
         # if not learned_pos:
         #     self.pos_embedding = ut.get_positional_encoding(embed_dim, max_pos_length)
@@ -99,7 +101,13 @@ class Model(nn.Module):
         if toks.size()[-1] > self.pos_embedding.size()[-2]:
             ut.get_logger().error("Sentence length ({}) is longer than max_pos_length ({}); please increase max_pos_length".format(toks.size()[-1], self.pos_embedding.size()[0]))
 
-        pos_embeds = self.pos_embedding[:toks.size()[-1], :].unsqueeze(0) # [1, max_len, embed_dim]
+        if self.lape_pos:
+            sign_flip = torch.rand(self.pos_embedding.shape[1]).to(torch.device('cuda'))
+            sign_flip[sign_flip >= 0.5] = 1.0
+            sign_flip[sign_flip < 0.5] = -1.0
+            self.pos_embedding *= sign_flip.unsqueeze(0)
+            pos_embeds = self.pos_embedding[:toks.size()[-1], :].unsqueeze(0) # [1, max_len, embed_dim]
+
         return word_embeds + pos_embeds
 
     def forward(self, src_toks, trg_toks, targets):

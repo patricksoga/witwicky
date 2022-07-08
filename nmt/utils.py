@@ -88,15 +88,13 @@ def get_sine_encoding(dim, sentence_length):
     return torch.from_numpy(encoded_vec.reshape([sentence_length, dim])).type(dtype)
 
 def get_lape_encoding(dim, sentence_length):
-    r_n = nx.cycle_graph(sentence_length)
-    laplacian = nx.normalized_laplacian_matrix(r_n)
+    p_n = nx.path_graph(sentence_length)
+    laplacian = nx.normalized_laplacian_matrix(p_n)
     evals, evecs = numpy.linalg.eig(laplacian.A)
     idx = evals.argsort()
     evals, evecs = evals[idx], numpy.real(evecs[:, idx])
     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
     pos_enc = torch.from_numpy(evecs[:, 1:dim+1]).type(dtype)
-    if sentence_length <= dim:
-        pos_enc = torch.nn.functional.pad(pos_enc, (0, dim - sentence_length + 1), value=float('0'))
     return pos_enc
 
 def normalize(x, scale=True):
