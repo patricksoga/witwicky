@@ -26,6 +26,7 @@ class Model(nn.Module):
         lape_pos = self.config['lape_pos']
 
         self.lape_pos = lape_pos
+        self.graph_size = self.config.get('graph_size', None)
 
         # get positonal embedding
         # if not learned_pos:
@@ -39,7 +40,7 @@ class Model(nn.Module):
         elif sine_pos:
             self.pos_embedding = ut.get_sine_encoding(embed_dim, max_pos_length)
         elif lape_pos:
-            self.pos_embedding = ut.get_lape_encoding(embed_dim, max_pos_length)
+            self.pos_embedding = ut.get_lape_encoding(embed_dim, max_pos_length, self.graph_size)
 
         # get word embeddings
         src_vocab_size, trg_vocab_size = ut.get_vocab_sizes(self.config)

@@ -8,6 +8,7 @@ import torch
 
 import nmt.all_constants as ac
 import networkx as nx
+from scipy.sparse.linalg import eigs
 
 
 def get_logger(logfile=None):
@@ -87,14 +88,19 @@ def get_sine_encoding(dim, sentence_length):
     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
     return torch.from_numpy(encoded_vec.reshape([sentence_length, dim])).type(dtype)
 
-def get_lape_encoding(dim, sentence_length):
-    p_n = nx.path_graph(sentence_length)
+def get_lape_encoding(dim, sentence_length, graph_size=None):
+    p_n = nx.cycle_graph(graph_size//100 if graph_size else sentence_length)
     laplacian = nx.normalized_laplacian_matrix(p_n)
     evals, evecs = numpy.linalg.eig(laplacian.A)
     idx = evals.argsort()
     evals, evecs = evals[idx], numpy.real(evecs[:, idx])
     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
-    pos_enc = torch.from_numpy(evecs[:, 1:dim+1]).type(dtype)
+    if graph_size is not None:
+        evecs = evecs[:sentence_length,1:dim+1]
+        numpy.random.shuffle(evecs)
+        pos_enc = torch.from_numpy(evecs).type(dtype)
+    else:
+        pos_enc = torch.from_numpy(evecs[:, 1:dim+1]).type(dtype)
     return pos_enc
 
 def normalize(x, scale=True):
