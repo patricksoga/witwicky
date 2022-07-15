@@ -89,7 +89,7 @@ def get_sine_encoding(dim, sentence_length):
     return torch.from_numpy(encoded_vec.reshape([sentence_length, dim])).type(dtype)
 
 def get_lape_encoding(dim, sentence_length, graph_size=None):
-    p_n = nx.cycle_graph(graph_size//100 if graph_size else sentence_length)
+    p_n = nx.cycle_graph(graph_size if graph_size else sentence_length)
     laplacian = nx.normalized_laplacian_matrix(p_n)
     evals, evecs = numpy.linalg.eig(laplacian.A)
     idx = evals.argsort()

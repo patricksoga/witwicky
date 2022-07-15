@@ -164,7 +164,7 @@ def en2vi_lape():
 
 def en2vi_lape_big_graph():
     config = en2vi_lape()
-    config['graph_size'] = 100000
+    config['graph_size'] = 10000
     return config
 
 def ar2en():
