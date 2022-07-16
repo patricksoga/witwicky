@@ -88,6 +88,25 @@ def get_sine_encoding(dim, sentence_length):
     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
     return torch.from_numpy(encoded_vec.reshape([sentence_length, dim])).type(dtype)
 
+def get_cycle_graph_lapes(dim, sentence_length):
+    """Compute laplacian eigenvectors for large cycle graph"""
+    big_length = int(1e6)
+    cos_encs = []
+    sine_encs = []
+    for i in range((big_length//2)+1):
+        cos_enc = numpy.cos((2*numpy.pi*i/big_length)*numpy.arange(dim)).reshape(-1,1)
+        if i != 0 and i != big_length//2:
+            sin_enc = numpy.sin((2*numpy.pi*i/big_length)*numpy.arange(dim)).reshape(-1,1)
+            sine_encs.append(sin_enc)
+        cos_encs.append(cos_enc)
+    cos_encs = numpy.concatenate(cos_encs, axis=1)
+    sine_encs = numpy.concatenate(sine_encs, axis=1)
+    cos_prefix = cos_encs[:, :(big_length//2)-1]
+    evec_prefix = numpy.vstack((cos_prefix, sine_encs)).reshape(dim, big_length-2, order='F')
+    evecs = numpy.concatenate((evec_prefix, cos_encs[:, (big_length)//2-1:big_length]), axis=1)
+    return evecs[:, :sentence_length]
+
+
 def get_lape_encoding(dim, sentence_length, graph_size=None):
     p_n = nx.cycle_graph(graph_size if graph_size else sentence_length)
     laplacian = nx.normalized_laplacian_matrix(p_n)
