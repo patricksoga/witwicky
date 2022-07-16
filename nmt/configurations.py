@@ -167,6 +167,12 @@ def en2vi_lape_big_graph():
     config['graph_size'] = 10000
     return config
 
+def en2vi_lape_big_graph_ul():
+    config = en2vi_sine()
+    config['sine_pos']     = False
+    config['big_graph_ul'] = True
+    return config
+
 def ar2en():
     config = base_config()
 

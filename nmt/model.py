@@ -27,6 +27,7 @@ class Model(nn.Module):
 
         self.lape_pos = lape_pos
         self.graph_size = self.config.get('graph_size', None)
+        self.big_graph_ul = self.config.get('big_graph_ul', None)
 
         # get positonal embedding
         # if not learned_pos:
@@ -35,12 +36,18 @@ class Model(nn.Module):
         #     self.pos_embedding = Parameter(torch.Tensor(max_pos_length, embed_dim))
         #     nn.init.normal_(self.pos_embedding, mean=0, std=embed_dim ** -0.5)
         if learned_pos:
+            print('using learned positional embedding')
             self.pos_embedding = Parameter(torch.Tensor(max_pos_length, embed_dim))
             nn.init.normal_(self.pos_embedding, mean=0, std=embed_dim ** -0.5)
         elif sine_pos:
+            print('using sine positional embedding')
             self.pos_embedding = ut.get_sine_encoding(embed_dim, max_pos_length)
         elif lape_pos:
+            print('using lape positional embedding')
             self.pos_embedding = ut.get_lape_encoding(embed_dim, max_pos_length, self.graph_size)
+        elif self.big_graph_ul:
+            print('using big cycle graph positional embedding (unnormalized Laplacian)')
+            self.pos_embedding = ut.get_cycle_graph_lapes(embed_dim, max_pos_length)
 
         # get word embeddings
         src_vocab_size, trg_vocab_size = ut.get_vocab_sizes(self.config)
