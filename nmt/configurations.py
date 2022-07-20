@@ -51,6 +51,7 @@ def base_config():
     config['learned_pos']       = False
     config['sine_pos']          = False
     config['lape_pos']          = False
+    config['spectral_attn']     = False
     # Position encoding size
     config['max_pos_length']    = 1024
     
@@ -164,13 +165,22 @@ def en2vi_lape():
 
 def en2vi_lape_big_graph():
     config = en2vi_lape()
-    config['graph_size'] = 10000
+    config['graph_size']        = 10000
     return config
 
 def en2vi_lape_big_graph_ul():
     config = en2vi_sine()
-    config['sine_pos']     = False
-    config['big_graph_ul'] = True
+    config['sine_pos']          = False
+    config['big_graph_ul']      = True
+    return config
+
+def en2vi_lape_spectral_attn():
+    config = en2vi_sine()
+    config['sine_pos']              = False
+    config['spectral_attn']         = True
+    config['spectral_embed_dim']    = 16
+    config['lpe_n_heads']           = 4
+    config['lpe_n_layers']          = 3
     return config
 
 def ar2en():

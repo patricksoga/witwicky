@@ -24,8 +24,11 @@ class Model(nn.Module):
         learned_pos = self.config['learned_pos']
         sine_pos = self.config['sine_pos']
         lape_pos = self.config['lape_pos']
+        spectral_attn = self.config['spectral_attn']
 
         self.lape_pos = lape_pos
+        self.spectral_attn = spectral_attn
+        self.max_pos_length = max_pos_length
         self.graph_size = self.config.get('graph_size', None)
         self.big_graph_ul = self.config.get('big_graph_ul', None)
 
@@ -36,17 +39,20 @@ class Model(nn.Module):
         #     self.pos_embedding = Parameter(torch.Tensor(max_pos_length, embed_dim))
         #     nn.init.normal_(self.pos_embedding, mean=0, std=embed_dim ** -0.5)
         if learned_pos:
-            print('using learned positional embedding')
+            ut.get_logger().info('Using learned positional embedding')
             self.pos_embedding = Parameter(torch.Tensor(max_pos_length, embed_dim))
             nn.init.normal_(self.pos_embedding, mean=0, std=embed_dim ** -0.5)
         elif sine_pos:
-            print('using sine positional embedding')
+            ut.get_logger().info('Using sine positional embedding')
             self.pos_embedding = ut.get_sine_encoding(embed_dim, max_pos_length)
         elif lape_pos:
-            print('using lape positional embedding')
+            ut.get_logger().info('Using lape positional embedding')
             self.pos_embedding = ut.get_lape_encoding(embed_dim, max_pos_length, self.graph_size)
+        elif spectral_attn:
+            ut.get_logger().info('Using spectral positional embedding')
+            self.spectral_embedding = ut.SpectralAttention(self.config)
         elif self.big_graph_ul:
-            print('using big cycle graph positional embedding (unnormalized Laplacian)')
+            ut.get_logger().info('Using big cycle graph positional embedding (unnormalized Laplacian)')
             self.pos_embedding = ut.get_cycle_graph_lapes(embed_dim, max_pos_length)
 
         # get word embeddings
@@ -57,11 +63,13 @@ class Model(nn.Module):
 
         self.out_bias = Parameter(torch.Tensor(trg_vocab_size))
         nn.init.constant_(self.out_bias, 0.)
-
         self.src_embedding = nn.Embedding(src_vocab_size, embed_dim)
         self.trg_embedding = nn.Embedding(trg_vocab_size, embed_dim)
         self.out_embedding = self.trg_embedding.weight
         self.embed_scale = embed_dim ** 0.5
+
+        if spectral_attn:
+            self.diet_linear = nn.Linear(embed_dim, embed_dim - self.config['spectral_embed_dim'])
 
         if tie_mode == ac.ALL_TIED:
             self.src_embedding.weight = self.trg_embedding.weight
@@ -106,14 +114,21 @@ class Model(nn.Module):
         else:
             word_embeds = word_embeds * self.embed_scale
 
-        if toks.size()[-1] > self.pos_embedding.size()[-2]:
-            ut.get_logger().error("Sentence length ({}) is longer than max_pos_length ({}); please increase max_pos_length".format(toks.size()[-1], self.pos_embedding.size()[0]))
+        # if toks.size()[-1] > self.pos_embedding.size()[-2]:
+        #     ut.get_logger().error("Sentence length ({}) is longer than max_pos_length ({}); please increase max_pos_length".format(toks.size()[-1], self.pos_embedding.size()[0]))
 
         if self.lape_pos:
             sign_flip = torch.rand(self.pos_embedding.shape[1]).to(torch.device('cuda'))
             sign_flip[sign_flip >= 0.5] = 1.0
             sign_flip[sign_flip < 0.5] = -1.0
             self.pos_embedding *= sign_flip.unsqueeze(0)
+
+        if self.spectral_attn:
+            # self.pos_embedding = self.spectral_embedding(word_embeds, toks.size()[1])
+            self.pos_embedding = self.spectral_embedding(word_embeds, toks.size()[1])
+            pos_embeds = self.pos_embedding[:toks.size()[-1], :].unsqueeze(0).repeat(toks.size()[0], 1, 1)
+            word_embeds = self.diet_linear(word_embeds)
+            return torch.cat((word_embeds, pos_embeds), dim=-1)
 
         pos_embeds = self.pos_embedding[:toks.size()[-1], :].unsqueeze(0) # [1, max_len, embed_dim]
         return word_embeds + pos_embeds

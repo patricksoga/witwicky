@@ -5,10 +5,13 @@ import subprocess
 
 import numpy
 import torch
+import torch.nn as nn
+import torch.nn.functional as F
 
 import nmt.all_constants as ac
 import networkx as nx
-from scipy.sparse.linalg import eigs
+import dgl
+import scipy.sparse as sp
 
 
 def get_logger(logfile=None):
@@ -108,9 +111,10 @@ def get_cycle_graph_lapes(dim, sentence_length):
     return torch.from_numpy(evecs[:dim, :sentence_length].T).type(dtype)
 
 def get_lape_encoding(dim, sentence_length, graph_size=None):
-    p_n = nx.cycle_graph(graph_size if graph_size else sentence_length)
-    laplacian = nx.normalized_laplacian_matrix(p_n)
-    evals, evecs = numpy.linalg.eig(laplacian.A)
+    # g = nx.cycle_graph(graph_size if graph_size else sentence_length)
+    # laplacian = nx.normalized_laplacian_matrix(g)
+    # evals, evecs = numpy.linalg.eig(laplacian.A)
+    evals, evecs = get_laplacian_eigs(graph_size if graph_size else sentence_length)
     idx = evals.argsort()
     evals, evecs = evals[idx], numpy.real(evecs[:, idx])
     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
@@ -121,6 +125,16 @@ def get_lape_encoding(dim, sentence_length, graph_size=None):
     else:
         pos_enc = torch.from_numpy(evecs[:, 1:dim+1]).type(dtype)
     return pos_enc
+
+def get_laplacian_eigs(sentence_length):
+    g = dgl.from_networkx(nx.cycle_graph(sentence_length))
+    n = g.number_of_nodes()
+    deg = g.in_degrees()
+    A = g.adjacency_matrix_scipy(return_edge_ids=False).astype(float)
+    N = sp.diags(dgl.backend.asnumpy(deg).clip(1) ** -0.5, dtype=float)
+    L = sp.eye(n) - N * A * N
+    evals, evecs = numpy.linalg.eigh(L.toarray())
+    return evals, evecs
 
 def normalize(x, scale=True):
     mean = x.mean(-1, keepdim=True)
@@ -134,3 +148,52 @@ def gnmt_length_model(alpha):
     def f(time_step, prob):
         return prob / ((5.0 + time_step + 1.0) ** alpha / 6.0 ** alpha)
     return f
+
+
+class SpectralAttention(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.config = config
+        embed_dim = config['spectral_embed_dim']
+        lpe_n_heads = config['lpe_n_heads']
+        lpe_n_layers = config['lpe_n_layers']
+
+        encoder_layer = nn.TransformerEncoderLayer(embed_dim, lpe_n_heads)
+        self.lpe_attn = nn.TransformerEncoder(encoder_layer, lpe_n_layers)
+        self.linear = nn.Linear(2, embed_dim)
+
+    def forward(self, x, sentence_length):
+        dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+
+        eigvals, eigvecs = get_laplacian_eigs(sentence_length)
+
+        eigvecs = torch.from_numpy(eigvecs).float().type(dtype)
+        eigvecs = F.normalize(eigvecs, p=2, dim=1, eps=1e-12, out=None)
+        eigvecs = eigvecs.unsqueeze(2)
+
+        eigvals = torch.from_numpy(numpy.sort(numpy.abs(numpy.real(eigvals)))).type(dtype) #Abs value is taken because numpy sometimes computes the first eigenvalue approaching 0 from the negative
+        eigvals = eigvals.unsqueeze(0)
+        eigvals = eigvals.repeat(sentence_length, 1).unsqueeze(2)
+
+        lpe = torch.cat((eigvecs, eigvals), dim=2) # (Num nodes) x (Num Eigenvectors) x 2
+        empty_mask = torch.isnan(lpe) # (Num nodes) x (Num Eigenvectors) x 2
+
+        lpe[empty_mask] = 0 # (Num nodes) x (Num Eigenvectors) x 2
+        lpe = torch.transpose(lpe, 0 ,1) # (Num Eigenvectors) x (Num nodes) x 2
+        lpe = self.linear(lpe) # (Num Eigenvectors) x (Num nodes) x PE_dim
+
+        #1st Transformer: Learned PE
+        lpe = self.lpe_attn(src=lpe, src_key_padding_mask=empty_mask[:,:,0])
+
+        #remove masked sequences
+        lpe[torch.transpose(empty_mask, 0 ,1)[:,:,0]] = float('nan')
+
+        #Sum pooling
+        lpe = torch.nansum(lpe, 0, keepdim=False)
+
+        #Concatenate learned PE to input embedding
+        # print(x.shape)
+        # x = torch.cat((x, lpe), dim=1)
+        # return x
+
+        return lpe
