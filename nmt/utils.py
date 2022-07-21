@@ -162,7 +162,7 @@ class SpectralAttention(nn.Module):
         self.lpe_attn = nn.TransformerEncoder(encoder_layer, lpe_n_layers)
         self.linear = nn.Linear(2, embed_dim)
 
-    def forward(self, x, sentence_length):
+    def forward(self, sentence_length):
         dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
         eigvals, eigvecs = get_laplacian_eigs(sentence_length)
@@ -182,7 +182,6 @@ class SpectralAttention(nn.Module):
         lpe = torch.transpose(lpe, 0 ,1) # (Num Eigenvectors) x (Num nodes) x 2
         lpe = self.linear(lpe) # (Num Eigenvectors) x (Num nodes) x PE_dim
 
-        #1st Transformer: Learned PE
         lpe = self.lpe_attn(src=lpe, src_key_padding_mask=empty_mask[:,:,0])
 
         #remove masked sequences
@@ -190,10 +189,5 @@ class SpectralAttention(nn.Module):
 
         #Sum pooling
         lpe = torch.nansum(lpe, 0, keepdim=False)
-
-        #Concatenate learned PE to input embedding
-        # print(x.shape)
-        # x = torch.cat((x, lpe), dim=1)
-        # return x
 
         return lpe

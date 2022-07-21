@@ -257,9 +257,9 @@ class DataManager(object):
         msg += '\nAlso save the approx tok count to {}'.format(joint_tok_count)
         self.logger.info(msg)
 
-        if exists(joint_file) and exists(joint_tok_count):
-            self.logger.info('    Token-id-ed data exists at {}'.format(joint_file))
-            return
+        # if exists(joint_file) and exists(joint_tok_count):
+        #     self.logger.info('    Token-id-ed data exists at {}'.format(joint_file))
+        #     return
 
         open(joint_file, 'w').close()
         open(joint_tok_count, 'w').close()

@@ -31,6 +31,7 @@ class Model(nn.Module):
         self.max_pos_length = max_pos_length
         self.graph_size = self.config.get('graph_size', None)
         self.big_graph_ul = self.config.get('big_graph_ul', None)
+        self.spectral_cache = {}
 
         # get positonal embedding
         # if not learned_pos:
@@ -124,8 +125,7 @@ class Model(nn.Module):
             self.pos_embedding *= sign_flip.unsqueeze(0)
 
         if self.spectral_attn:
-            # self.pos_embedding = self.spectral_embedding(word_embeds, toks.size()[1])
-            self.pos_embedding = self.spectral_embedding(word_embeds, toks.size()[1])
+            self.pos_embedding = self.spectral_embedding(toks.size()[1])
             pos_embeds = self.pos_embedding[:toks.size()[-1], :].unsqueeze(0).repeat(toks.size()[0], 1, 1)
             word_embeds = self.diet_linear(word_embeds)
             return torch.cat((word_embeds, pos_embeds), dim=-1)
@@ -184,6 +184,7 @@ class Model(nn.Module):
         encoder_inputs = self.get_input(src_toks, is_src=True)
         encoder_outputs = self.encoder(encoder_inputs, encoder_mask)
         max_lengths = torch.sum(src_toks != ac.PAD_ID, dim=-1).type(src_toks.type()) + 50
+        self.spectral_cache = {}
 
         def get_trg_inp(ids, time_step):
             ids = ids.type(src_toks.type())
@@ -192,6 +193,18 @@ class Model(nn.Module):
                 word_embeds = ut.normalize(word_embeds, scale=False)
             else:
                 word_embeds = word_embeds * self.embed_scale
+
+            if self.spectral_attn:
+                if time_step+1 in self.spectral_cache:
+                    # since every sentence lies on the same kind of graph, we cache calculated PEs
+                    return self.spectral_cache[time_step+1]
+
+                self.pos_embedding = self.spectral_embedding(time_step+1)
+                pos_embeds = self.pos_embedding[time_step, :].unsqueeze(0).repeat(word_embeds.shape[0], word_embeds.shape[1], 1) # bsz x beam_size x embed_dim
+                word_embeds = self.diet_linear(word_embeds)
+                ret = torch.cat((word_embeds, pos_embeds), dim=-1)
+                self.spectral_cache[time_step+1] = ret
+                return ret
 
             pos_embeds = self.pos_embedding[time_step, :].reshape(1, 1, -1)
             return word_embeds + pos_embeds
