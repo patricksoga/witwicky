@@ -191,6 +191,9 @@ class SpectralAttention(nn.Module):
         lpe[torch.transpose(empty_mask, 0 ,1)[:,:,0]] = float('nan')
 
         #Sum pooling
-        lpe = torch.nansum(lpe, 0, keepdim=False)
+        nan = torch.isnan(lpe)
+        lpe[nan] = 0
+        lpe = torch.sum(lpe, 0, keepdim=False)
+        # lpe = torch.nansum(lpe, 0, keepdim=False)
 
         return lpe
