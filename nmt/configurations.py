@@ -181,6 +181,7 @@ def en2vi_lape_spectral_attn():
     config['spectral_embed_dim']    = 16
     config['lpe_n_heads']           = 4
     config['lpe_n_layers']          = 3
+    config['lpe_ff_dim']            = 16 * 4
     return config
 
 def ar2en():

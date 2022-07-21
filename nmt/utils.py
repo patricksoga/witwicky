@@ -12,6 +12,7 @@ import nmt.all_constants as ac
 import networkx as nx
 import dgl
 import scipy.sparse as sp
+import layers
 
 
 def get_logger(logfile=None):
@@ -157,9 +158,11 @@ class SpectralAttention(nn.Module):
         embed_dim = config['spectral_embed_dim']
         lpe_n_heads = config['lpe_n_heads']
         lpe_n_layers = config['lpe_n_layers']
+        lpe_ff_dim = config['lpe_ff_dim']
 
-        encoder_layer = nn.TransformerEncoderLayer(embed_dim, lpe_n_heads)
-        self.lpe_attn = nn.TransformerEncoder(encoder_layer, lpe_n_layers)
+        # encoder_layer = nn.TransformerEncoderLayer(embed_dim, lpe_n_heads)
+        # self.lpe_attn = nn.TransformerEncoder(encoder_layer, lpe_n_layers)
+        self.lpe_attn = layers.encoders.Encoder(lpe_n_layers, lpe_n_heads, embed_dim, lpe_ff_dim)
         self.linear = nn.Linear(2, embed_dim)
 
     def forward(self, sentence_length):
@@ -182,7 +185,7 @@ class SpectralAttention(nn.Module):
         lpe = torch.transpose(lpe, 0 ,1) # (Num Eigenvectors) x (Num nodes) x 2
         lpe = self.linear(lpe) # (Num Eigenvectors) x (Num nodes) x PE_dim
 
-        lpe = self.lpe_attn(src=lpe, src_key_padding_mask=empty_mask[:,:,0])
+        lpe = self.lpe_attn(lpe, empty_mask[:,:,0])
 
         #remove masked sequences
         lpe[torch.transpose(empty_mask, 0 ,1)[:,:,0]] = float('nan')
