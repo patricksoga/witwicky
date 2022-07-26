@@ -1,4 +1,5 @@
 import os, os.path
+import pickle
 import re
 import time
 import shutil
@@ -16,6 +17,7 @@ import nmt.all_constants as ac
 class Validator(object):
     def __init__(self, config, data_manager):
         super(Validator, self).__init__()
+        self.config = config
         self.logger = ut.get_logger(config['log_file'])
         self.logger.info('Initializing validator')
 
@@ -308,6 +310,10 @@ class Validator(object):
         best_trans_file = input_file + '.best_trans'
         beam_trans_file = input_file + '.beam_trans'
 
+        if self.config['graph_automaton']:
+            best_fw_file = input_file + '.best_trans_fw.pkl'
+            open(best_fw_file, 'w').close()
+
         num_sents = 0
         with open(input_file, 'r') as f:
             for line in f:
@@ -319,9 +325,12 @@ class Validator(object):
             self.logger.info('Start translating {}'.format(input_file))
             start = time.time()
             count = 0
+
+            automaton_pe = model.pos_embedding.forward(self.config['max_pos_length']) if self.config['graph_automaton'] else None
+
             for (src_toks, original_idxs) in self.data_manager.get_trans_input(input_file):
                 src_toks_cuda = src_toks.to(device)
-                rets = model.beam_decode(src_toks_cuda)
+                rets = model.beam_decode(src_toks_cuda, automaton_pe=automaton_pe)
 
                 for i, ret in enumerate(rets):
                     probs = ret['probs'].cpu().detach().numpy().reshape([-1])
@@ -343,5 +352,9 @@ class Validator(object):
         with open(best_trans_file, 'w') as ftrans, open(beam_trans_file, 'w') as btrans:
             ftrans.write(''.join(all_best_trans))
             btrans.write(''.join(all_beam_trans))
+
+        if self.config['graph_automaton']:
+            with open(best_fw_file, 'wb') as fw:
+                pickle.dump(automaton_pe, fw)
 
         self.logger.info('Done translating {}, it takes {} minutes'.format(input_file, float(time.time() - start) / 60.0))
