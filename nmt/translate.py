@@ -2,7 +2,7 @@ import os
 import time
 
 import numpy
-
+import pickle
 import torch
 
 import nmt.all_constants as ac
@@ -107,6 +107,10 @@ class Translator(object):
         open(best_trans_file, 'w').close()
         open(beam_trans_file, 'w').close()
 
+        if self.config['graph_automaton']:
+            best_fw_file = self.input_file + '.best_trans_fw.pkl'
+            open(best_fw_file, 'w').close()
+
         num_sents = 0
         with open(self.input_file, 'r') as f:
             for line in f:
@@ -119,9 +123,12 @@ class Translator(object):
             self.logger.info('Start translating {}'.format(self.input_file))
             start = time.time()
             count = 0
+
+            automaton_pe = model.pos_embedding.forward(self.config['max_pos_length']) if self.config['graph_automaton'] else None
+
             for (src_toks, original_idxs) in self.data_manager.get_trans_input(self.input_file):
                 src_toks_cuda = src_toks.to(device)
-                rets = model.beam_decode(src_toks_cuda)
+                rets = model.beam_decode(src_toks_cuda, automaton_pe=automaton_pe)
 
                 for i, ret in enumerate(rets):
                     probs = ret['probs'].cpu().detach().numpy().reshape([-1])
@@ -141,5 +148,9 @@ class Translator(object):
         with open(best_trans_file, 'w') as ftrans, open(beam_trans_file, 'w') as btrans:
             ftrans.write(''.join(all_best_trans))
             btrans.write(''.join(all_beam_trans))
+
+        if self.config['graph_automaton']:
+            with open(best_fw_file, 'wb') as fw:
+                pickle.dump(automaton_pe, fw)
 
         self.logger.info('Done translating {}, it takes {} minutes'.format(self.input_file, float(time.time() - start) / 60.0))

@@ -148,9 +148,12 @@ class Validator(object):
         with torch.no_grad():
             start_time = time.time()
             count = 0
+
+            automaton_pe = model.pos_embedding.forward(model.max_pos_length) if model.graph_automaton else None
+
             for (src_toks, original_idxs) in self.data_manager.get_trans_input(src_file):
                 src_toks_cuda = src_toks.to(device)
-                rets = model.beam_decode(src_toks_cuda)
+                rets = model.beam_decode(src_toks_cuda, automaton_pe=automaton_pe)
 
                 for i, ret in enumerate(rets):
                     probs = ret['probs'].cpu().detach().numpy().reshape([-1])

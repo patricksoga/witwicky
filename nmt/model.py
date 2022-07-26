@@ -25,13 +25,15 @@ class Model(nn.Module):
         sine_pos = self.config['sine_pos']
         lape_pos = self.config['lape_pos']
         spectral_attn = self.config['spectral_attn']
+        graph_automaton = self.config['graph_automaton']
 
         self.lape_pos = lape_pos
         self.spectral_attn = spectral_attn
+        self.graph_automaton = graph_automaton
         self.max_pos_length = max_pos_length
         self.graph_size = self.config.get('graph_size', None)
         self.big_graph_ul = self.config.get('big_graph_ul', None)
-        self.spectral_cache = {}
+        self.pe_cache = {}
 
         # get positonal embedding
         # if not learned_pos:
@@ -55,6 +57,9 @@ class Model(nn.Module):
         elif self.big_graph_ul:
             ut.get_logger().info('Using big cycle graph positional embedding (unnormalized Laplacian)')
             self.pos_embedding = ut.get_cycle_graph_lapes(embed_dim, max_pos_length)
+        elif graph_automaton:
+            ut.get_logger().info('Using graph automaton positional embedding')
+            self.pos_embedding = ut.AutomatonPELayer(self.config)
 
         # get word embeddings
         src_vocab_size, trg_vocab_size = ut.get_vocab_sizes(self.config)
@@ -130,6 +135,11 @@ class Model(nn.Module):
             word_embeds = self.diet_linear(word_embeds)
             return torch.cat((word_embeds, pos_embeds), dim=-1)
 
+        if self.graph_automaton:
+            pos_embeds = self.pos_embedding(toks.size()[1])
+            return word_embeds + pos_embeds
+
+        # Default: use sinusoidal embeddings
         pos_embeds = self.pos_embedding[:toks.size()[-1], :].unsqueeze(0) # [1, max_len, embed_dim]
         return word_embeds + pos_embeds
 
@@ -170,10 +180,10 @@ class Model(nn.Module):
         softmax_weight = self.out_embedding if not self.config['fix_norm'] else ut.normalize(self.out_embedding, scale=True)
         logits = F.linear(decoder_output, softmax_weight, bias=self.out_bias)
         logits = logits.reshape(-1, logits.size()[-1])
-        logits[:, ~self.trg_vocab_mask] = -1e9
+        logits[:, ~self.trg_vocab_mask.bool()] = -1e9
         return logits
 
-    def beam_decode(self, src_toks):
+    def beam_decode(self, src_toks, automaton_pe=None):
         """Translate a minibatch of sentences. 
 
         Arguments: src_toks[i,j] is the jth word of sentence i.
@@ -184,7 +194,7 @@ class Model(nn.Module):
         encoder_inputs = self.get_input(src_toks, is_src=True)
         encoder_outputs = self.encoder(encoder_inputs, encoder_mask)
         max_lengths = torch.sum(src_toks != ac.PAD_ID, dim=-1).type(src_toks.type()) + 50
-        self.spectral_cache = {}
+        self.pe_cache = {} # for spectral attention and graph automaton pe
 
         def get_trg_inp(ids, time_step):
             ids = ids.type(src_toks.type())
@@ -195,16 +205,20 @@ class Model(nn.Module):
                 word_embeds = word_embeds * self.embed_scale
 
             if self.spectral_attn:
-                if time_step+1 in self.spectral_cache:
+                if time_step+1 in self.pe_cache:
                     # since every sentence lies on the same kind of graph, we cache calculated PEs
-                    return self.spectral_cache[time_step+1]
+                    return self.pe_cache[time_step+1]
 
                 self.pos_embedding = self.spectral_embedding(time_step+1)
                 pos_embeds = self.pos_embedding[time_step, :].unsqueeze(0).repeat(word_embeds.shape[0], word_embeds.shape[1], 1) # bsz x beam_size x embed_dim
                 word_embeds = self.diet_linear(word_embeds)
                 ret = torch.cat((word_embeds, pos_embeds), dim=-1)
-                self.spectral_cache[time_step+1] = ret
+                self.pe_cache[time_step+1] = ret
                 return ret
+            
+            if self.graph_automaton and automaton_pe is not None:
+                pos_embeds = automaton_pe[time_step, :].reshape(1, 1, -1)
+                return word_embeds + pos_embeds
 
             pos_embeds = self.pos_embedding[time_step, :].reshape(1, 1, -1)
             return word_embeds + pos_embeds

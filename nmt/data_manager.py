@@ -383,9 +383,9 @@ class DataManager(object):
                 trg_seq_lengths.append(_trg_len)
 
         # convert to numpy array for sorting & reindexing
-        src_inputs = numpy.array(src_inputs)
+        src_inputs = numpy.array(src_inputs, dtype=object)
         src_seq_lengths = numpy.array(src_seq_lengths)
-        trg_inputs = numpy.array(trg_inputs)
+        trg_inputs = numpy.array(trg_inputs, dtype=object)
         trg_seq_lengths = numpy.array(trg_seq_lengths)
 
         return src_inputs, src_seq_lengths, trg_inputs, trg_seq_lengths

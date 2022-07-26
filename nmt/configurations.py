@@ -52,6 +52,7 @@ def base_config():
     config['sine_pos']          = False
     config['lape_pos']          = False
     config['spectral_attn']     = False
+    config['graph_automaton']   = False
     # Position encoding size
     config['max_pos_length']    = 1024
     
@@ -182,6 +183,13 @@ def en2vi_lape_spectral_attn():
     config['lpe_n_heads']           = 4
     config['lpe_n_layers']          = 3
     config['lpe_ff_dim']            = 16 * 4
+    return config
+
+def en2vi_graph_automaton():
+    config = en2vi_sine()
+    config['sine_pos']          = False
+    config['graph_automaton']   = True
+    config['num_states']        = 10
     return config
 
 def ar2en():

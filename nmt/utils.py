@@ -197,3 +197,33 @@ class SpectralAttention(nn.Module):
         # lpe = torch.nansum(lpe, 0, keepdim=False)
 
         return lpe
+
+
+class AutomatonPELayer(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.num_states = config['num_states']
+        embed_dim = config['embed_dim']
+
+        self.embedding_pos_enc = nn.Linear(self.num_states, embed_dim)
+        self.pos_initial = nn.Parameter(torch.Tensor(self.num_states, 1), requires_grad=True)
+        self.pos_transition = nn.Parameter(torch.Tensor(self.num_states, self.num_states), requires_grad=True)
+        nn.init.normal_(self.pos_initial)
+        nn.init.orthogonal_(self.pos_transition)
+
+    def forward(self, sentence_len):
+        device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+        g = dgl.from_networkx(nx.path_graph(sentence_len))
+        mat = g.adjacency_matrix().to_dense().to(device)
+        z = torch.zeros(self.num_states, g.num_nodes()-1, requires_grad=False, device=device)
+        vec_init = torch.cat((self.pos_initial, z), dim=1)
+        vec_init = vec_init.transpose(1, 0).flatten()
+        kron_prod = torch.kron(mat.reshape(mat.shape[1], mat.shape[0]), self.pos_transition)
+        B = torch.eye(kron_prod.shape[1], device=device) - kron_prod
+
+        encs = torch.linalg.solve(B, vec_init)
+        stacked_encs = torch.stack(encs.split(self.num_states), dim=1)
+        stacked_encs = stacked_encs.transpose(1, 0)
+        pe = self.embedding_pos_enc(stacked_encs)
+
+        return pe
