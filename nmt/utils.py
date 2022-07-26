@@ -216,7 +216,7 @@ class AutomatonPELayer(nn.Module):
         device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
         digraph = nx.DiGraph()
-        digraph.add_edges_from([(i, i+1) for i in range(sentence_len)])
+        digraph.add_edges_from([(i, i+1) for i in range(sentence_len-1)])
 
         g = dgl.from_networkx(digraph)
         adj = g.adjacency_matrix().to_dense().to(device)
