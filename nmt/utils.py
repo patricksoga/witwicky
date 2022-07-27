@@ -203,6 +203,7 @@ class AutomatonPELayer(nn.Module):
     def __init__(self, config):
         super().__init__()
         self.num_states = config['num_states']
+        self.directed = config['directed']
         embed_dim = config['embed_dim']
 
         self.embedding_pos_enc = nn.Linear(self.num_states, embed_dim)
@@ -214,14 +215,16 @@ class AutomatonPELayer(nn.Module):
 
     def forward(self, sentence_len):
         device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
-
-        digraph = nx.DiGraph()
-        if sentence_len == 1:
-            digraph.add_node(0)
+        if self.directed:
+            graph = nx.DiGraph()
+            if sentence_len == 1:
+                graph.add_node(0)
+            else:
+                graph.add_edges_from([(i, i+1) for i in range(sentence_len-1)])
         else:
-            digraph.add_edges_from([(i, i+1) for i in range(sentence_len-1)])
+            graph = nx.path_graph(sentence_len)
 
-        g = dgl.from_networkx(digraph)
+        g = dgl.from_networkx(graph)
         adj = g.adjacency_matrix().to_dense().to(device)
         z = torch.zeros(self.num_states, g.num_nodes()-1, requires_grad=False, device=device)
 

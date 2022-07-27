@@ -190,6 +190,7 @@ def en2vi_graph_automaton():
     config['sine_pos']          = False
     config['graph_automaton']   = True
     config['num_states']        = 10
+    config['directed']          = False
     return config
 
 def ar2en():
