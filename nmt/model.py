@@ -183,7 +183,7 @@ class Model(nn.Module):
         logits[:, ~self.trg_vocab_mask.bool()] = -1e9
         return logits
 
-    def beam_decode(self, src_toks, automaton_pe=None):
+    def beam_decode(self, src_toks, automaton_pe=None, pe_cache=None):
         """Translate a minibatch of sentences. 
 
         Arguments: src_toks[i,j] is the jth word of sentence i.
@@ -216,9 +216,17 @@ class Model(nn.Module):
                 self.pe_cache[time_step+1] = ret
                 return ret
             
-            if self.graph_automaton and automaton_pe is not None:
+            if self.graph_automaton:
+                if time_step + 1 in pe_cache:
+                    return word_embeds + pe_cache[time_step+1]
+                automaton_pe = self.pos_embedding(time_step+1)
                 pos_embeds = automaton_pe[time_step, :].reshape(1, 1, -1)
+                pe_cache[time_step+1] = pos_embeds
                 return word_embeds + pos_embeds
+
+            # if self.graph_automaton and automaton_pe is not None:
+            #     pos_embeds = automaton_pe[time_step, :].reshape(1, 1, -1)
+            #     return word_embeds + pos_embeds
 
             pos_embeds = self.pos_embedding[time_step, :].reshape(1, 1, -1)
             return word_embeds + pos_embeds

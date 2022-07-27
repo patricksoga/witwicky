@@ -151,11 +151,13 @@ class Validator(object):
             start_time = time.time()
             count = 0
 
-            automaton_pe = model.pos_embedding.forward(model.max_pos_length) if model.graph_automaton else None
+            # automaton_pe = model.pos_embedding.forward(model.max_pos_length) if model.graph_automaton else None
+            automaton_pe = None
+            pe_cache = {}
 
             for (src_toks, original_idxs) in self.data_manager.get_trans_input(src_file):
                 src_toks_cuda = src_toks.to(device)
-                rets = model.beam_decode(src_toks_cuda, automaton_pe=automaton_pe)
+                rets = model.beam_decode(src_toks_cuda, automaton_pe=automaton_pe, pe_cache=pe_cache)
 
                 for i, ret in enumerate(rets):
                     probs = ret['probs'].cpu().detach().numpy().reshape([-1])
@@ -326,11 +328,13 @@ class Validator(object):
             start = time.time()
             count = 0
 
-            automaton_pe = model.pos_embedding.forward(self.config['max_pos_length']) if self.config['graph_automaton'] else None
+            # automaton_pe = model.pos_embedding.forward(self.config['max_pos_length']) if self.config['graph_automaton'] else None
+            automaton_pe = None
+            pe_cache = {}
 
             for (src_toks, original_idxs) in self.data_manager.get_trans_input(input_file):
                 src_toks_cuda = src_toks.to(device)
-                rets = model.beam_decode(src_toks_cuda, automaton_pe=automaton_pe)
+                rets = model.beam_decode(src_toks_cuda, automaton_pe=automaton_pe, pe_cache=pe_cache)
 
                 for i, ret in enumerate(rets):
                     probs = ret['probs'].cpu().detach().numpy().reshape([-1])
