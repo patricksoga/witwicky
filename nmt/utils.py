@@ -206,7 +206,8 @@ class AutomatonPELayer(nn.Module):
         self.directed = config['directed']
         embed_dim = config['embed_dim']
 
-        self.embedding_pos_enc = nn.Linear(self.num_states, embed_dim)
+        self.linear_ = nn.Linear(self.num_states, embed_dim)
+        self._linear = nn.Linear(embed_dim, embed_dim)
         self.pos_initial = nn.Parameter(torch.Tensor(self.num_states, 1), requires_grad=True)
         self.pos_transition = nn.Parameter(torch.Tensor(self.num_states, self.num_states), requires_grad=True)
 
@@ -238,6 +239,8 @@ class AutomatonPELayer(nn.Module):
         stacked_encs = torch.stack(encs.split(self.num_states), dim=1)
         stacked_encs = stacked_encs.transpose(1, 0)
 
-        pe = self.embedding_pos_enc(stacked_encs)
+        pe = self.linear_(stacked_encs)
+        pe = torch.nn.Tanh()(pe)
+        pe = self._linear(pe)
 
         return pe
