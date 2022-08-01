@@ -226,9 +226,10 @@ class AutomatonPELayer(nn.Module):
 
         g = dgl.from_networkx(graph)
         adj = g.adjacency_matrix().to_dense().to(device)
-        z = torch.zeros(self.num_states, g.num_nodes()-1, requires_grad=False, device=device)
+        # z = torch.zeros(self.num_states, g.num_nodes()-1, requires_grad=False, device=device)
 
-        vec_init = torch.cat((self.pos_initial, z), dim=1)
+        # vec_init = torch.cat((self.pos_initial, z), dim=1)
+        vec_init = torch.cat([self.pos_initial for _ in range(g.num_nodes())], dim=1)
         vec_init = vec_init.transpose(1, 0).flatten()
 
         kron_prod = torch.kron(adj.reshape(adj.shape[1], adj.shape[0]), self.pos_transition)

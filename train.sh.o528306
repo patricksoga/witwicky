@@ -1,0 +1,113 @@
+<class 'networkx.utils.decorators.argmap'> compilation 12:4: FutureWarning: normalized_laplacian_matrix will return a scipy.sparse array instead of a matrix in Networkx 3.0.
+/afs/crc.nd.edu/user/p/psoga/witwicky/nmt/data_manager.py:386: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  src_inputs = numpy.array(src_inputs)
+/afs/crc.nd.edu/user/p/psoga/witwicky/nmt/data_manager.py:388: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  trg_inputs = numpy.array(trg_inputs)
+/afs/crc.nd.edu/user/p/psoga/witwicky/nmt/model.py:150: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead. (Triggered internally at  /opt/conda/conda-bld/pytorch_1656352645774/work/aten/src/ATen/native/IndexingUtils.h:27.)
+  logits[:, ~self.trg_vocab_mask] = -1e9
+/afs/crc.nd.edu/user/p/psoga/.conda/envs/gnn/lib/python3.10/site-packages/torch/autograd/__init__.py:173: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead. (Triggered internally at  /opt/conda/conda-bld/pytorch_1656352645774/work/aten/src/ATen/native/IndexingUtils.h:27.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/afs/crc.nd.edu/user/p/psoga/witwicky/nmt/data_manager.py:434: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  data = numpy.array(data)[sorted_idxs]
+/afs/crc.nd.edu/user/p/psoga/witwicky/layers/encoders.py:277: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  parent_idxs = idxs // num_classes
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.
+Use of uninitialized value in division (/) at /afs/crc.nd.edu/user/p/psoga/witwicky/nmt/../scripts/multi-bleu.perl line 139, <STDIN> line 1553.

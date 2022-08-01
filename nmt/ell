@@ -1,0 +1,1172 @@
+job-ID     prior   name       user         state submit/start at     queue                          jclass                         slots ja-task-ID 
+------------------------------------------------------------------------------------------------------------------------------------------------
+    483262 50.60000 p500_600.j jng2         r     06/08/2022 08:55:55 long@d12chas384.crc.nd.edu                                        2        
+    490023 50.58564 jobscript_ cnaudet      r     06/12/2022 15:06:19 long@d12chas497.crc.nd.edu                                        1        
+    490933 50.58516 dns2-0-0.j xfan2        r     06/13/2022 14:16:27 long@d12chas405.crc.nd.edu                                       72        
+    490774 50.58271 frdmloop   eholmbec     r     06/13/2022 11:59:49 long@d12chas313.crc.nd.edu                                        1        
+    492258 50.58121 dns2-0.1-0 xfan2        r     06/14/2022 11:45:05 long@d12chas450.crc.nd.edu                                       48        
+    492265 50.58120 dns2-0.3-0 xfan2        r     06/14/2022 11:50:12 long@d12chas454.crc.nd.edu                                       48        
+    492267 50.58120 dns2-0.1-0 xfan2        r     06/14/2022 11:51:14 long@d12chas442.crc.nd.edu                                       48        
+    493141 50.57852 jobscript_ cnaudet      r     06/14/2022 17:53:33 long@d12chas470.crc.nd.edu                                        1        
+    495382 50.57324 J19-12-03- yzhang19     r     06/26/2022 18:57:18 long@d12chas172.crc.nd.edu                                       24        
+    495383 50.57324 J19-12-13- yzhang19     r     06/26/2022 20:03:37 long@d12chas162.crc.nd.edu                                       24        
+    495388 50.57324 J19-12-23- yzhang19     r     06/26/2022 21:42:57 long@d12chas167.crc.nd.edu                                       24        
+    495389 50.57323 J19-12-33- yzhang19     r     06/26/2022 21:45:12 long@d12chas180.crc.nd.edu                                       24        
+    495390 50.57323 J19-12-43- yzhang19     r     06/26/2022 23:21:09 long@d12chas156.crc.nd.edu                                       24        
+    495392 50.57323 J19-12-53- yzhang19     r     06/27/2022 00:05:02 long@d12chas185.crc.nd.edu                                       24        
+    495393 50.57323 J19-12-63- yzhang19     r     06/27/2022 18:15:55 long@d12chas173.crc.nd.edu                                       24        
+    495394 50.57323 J19-12-73- yzhang19     r     06/27/2022 18:54:17 long@d12chas186.crc.nd.edu                                       24        
+    496664 50.57305 dns2-0.2-0 xfan2        r     06/17/2022 16:53:07 long@d12chas406.crc.nd.edu                                       48        
+    496665 50.57305 dns2-0.3-0 xfan2        r     06/17/2022 16:53:08 long@d12chas444.crc.nd.edu                                       48        
+    496666 50.57304 dns2-0.1-0 xfan2        r     06/17/2022 16:53:09 long@d12chas467.crc.nd.edu                                       48        
+    496668 50.57304 dns2-0.2-0 xfan2        r     06/17/2022 16:53:09 long@d12chas407.crc.nd.edu                                       48        
+    496672 50.57304 dns2-0.3-0 xfan2        r     06/18/2022 06:14:29 long@d12chas513.crc.nd.edu                                       48        
+    502183 50.56287 run_glass_ jcarpen3     r     06/19/2022 19:02:22 long@d12chas374.crc.nd.edu                                       24        
+    502184 50.56287 run_glass_ jcarpen3     r     06/19/2022 19:03:39 long@d12chas472.crc.nd.edu                                       24        
+    502018 50.56260 E17        jzhou8       r     06/19/2022 12:22:08 gpu@qa-xp-021.crc.nd.edu                                          4        
+    502142 50.56209 benchmark_ jherko       r     06/19/2022 15:10:08 long@d12chas422.crc.nd.edu                                        1        
+    502143 50.56208 benchmark_ jherko       r     06/19/2022 15:12:31 long@d12chas414.crc.nd.edu                                        1        
+    502145 50.56208 benchmark_ jherko       r     06/19/2022 15:14:05 long@d12chas433.crc.nd.edu                                        1        
+    502147 50.56207 benchmark_ jherko       r     06/19/2022 15:15:59 long@d12chas382.crc.nd.edu                                        1        
+    505529 50.55303 python_pvp cdaviso1     r     06/22/2022 09:44:00 long@d12chas337.crc.nd.edu                                        8        
+    505607 50.55252 female_exe rbhuiyan     r     06/22/2022 11:25:42 long@d12chas426.crc.nd.edu                                        1        
+    505611 50.55252 male_execu rbhuiyan     r     06/22/2022 11:27:39 long@d12chas508.crc.nd.edu                                        1        
+    505615 50.55250 all_execut rbhuiyan     r     06/22/2022 11:35:58 long@d12chas470.crc.nd.edu                                        1        
+    506675 50.54949 rrlfe_run_ espaldin     r     06/23/2022 09:53:24 long@d12chas423.crc.nd.edu                                        4        
+    506811 50.54908 ADM-rodrig eholmbec     r     06/23/2022 11:57:54 long@d12chas313.crc.nd.edu                                        1        
+    510161 50.54251 E32        jzhou8       r     06/25/2022 11:42:40 gpu@qa-xp-020.crc.nd.edu                                          4        
+    524322 50.53968 RK45       charnish     r     07/05/2022 13:00:59 long@d8civy100.crc.nd.edu                                       800        
+    528218 50.53814 GESTOFSv5. dwood7       r     07/07/2022 20:26:04 long@d12chas041.crc.nd.edu                                      960        
+    514102 50.53641 run_glass_ jcarpen3     r     06/28/2022 09:55:25 hpc@d32cepyc025.crc.nd.edu                                       32        
+    514103 50.53641 run_glass_ jcarpen3     r     06/28/2022 09:55:25 hpc@d32cepyc025.crc.nd.edu                                       32        
+    514681 50.53349 ddpm_crf_v bsporrer     r     06/28/2022 03:11:13 long@d12chas431.crc.nd.edu                                        1 1
+    514681 50.53349 ddpm_crf_v bsporrer     r     06/28/2022 03:11:13 long@d12chas110.crc.nd.edu                                        1 9
+    514681 50.53349 ddpm_crf_v bsporrer     r     06/28/2022 03:11:13 long@d12chas110.crc.nd.edu                                        1 13
+    514681 50.53349 ddpm_crf_v bsporrer     r     06/28/2022 03:11:13 long@d12chas110.crc.nd.edu                                        1 17
+    514877 50.53244 rodrigo-dz eholmbec     r     06/28/2022 10:42:01 long@d12chas313.crc.nd.edu                                        1        
+    515327 50.53178 CH4_MIL-10 eosaro       r     06/28/2022 15:24:45 hpc@d32cepyc042.crc.nd.edu                                        1        
+    515494 50.53145 kenout     smowry       r     06/28/2022 17:47:28 long@d64cepyc010.crc.nd.edu                                       1        
+    515653 50.53092 H2_DUT49   eosaro       r     06/29/2022 09:55:48 hpc@d32cepyc042.crc.nd.edu                                        1 4
+    515653 50.53092 H2_DUT49   eosaro       r     06/29/2022 10:44:22 hpc@d32cepyc042.crc.nd.edu                                        1 5
+    515653 50.53092 H2_DUT49   eosaro       r     06/29/2022 11:09:38 hpc@d32cepyc032.crc.nd.edu                                        1 6
+    517144 50.52951 polym_loop jcarpen3     r     06/29/2022 14:32:38 long@d12chas424.crc.nd.edu                                       24        
+    517282 50.52937 polym_loop jcarpen3     r     06/29/2022 17:34:11 long@d12chas478.crc.nd.edu                                       24        
+    517181 50.52861 Mixed_RBF+ kmukherj     r     06/29/2022 18:31:02 hpc@d32cepyc026.crc.nd.edu                                        1        
+    517190 50.52859 Mixed_RBF+ kmukherj     r     06/29/2022 14:11:35 long@d12chas370.crc.nd.edu                                        1        
+    517227 50.52853 In-between kmukherj     r     06/29/2022 14:35:26 long@d12chas507.crc.nd.edu                                        1        
+    517612 50.52820 YF_vac     qtran4       r     06/29/2022 16:57:31 long@d12chas414.crc.nd.edu                                        1 13
+    517834 50.52785 tipsicatir dhaungs      r     06/29/2022 20:18:55 long@d12chas382.crc.nd.edu                                        4        
+    518016 50.52782 cb7acy7    skommidi     r     06/30/2022 18:35:59 long@d12chas413.crc.nd.edu                                       24        
+    518756 50.52566 NPVA300    sanoj        r     06/30/2022 12:13:21 hpc@d32cepyc028.crc.nd.edu                                        5        
+    518758 50.52565 NPVA300    sanoj        r     06/30/2022 12:14:15 hpc@d32cepyc038.crc.nd.edu                                        5        
+    518763 50.52564 NPVA300    sanoj        r     06/30/2022 12:18:24 hpc@d32cepyc024.crc.nd.edu                                        5        
+    518802 50.52539 grid_calcu pnalamwa     r     06/30/2022 13:01:32 long@d12chas432.crc.nd.edu                                        1        
+    520811 50.52470 aimd_nacl_ omendibl     r     07/01/2022 14:02:19 hpc@d32cepyc023.crc.nd.edu                                       64        
+    520335 50.52439 i91        jmorisba     r     07/01/2022 09:13:42 long@d6cneh077.crc.nd.edu                                        48        
+    521228 50.52438 aimd_nacl_ omendibl     r     07/01/2022 14:02:19 hpc@d32cepyc027.crc.nd.edu                                       64        
+    520336 50.52438 i92        jmorisba     r     07/01/2022 09:16:29 long@d6cneh050.crc.nd.edu                                        48        
+    520339 50.52438 i95        jmorisba     r     07/02/2022 19:25:55 long@d12chas503.crc.nd.edu                                       48        
+    520340 50.52437 i96        jmorisba     r     07/02/2022 20:05:25 long@d12chas479.crc.nd.edu                                       48        
+    520341 50.52437 i97        jmorisba     r     07/02/2022 20:28:10 long@d12chas352.crc.nd.edu                                       48        
+    520342 50.52437 i98        jmorisba     r     07/02/2022 20:44:13 long@d12chas482.crc.nd.edu                                       48        
+    520343 50.52437 i99        jmorisba     r     07/02/2022 21:15:02 long@d12chas383.crc.nd.edu                                       48        
+    520344 50.52437 i100       jmorisba     r     07/02/2022 21:21:37 long@d12chas463.crc.nd.edu                                       48        
+    521501 50.52244 npt_0.5m   yjiang9      r     07/02/2022 06:56:38 long@d12chas493.crc.nd.edu                                       24        
+    521400 50.52226 VB-3-b     bbullard     r     07/02/2022 04:12:59 long@d12chas330.crc.nd.edu                                       16        
+    521265 50.52225 GE_theta   jnauerz      r     07/01/2022 14:33:26 long@d12chas363.crc.nd.edu                                       10        
+    521243 50.52207 NPVA450    sanoj        r     07/01/2022 13:46:57 hpc@d32cepyc028.crc.nd.edu                                        5        
+    521258 50.52206 NPVA500    sanoj        r     07/01/2022 13:50:52 hpc@d32cepyc038.crc.nd.edu                                        5        
+    520942 50.52205 jupyter    kdong2       r     07/01/2022 12:48:33 gpu@qa-1080ti-004.crc.nd.edu                                      1        
+    521256 50.52191 x165669782 nvenkate     r     07/01/2022 13:52:42 long@d12chas414.crc.nd.edu                                        1        
+    521289 50.52188 H2_DUT32   eosaro       r     07/01/2022 14:03:35 hpc@d32cepyc028.crc.nd.edu                                        1 1
+    521289 50.52188 H2_DUT32   eosaro       r     07/01/2022 14:03:35 hpc@d32cepyc028.crc.nd.edu                                        1 2
+    521289 50.52188 H2_DUT32   eosaro       r     07/01/2022 14:03:35 hpc@d32cepyc028.crc.nd.edu                                        1 3
+    521289 50.52188 H2_DUT32   eosaro       r     07/01/2022 14:03:35 hpc@d32cepyc028.crc.nd.edu                                        1 4
+    521289 50.52188 H2_DUT32   eosaro       r     07/01/2022 14:03:35 hpc@d32cepyc032.crc.nd.edu                                        1 5
+    521289 50.52188 H2_DUT32   eosaro       r     07/01/2022 14:03:35 hpc@d32cepyc032.crc.nd.edu                                        1 6
+    521289 50.52188 H2_DUT32   eosaro       r     07/01/2022 14:03:35 hpc@d32cepyc032.crc.nd.edu                                        1 7
+    521310 50.52185 H2_PCN61   eosaro       r     07/01/2022 14:16:39 hpc@d32cepyc034.crc.nd.edu                                        1 4
+    521310 50.52185 H2_PCN61   eosaro       r     07/01/2022 14:16:39 hpc@d32cepyc034.crc.nd.edu                                        1 5
+    521310 50.52185 H2_PCN61   eosaro       r     07/01/2022 14:16:39 hpc@d32cepyc034.crc.nd.edu                                        1 6
+    523207 50.52128 emtfoh31pl emarinri     r     07/06/2022 07:10:35 hpc@d32cepyc048.crc.nd.edu                                      192        
+    523209 50.52126 chcl31plie emarinri     r     07/06/2022 11:08:22 hpc@d32cepyc047.crc.nd.edu                                      192        
+    522783 50.52057 SSGF1ShWv5 kseh         r     07/03/2022 10:38:24 long@d8civy070.crc.nd.edu                                       128        
+    522171 50.52046 Miro103    sanoj        r     07/03/2022 00:13:10 long@d12chas509.crc.nd.edu                                       48        
+    523391 50.52018 R2_GC01_HP pgiani       r     07/04/2022 07:14:40 hpc@d24cepyc088.crc.nd.edu                                      192        
+    522143 50.51896 PEG67300   sanoj        r     07/02/2022 12:00:09 hpc@d32cepyc038.crc.nd.edu                                        5        
+    522147 50.51895 NPVA300    sanoj        r     07/02/2022 12:02:58 hpc@d32cepyc038.crc.nd.edu                                        5        
+    522149 50.51891 PEG67350   sanoj        r     07/02/2022 12:20:38 hpc@d32cepyc038.crc.nd.edu                                        5        
+    522150 50.51891 NPVA350    sanoj        r     07/02/2022 12:21:23 hpc@d32cepyc038.crc.nd.edu                                        5        
+    522151 50.51891 PEG67400   sanoj        r     07/02/2022 12:22:53 hpc@d32cepyc038.crc.nd.edu                                        5        
+    522152 50.51890 PEG67450   sanoj        r     07/02/2022 12:24:24 hpc@d32cepyc042.crc.nd.edu                                        5        
+    522157 50.51890 NPVA450    sanoj        r     07/02/2022 12:25:12 hpc@d32cepyc042.crc.nd.edu                                        5        
+    522158 50.51890 PEG67500   sanoj        r     07/02/2022 12:26:18 hpc@d32cepyc042.crc.nd.edu                                        5        
+    522159 50.51889 NPVA500    sanoj        r     07/02/2022 12:27:46 hpc@d32cepyc038.crc.nd.edu                                        5        
+    524334 50.51786 laterRK45  charnish     r     07/05/2022 13:07:09 long@d12chas452.crc.nd.edu                                      240        
+    522807 50.51626 TRIPVA350  sanoj        r     07/03/2022 11:25:10 long@d12chas487.crc.nd.edu                                       20        
+    522812 50.51624 TRIPEG350  sanoj        r     07/03/2022 11:35:11 long@d12chas435.crc.nd.edu                                       20        
+    522818 50.51622 TRIPVA300  sanoj        r     07/03/2022 11:40:43 long@d12chas403.crc.nd.edu                                       20        
+    522819 50.51622 TRIPEG400  sanoj        r     07/03/2022 11:42:25 long@d12chas436.crc.nd.edu                                       20        
+    522820 50.51622 TRIPVA400  sanoj        r     07/03/2022 11:43:36 long@d12chas429.crc.nd.edu                                       20        
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas488.crc.nd.edu                                        1 1
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas422.crc.nd.edu                                        1 2
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas414.crc.nd.edu                                        1 3
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas355.crc.nd.edu                                        1 4
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas510.crc.nd.edu                                        1 5
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas508.crc.nd.edu                                        1 6
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas464.crc.nd.edu                                        1 7
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas433.crc.nd.edu                                        1 8
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas384.crc.nd.edu                                        1 9
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas507.crc.nd.edu                                        1 10
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas432.crc.nd.edu                                        1 11
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas486.crc.nd.edu                                        1 12
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas470.crc.nd.edu                                        1 13
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas363.crc.nd.edu                                        1 14
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas512.crc.nd.edu                                        1 15
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas530.crc.nd.edu                                        1 16
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas376.crc.nd.edu                                        1 17
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas376.crc.nd.edu                                        1 18
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas376.crc.nd.edu                                        1 19
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas375.crc.nd.edu                                        1 20
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas375.crc.nd.edu                                        1 21
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas375.crc.nd.edu                                        1 22
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas506.crc.nd.edu                                        1 23
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas506.crc.nd.edu                                        1 24
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas506.crc.nd.edu                                        1 25
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas506.crc.nd.edu                                        1 26
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas382.crc.nd.edu                                        1 27
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas382.crc.nd.edu                                        1 28
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas382.crc.nd.edu                                        1 29
+    522801 50.51556 PD         dminogue     r     07/03/2022 11:08:24 long@d12chas382.crc.nd.edu                                        1 30
+    528290 50.51550 MOD3test   akozlov      r     07/07/2022 21:58:54 hpc@d24cepyc092.crc.nd.edu                                      384        
+    528291 50.51549 MOD3test   akozlov      r     07/07/2022 22:02:51 hpc@d24cepyc116.crc.nd.edu                                      384        
+    522857 50.51539 QLOGIN     ytian5       r     07/03/2022 13:13:03 gpu@qa-p100-001.crc.nd.edu                                        4        
+    522858 50.51539 QLOGIN     ytian5       r     07/03/2022 13:13:29 gpu@qa-p100-001.crc.nd.edu                                        4        
+    522860 50.51538 QLOGIN     ytian5       r     07/03/2022 13:13:38 gpu@qa-p100-001.crc.nd.edu                                        4        
+    522861 50.51538 QLOGIN     ytian5       r     07/03/2022 13:13:45 gpu@qa-p100-001.crc.nd.edu                                        4        
+    523284 50.51527 P030007    jxu24        r     07/07/2022 19:29:02 hpc@d24cepyc101.crc.nd.edu                                       48        
+    523285 50.51527 P030009    jxu24        r     07/07/2022 22:28:01 hpc@d24cepyc126.crc.nd.edu                                       48        
+    523286 50.51526 P030010    jxu24        r     07/07/2022 22:52:59 hpc@d24cepyc130.crc.nd.edu                                       48        
+    523287 50.51526 P030011    jxu24        r     07/08/2022 01:50:00 hpc@d24cepyc079.crc.nd.edu                                       48        
+    523186 50.51479 znso4_npt  yjiang9      r     07/03/2022 23:03:41 long@d12chas163.crc.nd.edu                                       24        
+    523190 50.51476 npt_1m     yjiang9      r     07/03/2022 23:12:25 long@d12chas184.crc.nd.edu                                       24        
+    524314 50.51415 TGV_URANS_ jpadill4     r     07/05/2022 12:56:15 hpc@d24cepyc122.crc.nd.edu                                      144        
+    524462 50.51407 TGV_WAS_t0 jpadill4     r     07/05/2022 13:31:54 hpc@d24cepyc132.crc.nd.edu                                      144        
+    524463 50.51406 TGV_VLES_t jpadill4     r     07/05/2022 13:32:49 hpc@d24cepyc083.crc.nd.edu                                      144        
+    523674 50.51397 exacSolvec anair        r     07/04/2022 15:58:33 hpc@d32cepyc007.crc.nd.edu                                       64        
+    523621 50.51359 nvt_5m     yjiang9      r     07/04/2022 14:15:34 long@d12chas189.crc.nd.edu                                       48        
+    523424 50.51337 LIB3O4QE   sanoj        r     07/04/2022 09:08:14 long@d12chas417.crc.nd.edu                                       24        
+    525656 50.51318 R3_GF02_HP pgiani       r     07/06/2022 09:12:50 hpc@d24cepyc077.crc.nd.edu                                      192        
+    523345 50.51293 YF_t_age   qtran4       r     07/04/2022 05:55:51 long@d12chas481.crc.nd.edu                                        1 1
+    523345 50.51293 YF_t_age   qtran4       r     07/04/2022 05:55:51 long@d12chas408.crc.nd.edu                                        1 4
+    523345 50.51293 YF_t_age   qtran4       r     07/04/2022 05:55:51 long@d12chas439.crc.nd.edu                                        1 6
+    523345 50.51293 YF_t_age   qtran4       r     07/04/2022 05:55:51 long@d12chas439.crc.nd.edu                                        1 7
+    523345 50.51293 YF_t_age   qtran4       r     07/04/2022 05:55:51 long@d12chas439.crc.nd.edu                                        1 8
+    523345 50.51293 YF_t_age   qtran4       r     07/04/2022 05:55:51 long@d12chas439.crc.nd.edu                                        1 9
+    523345 50.51293 YF_t_age   qtran4       r     07/04/2022 05:55:51 long@d12chas414.crc.nd.edu                                        1 10
+    523577 50.51287 H1         cmichae2     r     07/04/2022 20:36:44 gpu@qa-1080ti-006.crc.nd.edu                                     24        
+    523581 50.51284 H2         cmichae2     r     07/04/2022 22:40:21 gpu@qa-1080ti-009.crc.nd.edu                                     24        
+    523582 50.51284 H3         cmichae2     r     07/04/2022 23:34:42 gpu@qa-1080ti-010.crc.nd.edu                                     24        
+    523583 50.51284 H4         cmichae2     r     07/05/2022 01:23:36 gpu@qa-1080ti-007.crc.nd.edu                                     24        
+    523584 50.51284 H5         cmichae2     r     07/05/2022 03:27:44 gpu@qa-1080ti-005.crc.nd.edu                                     24        
+    523405 50.51281 NPVA400    sanoj        r     07/04/2022 07:53:52 hpc@d32cepyc026.crc.nd.edu                                        5        
+    523412 50.51263 vortex_ner ylu25        r     07/04/2022 08:03:43 gpu@qa-titanx-001.crc.nd.edu                                      1        
+    523415 50.51261 vortex_ner ylu25        r     07/04/2022 08:10:41 gpu@qa-1080ti-003.crc.nd.edu                                      1        
+    523416 50.51261 vortex_ner ylu25        r     07/04/2022 08:11:57 gpu@qa-1080ti-002.crc.nd.edu                                      1        
+    523486 50.51232 LC21_1.51  lbocciol     r     07/06/2022 21:08:03 long@d12chas376.crc.nd.edu                                        4 113
+    523486 50.51232 LC21_1.51  lbocciol     r     07/07/2022 03:46:51 long@d12chas506.crc.nd.edu                                        4 117
+    523486 50.51232 LC21_1.51  lbocciol     r     07/07/2022 06:37:03 long@d12chas384.crc.nd.edu                                        4 118
+    523486 50.51232 LC21_1.51  lbocciol     r     07/07/2022 09:38:06 long@d12chas356.crc.nd.edu                                        4 119
+    523486 50.51232 LC21_1.51  lbocciol     r     07/07/2022 12:26:08 long@d12chas416.crc.nd.edu                                        4 120
+    523486 50.51232 LC21_1.51  lbocciol     r     07/07/2022 17:43:08 long@d12chas416.crc.nd.edu                                        4 123
+    523486 50.51232 LC21_1.51  lbocciol     r     07/07/2022 19:02:20 long@d12chas423.crc.nd.edu                                        4 124
+    523486 50.51232 LC21_1.51  lbocciol     r     07/07/2022 23:23:01 long@d12chas522.crc.nd.edu                                        4 125
+    523486 50.51232 LC21_1.51  lbocciol     r     07/08/2022 00:20:42 long@d12chas432.crc.nd.edu                                        4 126
+    523486 50.51232 LC21_1.51  lbocciol     r     07/08/2022 00:47:22 long@d12chas421.crc.nd.edu                                        4 127
+    523486 50.51232 LC21_1.51  lbocciol     r     07/08/2022 02:10:35 long@d12chas431.crc.nd.edu                                        4 128
+    523486 50.51232 LC21_1.51  lbocciol     r     07/08/2022 02:12:01 long@d12chas400.crc.nd.edu                                        4 129
+    523707 50.51189 Target4A-o tmilazzo     r     07/04/2022 17:27:57 long@d12chas434.crc.nd.edu                                       16        
+    523732 50.51183 Target4E-o tmilazzo     r     07/04/2022 17:56:42 long@d12chas416.crc.nd.edu                                       16        
+    524082 50.51153 MD-D-2500  sanoj        r     07/05/2022 09:26:00 hpc@d32cepyc030.crc.nd.edu                                       64        
+    524085 50.51152 MD-D-3000  sanoj        r     07/05/2022 09:27:42 hpc@d32cepyc040.crc.nd.edu                                       64        
+    523673 50.51152 M+M_In-bet kmukherj     r     07/04/2022 15:57:58 long@d12chas384.crc.nd.edu                                        1        
+    524086 50.51151 MD-D-1400  sanoj        r     07/05/2022 09:30:55 hpc@d32cepyc039.crc.nd.edu                                       64        
+    523680 50.51151 RQ+RQ_In-b kmukherj     r     07/04/2022 16:03:09 long@d12chas414.crc.nd.edu                                        1        
+    524088 50.51151 MD-D-2800  sanoj        r     07/05/2022 09:33:39 hpc@d32cepyc033.crc.nd.edu                                       64        
+    523682 50.51149 RBF+RBF_In kmukherj     r     07/04/2022 16:12:46 long@d12chas506.crc.nd.edu                                        1        
+    523683 50.51148 RQ+RBF_In- kmukherj     r     07/04/2022 16:15:23 long@d12chas476.crc.nd.edu                                        1        
+    523686 50.51147 M+RQ_In-be kmukherj     r     07/04/2022 16:18:11 long@d12chas376.crc.nd.edu                                        1        
+    524097 50.51131 MD-D-1300  sanoj        r     07/05/2022 09:51:19 hpc@d32cepyc032.crc.nd.edu                                       60        
+    524100 50.51123 MD-D-1000  sanoj        r     07/05/2022 09:53:41 hpc@d32cepyc034.crc.nd.edu                                       58        
+    523887 50.51106 TOP-opt    tmilazzo     r     07/04/2022 23:26:32 long@d12chas357.crc.nd.edu                                       16        
+    525842 50.51096 run_p1sq.s skim43       r     07/06/2022 11:40:44 long@d8civy123.crc.nd.edu                                       144        
+    523824 50.51078 XEKRIn-bet kmukherj     r     07/04/2022 21:15:10 long@d12chas481.crc.nd.edu                                        1        
+    523951 50.51068 log2_2000  rli23        r     07/05/2022 02:51:01 long@d12chas365.crc.nd.edu                                       12 1
+    523951 50.51068 log2_2000  rli23        r     07/05/2022 02:51:01 long@d12chas363.crc.nd.edu                                       12 2
+    523951 50.51068 log2_2000  rli23        r     07/05/2022 02:51:01 long@d12chas521.crc.nd.edu                                       12 3
+    523951 50.51068 log2_2000  rli23        r     07/05/2022 02:51:01 long@d12chas386.crc.nd.edu                                       12 4
+    524241 50.51053 windhertzm wwestley     r     07/05/2022 12:05:57 long@d12chas362.crc.nd.edu                                       48        
+    524300 50.51044 spherempi4 wwestley     r     07/05/2022 12:42:36 long@d12chas372.crc.nd.edu                                       48        
+    526282 50.51039 run_s8a.sh skim43       r     07/07/2022 09:43:10 long@d8civy092.crc.nd.edu                                       144        
+    523922 50.51031 ppa        kdong2       r     07/05/2022 00:34:44 gpu@qa-1080ti-001.crc.nd.edu                                      1        
+    523989 50.51004 MLP_SmallN ktang2       r     07/05/2022 02:30:31 gpu@qa-xp-003.crc.nd.edu                                          1        
+    527520 50.50949 homTest    chills1      r     07/07/2022 12:16:18 long@d24cepyc061.crc.nd.edu                                     192        
+    528466 50.50945 ALCOFS_swa gling        r     07/08/2022 01:20:47 long@d6cneh047.crc.nd.edu                                       240        
+    528491 50.50936 GESTOFS_v4 gling        r     07/08/2022 02:14:58 long@d6cneh015.crc.nd.edu                                       240        
+    528492 50.50934 WW3_IC4M2_ gling        r     07/08/2022 01:53:58 long@d6cneh038.crc.nd.edu                                       240        
+    524777 50.50912 GE_theta   jnauerz      r     07/05/2022 15:30:09 long@d12chas339.crc.nd.edu                                       24        
+    524780 50.50911 GE_theta   jnauerz      r     07/05/2022 15:31:21 long@d12chas336.crc.nd.edu                                       24        
+    524115 50.50895 UIO66_H2   eosaro       r     07/05/2022 10:17:53 hpc@d32cepyc026.crc.nd.edu                                        1        
+    524130 50.50891 step3_bcc  awillso2     r     07/05/2022 10:35:57 long@d12chas356.crc.nd.edu                                        1        
+    524131 50.50891 step3_ccsm awillso2     r     07/05/2022 10:36:03 long@d12chas400.crc.nd.edu                                        1        
+    524132 50.50891 step3_miro awillso2     r     07/05/2022 10:36:10 long@d12chas400.crc.nd.edu                                        1        
+    524133 50.50891 step3_mpi  awillso2     r     07/05/2022 10:36:18 long@d12chas400.crc.nd.edu                                        1        
+    524706 50.50887 axa0e0     pwang8       r     07/05/2022 15:01:35 long@d12chas488.crc.nd.edu                                       16        
+    524709 50.50887 run_glass_ jcarpen3     r     07/05/2022 15:03:41 hpc@d32cepyc038.crc.nd.edu                                       16        
+    524710 50.50887 run_glass_ jcarpen3     r     07/05/2022 15:03:43 hpc@d32cepyc042.crc.nd.edu                                       16        
+    524711 50.50887 run_glass_ jcarpen3     r     07/05/2022 15:03:45 hpc@d32cepyc029.crc.nd.edu                                       16        
+    524712 50.50887 run_glass_ jcarpen3     r     07/05/2022 15:03:46 hpc@d32cepyc031.crc.nd.edu                                       16        
+    524757 50.50882 axa0e0     pwang8       r     07/05/2022 15:25:00 long@d12chas400.crc.nd.edu                                       16        
+    524219 50.50873 reconstruc cgainzak     r     07/05/2022 11:51:09 long@d12chas223.crc.nd.edu                                        1        
+    524220 50.50873 reconstruc cgainzak     r     07/05/2022 11:51:10 long@d12chas223.crc.nd.edu                                        1        
+    524222 50.50873 reconstruc cgainzak     r     07/05/2022 11:51:13 long@d12chas228.crc.nd.edu                                        1        
+    524223 50.50873 reconstruc cgainzak     r     07/05/2022 11:51:14 long@d12chas228.crc.nd.edu                                        1        
+    524224 50.50873 reconstruc cgainzak     r     07/05/2022 11:51:15 long@d12chas228.crc.nd.edu                                        1        
+    524225 50.50873 reconstruc cgainzak     r     07/05/2022 11:51:17 long@d12chas375.crc.nd.edu                                        1        
+    524227 50.50873 reconstruc cgainzak     r     07/05/2022 11:51:19 long@d12chas375.crc.nd.edu                                        1        
+    524857 50.50873 run_glass_ jcarpen3     r     07/05/2022 16:01:39 hpc@d32cepyc031.crc.nd.edu                                       16        
+    524858 50.50873 run_glass_ jcarpen3     r     07/05/2022 16:01:42 hpc@d32cepyc042.crc.nd.edu                                       16        
+    524859 50.50873 run_glass_ jcarpen3     r     07/05/2022 16:01:44 hpc@d32cepyc031.crc.nd.edu                                       16        
+    524860 50.50873 run_glass_ jcarpen3     r     07/05/2022 16:01:46 hpc@d32cepyc031.crc.nd.edu                                       16        
+    524861 50.50873 run_glass_ jcarpen3     r     07/05/2022 19:26:57 hpc@d32cepyc029.crc.nd.edu                                       16        
+    524862 50.50873 run_glass_ jcarpen3     r     07/05/2022 19:26:57 hpc@d32cepyc029.crc.nd.edu                                       16        
+    524863 50.50873 run_glass_ jcarpen3     r     07/05/2022 19:26:57 hpc@d32cepyc029.crc.nd.edu                                       16        
+    524864 50.50873 run_glass_ jcarpen3     r     07/06/2022 16:57:33 hpc@d32cepyc036.crc.nd.edu                                       16        
+    524865 50.50873 run_glass_ jcarpen3     r     07/06/2022 16:57:48 hpc@d32cepyc037.crc.nd.edu                                       16        
+    524229 50.50873 reconstruc cgainzak     r     07/05/2022 11:52:51 long@d12chas223.crc.nd.edu                                        1        
+    524866 50.50873 run_glass_ jcarpen3     r     07/06/2022 16:59:51 hpc@d32cepyc028.crc.nd.edu                                       16        
+    524867 50.50873 run_glass_ jcarpen3     r     07/06/2022 17:00:54 hpc@d32cepyc037.crc.nd.edu                                       16        
+    524868 50.50873 run_glass_ jcarpen3     r     07/06/2022 17:01:09 hpc@d32cepyc026.crc.nd.edu                                       16        
+    524869 50.50873 run_glass_ jcarpen3     r     07/06/2022 17:01:40 hpc@d32cepyc037.crc.nd.edu                                       16        
+    524870 50.50873 run_glass_ jcarpen3     r     07/06/2022 17:01:54 hpc@d32cepyc036.crc.nd.edu                                       16        
+    524871 50.50873 run_glass_ jcarpen3     r     07/06/2022 17:02:58 hpc@d32cepyc036.crc.nd.edu                                       16        
+    524873 50.50873 run_glass_ jcarpen3     r     07/06/2022 17:03:15 hpc@d32cepyc037.crc.nd.edu                                       16        
+    524875 50.50873 run_glass_ jcarpen3     r     07/06/2022 22:09:54 hpc@d32cepyc028.crc.nd.edu                                       16        
+    524876 50.50873 run_glass_ jcarpen3     r     07/06/2022 22:09:54 hpc@d32cepyc024.crc.nd.edu                                       16        
+    524877 50.50873 run_glass_ jcarpen3     r     07/06/2022 22:09:55 hpc@d32cepyc028.crc.nd.edu                                       16        
+    525021 50.50858 axa1e2     pwang8       r     07/05/2022 20:55:41 long@d12chas491.crc.nd.edu                                       16        
+    524320 50.50857 job.script whu2         r     07/05/2022 12:59:28 long@d12chas356.crc.nd.edu                                        1        
+    524321 50.50857 job.script whu2         r     07/05/2022 13:00:17 long@d12chas356.crc.nd.edu                                        1        
+    524323 50.50857 job.script whu2         r     07/05/2022 13:01:16 long@d12chas356.crc.nd.edu                                        1        
+    524328 50.50856 job.script whu2         r     07/05/2022 13:05:54 long@d12chas356.crc.nd.edu                                        1        
+    524329 50.50856 job.script whu2         r     07/05/2022 13:06:24 long@d12chas512.crc.nd.edu                                        1        
+    524333 50.50856 job.script whu2         r     07/05/2022 13:06:56 long@d12chas464.crc.nd.edu                                        1        
+    524337 50.50856 job.script whu2         r     07/05/2022 13:07:20 long@d12chas512.crc.nd.edu                                        1        
+    528164 50.50843 GC03_CRF   pgiani       r     07/07/2022 19:02:21 long@d24cepyc034.crc.nd.edu                                     192        
+    528166 50.50842 GF03_CRF   pgiani       r     07/07/2022 21:33:09 long@d24cepyc028.crc.nd.edu                                     192        
+    528167 50.50840 GC04_HPC   pgiani       r     07/07/2022 19:15:41 hpc@d24cepyc118.crc.nd.edu                                      192        
+    524795 50.50820 build_dist cgainzak     r     07/05/2022 15:38:25 long@d12chas382.crc.nd.edu                                        1        
+    524802 50.50820 build_dist cgainzak     r     07/05/2022 15:39:36 long@d12chas375.crc.nd.edu                                        1        
+    524807 50.50820 build_dist cgainzak     r     07/05/2022 15:40:34 long@d12chas375.crc.nd.edu                                        1        
+    524809 50.50820 build_dist cgainzak     r     07/05/2022 15:41:29 long@d12chas464.crc.nd.edu                                        1        
+    524811 50.50819 build_dist cgainzak     r     07/05/2022 15:42:17 long@d12chas468.crc.nd.edu                                        1        
+    524818 50.50819 build_dist cgainzak     r     07/05/2022 15:43:20 long@d12chas468.crc.nd.edu                                        1        
+    524964 50.50807 binom_NS   jzhang19     r     07/05/2022 16:35:56 long@d12chas376.crc.nd.edu                                        1 8
+    528368 50.50784 MOD3test   akozlov      r     07/07/2022 23:16:53 hpc@d24cepyc074.crc.nd.edu                                      192        
+    528370 50.50784 MOD3test   akozlov      r     07/07/2022 23:17:27 hpc@d24cepyc078.crc.nd.edu                                      192        
+    528373 50.50783 MOD3test   akozlov      r     07/07/2022 23:23:09 hpc@d24cepyc073.crc.nd.edu                                      192        
+    528376 50.50782 MOD3test   akozlov      r     07/07/2022 23:23:27 hpc@d24cepyc076.crc.nd.edu                                      192        
+    525366 50.50749 enumerateS yzhang66     r     07/05/2022 20:44:01 long@d12chas422.crc.nd.edu                                        1        
+    526129 50.50735 MD-E-7600  sanoj        r     07/07/2022 02:54:59 hpc@d32cepyc035.crc.nd.edu                                       64        
+    526248 50.50729 MD-E-16400 sanoj        r     07/07/2022 08:58:29 hpc@d32cepyc041.crc.nd.edu                                       64        
+    525478 50.50709 rns-2-3-ma bdusell1     r     07/05/2022 23:33:30 gpu@qa-titanx-011.crc.nd.edu                                      1        
+    525645 50.50668 mB_dt      charnish     r     07/06/2022 08:52:41 long@d12chas501.crc.nd.edu                                       24        
+    525862 50.50627 mB2D_p6_e5 charnish     r     07/06/2022 12:33:11 long@d12chas528.crc.nd.edu                                       24        
+    525863 50.50627 mB2D_p6_e6 charnish     r     07/06/2022 12:37:33 long@d12chas496.crc.nd.edu                                       24        
+    525864 50.50627 mB2D_p6_e7 charnish     r     07/06/2022 12:44:18 long@d12chas529.crc.nd.edu                                       24        
+    525869 50.50627 mB2D_p8_e5 charnish     r     07/06/2022 13:20:27 long@d12chas498.crc.nd.edu                                       24        
+    525870 50.50627 mB2D_p8_e6 charnish     r     07/06/2022 15:21:44 long@d12chas494.crc.nd.edu                                       24        
+    525871 50.50627 mB2D_p8_e7 charnish     r     07/06/2022 23:51:25 long@d12chas447.crc.nd.edu                                       24        
+    525876 50.50627 mB2D_p10_e charnish     r     07/07/2022 17:52:05 long@d12chas475.crc.nd.edu                                       24        
+    525877 50.50627 mB2D_p10_e charnish     r     07/07/2022 18:48:00 long@d12chas385.crc.nd.edu                                       24        
+    525878 50.50627 mB2D_p10_e charnish     r     07/07/2022 21:41:59 long@d12chas489.crc.nd.edu                                       24        
+    525965 50.50609 laikago_tr hli25        r     07/06/2022 13:23:17 long@d12chas360.crc.nd.edu                                       24 5
+    525965 50.50609 laikago_tr hli25        r     07/06/2022 13:28:38 long@d12chas514.crc.nd.edu                                       24 6
+    525615 50.50591 trainBins  skhan22      r     07/06/2022 07:58:35 gpu@qa-rtx6k-043.crc.nd.edu                                       1        
+    525808 50.50588 RH_m_1     pturner4     r     07/06/2022 11:17:13 long@d12chas337.crc.nd.edu                                       12        
+    525809 50.50588 RH_m_2     pturner4     r     07/07/2022 05:18:44 long@d12chas334.crc.nd.edu                                       12        
+    525810 50.50588 RH_m_3     pturner4     r     07/07/2022 05:18:44 long@d12chas334.crc.nd.edu                                       12        
+    525811 50.50588 RH_m_4     pturner4     r     07/07/2022 06:32:31 long@d12chas340.crc.nd.edu                                       12        
+    525812 50.50588 RH_m_5     pturner4     r     07/07/2022 06:32:31 long@d12chas340.crc.nd.edu                                       12        
+    525813 50.50588 RH_m_6     pturner4     r     07/07/2022 07:00:44 long@d12chas335.crc.nd.edu                                       12        
+    525815 50.50588 RH_m_7     pturner4     r     07/07/2022 07:00:44 long@d12chas335.crc.nd.edu                                       12        
+    525816 50.50588 RH_m_8     pturner4     r     07/07/2022 22:04:30 long@d12chas338.crc.nd.edu                                       12        
+    525817 50.50588 RH_m_9     pturner4     r     07/07/2022 22:04:30 long@d12chas338.crc.nd.edu                                       12        
+    525955 50.50580 axa6e2     pwang8       r     07/06/2022 12:54:53 long@d12chas464.crc.nd.edu                                       16        
+    525956 50.50580 axa12e3    pwang8       r     07/06/2022 12:55:33 long@d12chas507.crc.nd.edu                                       16        
+    527513 50.50577 wrf_IOP1_6 rdimitro     r     07/07/2022 11:24:12 hpc@d24cepyc068.crc.nd.edu                                       96        
+    526157 50.50576 jobname    ianc         r     07/06/2022 15:27:05 long@d12chas281.crc.nd.edu                                       24        
+    526024 50.50568 axa3e2g32  pwang8       r     07/06/2022 13:48:08 long@d12chas470.crc.nd.edu                                       16        
+    526026 50.50567 axa3e2g32  pwang8       r     07/06/2022 13:52:59 long@d12chas492.crc.nd.edu                                       16        
+    526435 50.50562 Ni-N3-cove cyan2        r     07/06/2022 19:17:15 long@d12chas443.crc.nd.edu                                       24        
+    526444 50.50561 Pt-N3-cove cyan2        r     07/06/2022 20:25:06 long@d12chas306.crc.nd.edu                                       24        
+    526456 50.50557 Au-N3-cove cyan2        r     07/06/2022 22:10:06 long@d12chas304.crc.nd.edu                                       24        
+    525780 50.50552 InceptV1_T mmitchef     r     07/06/2022 11:10:13 gpu@qa-1080ti-001.crc.nd.edu                                      1        
+    526088 50.50538 cleverhans ccrum        r     07/06/2022 14:50:28 long@d32cepyc060.crc.nd.edu                                      12 3
+    526088 50.50538 cleverhans ccrum        r     07/06/2022 14:50:28 long@d32cepyc060.crc.nd.edu                                      12 4
+    526102 50.50537 cleverhans ccrum        r     07/06/2022 14:54:08 long@d32cepyc061.crc.nd.edu                                      12 3
+    526102 50.50537 cleverhans ccrum        r     07/06/2022 14:54:08 long@d32cepyc061.crc.nd.edu                                      12 4
+    526114 50.50536 cleverhans ccrum        r     07/06/2022 14:59:31 long@d12chas110.crc.nd.edu                                       12 2
+    526114 50.50536 cleverhans ccrum        r     07/06/2022 14:59:31 long@d32cepyc060.crc.nd.edu                                      12 3
+    526114 50.50536 cleverhans ccrum        r     07/06/2022 14:59:31 long@d32cepyc060.crc.nd.edu                                      12 4
+    526114 50.50536 cleverhans ccrum        r     07/06/2022 15:23:53 long@d32cepyc061.crc.nd.edu                                      12 5
+    526117 50.50535 cleverhans ccrum        r     07/06/2022 15:26:09 long@d12chas332.crc.nd.edu                                       12 1
+    526117 50.50535 cleverhans ccrum        r     07/06/2022 15:29:26 long@d12chas382.crc.nd.edu                                       12 2
+    526117 50.50535 cleverhans ccrum        r     07/06/2022 15:38:36 long@d32cepyc061.crc.nd.edu                                      12 3
+    526117 50.50535 cleverhans ccrum        r     07/06/2022 15:47:27 long@d12chas524.crc.nd.edu                                       12 4
+    526117 50.50535 cleverhans ccrum        r     07/06/2022 15:58:52 long@d12chas504.crc.nd.edu                                       12 5
+    525910 50.50533 vortex_ner ylu25        r     07/06/2022 12:06:13 gpu@qa-1080ti-001.crc.nd.edu                                      1        
+    526130 50.50533 fgsm-origi ccrum        r     07/06/2022 16:06:28 long@d12chas480.crc.nd.edu                                       12 1
+    526130 50.50533 fgsm-origi ccrum        r     07/06/2022 16:27:55 long@d12chas365.crc.nd.edu                                       12 3
+    526130 50.50533 fgsm-origi ccrum        r     07/06/2022 16:51:41 long@d12chas469.crc.nd.edu                                       12 4
+    525925 50.50530 x165712438 nvenkate     r     07/06/2022 12:19:42 long@d12chas506.crc.nd.edu                                        1        
+    525998 50.50513 zeo_ZnMOP- jcarpen3     r     07/06/2022 13:34:04 long@d12chas375.crc.nd.edu                                        1        
+    526002 50.50513 zeo_ZnMOP- jcarpen3     r     07/06/2022 13:34:42 long@d12chas423.crc.nd.edu                                        1        
+    526003 50.50513 zeo_ZnMOP- jcarpen3     r     07/06/2022 13:34:50 long@d12chas423.crc.nd.edu                                        1        
+    526004 50.50513 zeo_ZnMOP- jcarpen3     r     07/06/2022 13:34:57 long@d12chas423.crc.nd.edu                                        1        
+    526005 50.50513 zeo_ZnMOP- jcarpen3     r     07/06/2022 13:35:09 long@d12chas423.crc.nd.edu                                        1        
+    526657 50.50502 fgsm-old-b ccrum        r     07/06/2022 17:32:40 long@d12chas359.crc.nd.edu                                       12 5
+    526084 50.50495 emb-rns-2- bdusell1     r     07/06/2022 18:01:36 gpu@qa-1080ti-014.crc.nd.edu                                      1        
+    526086 50.50495 emb-rns-2- bdusell1     r     07/06/2022 18:07:22 gpu@qa-titanx-011.crc.nd.edu                                      1        
+    526089 50.50495 emb-rns-2- bdusell1     r     07/06/2022 18:11:58 gpu@qa-titanx-012.crc.nd.edu                                      1        
+    526191 50.50486 Position5_ cayres       r     07/06/2022 15:30:35 long@d12chas505.crc.nd.edu                                        1        
+    526192 50.50486 Position5_ cayres       r     07/06/2022 15:30:37 long@d12chas445.crc.nd.edu                                        1        
+    526193 50.50486 Position5_ cayres       r     07/06/2022 15:30:38 long@d12chas370.crc.nd.edu                                        1        
+    526194 50.50486 Position5_ cayres       r     07/06/2022 15:30:40 long@d12chas376.crc.nd.edu                                        1        
+    526195 50.50486 Position5_ cayres       r     07/06/2022 15:30:41 long@d12chas436.crc.nd.edu                                        1        
+    526196 50.50486 Position5_ cayres       r     07/06/2022 15:30:43 long@d12chas530.crc.nd.edu                                        1        
+    526197 50.50486 Position5_ cayres       r     07/06/2022 15:30:44 long@d12chas530.crc.nd.edu                                        1        
+    526198 50.50486 Position5_ cayres       r     07/06/2022 15:30:46 long@d12chas384.crc.nd.edu                                        1        
+    527032 50.50486 Sub_0624_p dgan         r     07/07/2022 07:11:45 long@d32cepyc069.crc.nd.edu                                      30        
+    527033 50.50486 Sub_0624_p dgan         r     07/07/2022 22:32:29 long@d32cepyc069.crc.nd.edu                                      30        
+    526199 50.50486 Position5_ cayres       r     07/06/2022 15:31:11 long@d12chas384.crc.nd.edu                                        1        
+    526200 50.50486 Position5_ cayres       r     07/06/2022 15:31:23 long@d12chas384.crc.nd.edu                                        1        
+    526202 50.50485 Position5_ cayres       r     07/06/2022 15:31:38 long@d12chas519.crc.nd.edu                                        1        
+    526204 50.50485 Position5_ cayres       r     07/06/2022 15:31:46 long@d12chas519.crc.nd.edu                                        1        
+    526205 50.50485 Position5_ cayres       r     07/06/2022 15:31:49 long@d12chas519.crc.nd.edu                                        1        
+    526206 50.50485 Position5_ cayres       r     07/06/2022 15:31:51 long@d12chas519.crc.nd.edu                                        1        
+    526207 50.50485 Position5_ cayres       r     07/06/2022 15:31:53 long@d12chas512.crc.nd.edu                                        1        
+    526208 50.50485 Position5_ cayres       r     07/06/2022 15:31:54 long@d12chas512.crc.nd.edu                                        1        
+    526209 50.50485 Position5_ cayres       r     07/06/2022 15:31:56 long@d12chas512.crc.nd.edu                                        1        
+    526210 50.50485 Position5_ cayres       r     07/06/2022 15:31:57 long@d12chas512.crc.nd.edu                                        1        
+    526211 50.50485 Position5_ cayres       r     07/06/2022 15:31:59 long@d12chas464.crc.nd.edu                                        1        
+    526213 50.50485 Position5_ cayres       r     07/06/2022 15:32:01 long@d12chas464.crc.nd.edu                                        1        
+    526214 50.50485 Position5_ cayres       r     07/06/2022 15:32:02 long@d12chas464.crc.nd.edu                                        1        
+    526215 50.50485 Position5_ cayres       r     07/06/2022 15:32:06 long@d12chas464.crc.nd.edu                                        1        
+    526216 50.50485 Position5_ cayres       r     07/06/2022 15:32:09 long@d12chas488.crc.nd.edu                                        1        
+    526217 50.50485 Position5_ cayres       r     07/06/2022 15:32:11 long@d12chas488.crc.nd.edu                                        1        
+    526218 50.50485 Position5_ cayres       r     07/06/2022 15:32:12 long@d12chas488.crc.nd.edu                                        1        
+    526219 50.50485 Position5_ cayres       r     07/06/2022 15:32:14 long@d12chas488.crc.nd.edu                                        1        
+    526220 50.50485 Position5_ cayres       r     07/06/2022 15:32:16 long@d12chas507.crc.nd.edu                                        1        
+    526221 50.50485 Position5_ cayres       r     07/06/2022 15:32:17 long@d12chas507.crc.nd.edu                                        1        
+    526223 50.50485 Position5_ cayres       r     07/06/2022 15:32:19 long@d12chas507.crc.nd.edu                                        1        
+    526224 50.50485 Position5_ cayres       r     07/06/2022 15:32:20 long@d12chas507.crc.nd.edu                                        1        
+    526225 50.50485 Position5_ cayres       r     07/06/2022 15:32:22 long@d12chas507.crc.nd.edu                                        1        
+    526226 50.50485 Position5_ cayres       r     07/06/2022 15:34:40 long@d12chas370.crc.nd.edu                                        1        
+    526227 50.50485 Position5_ cayres       r     07/06/2022 15:34:40 long@d12chas370.crc.nd.edu                                        1        
+    526228 50.50485 Position5_ cayres       r     07/06/2022 15:34:40 long@d12chas370.crc.nd.edu                                        1        
+    526229 50.50485 Position5_ cayres       r     07/06/2022 15:34:40 long@d12chas370.crc.nd.edu                                        1        
+    526230 50.50485 Position5_ cayres       r     07/06/2022 15:34:40 long@d12chas370.crc.nd.edu                                        1        
+    526231 50.50485 Position5_ cayres       r     07/06/2022 15:34:40 long@d12chas370.crc.nd.edu                                        1        
+    526233 50.50485 Position5_ cayres       r     07/06/2022 15:34:40 long@d12chas370.crc.nd.edu                                        1        
+    526234 50.50485 Position5_ cayres       r     07/06/2022 15:34:40 long@d12chas370.crc.nd.edu                                        1        
+    526235 50.50485 Position5_ cayres       r     07/06/2022 15:35:09 long@d12chas486.crc.nd.edu                                        1        
+    526447 50.50482 K_36       jmarti53     r     07/06/2022 17:11:54 long@d12chas522.crc.nd.edu                                        4 13
+    526447 50.50482 K_36       jmarti53     r     07/06/2022 17:12:03 long@d12chas421.crc.nd.edu                                        4 14
+    526448 50.50482 K_49       jmarti53     r     07/06/2022 17:21:07 long@d12chas408.crc.nd.edu                                        4 13
+    526448 50.50482 K_49       jmarti53     r     07/06/2022 17:21:07 long@d12chas408.crc.nd.edu                                        4 14
+    526358 50.50478 runitergms dchipman     r     07/06/2022 16:15:11 long@d12chas384.crc.nd.edu                                        1        
+    526360 50.50478 runitergms dchipman     r     07/06/2022 16:16:10 long@d12chas523.crc.nd.edu                                        1        
+    526361 50.50478 runitergms dchipman     r     07/06/2022 16:17:22 long@d12chas431.crc.nd.edu                                        1        
+    526416 50.50475 GP3S_R15_B mcarlozo     r     07/06/2022 16:16:24 long@d12chas192.crc.nd.edu                                        1        
+    526432 50.50473 rt0_parabo dwirasae     r     07/06/2022 16:25:08 long@d6cneh023.crc.nd.edu                                         1        
+    526436 50.50472 rt0_parabo dwirasae     r     07/06/2022 16:27:35 long@d6cneh023.crc.nd.edu                                         1        
+    526977 50.50466 TRIPEG300  sanoj        r     07/06/2022 22:12:45 hpc@d32cepyc024.crc.nd.edu                                       20        
+    526472 50.50465 N2_CuBTC   eosaro       r     07/06/2022 16:59:56 hpc@d32cepyc024.crc.nd.edu                                        1        
+    526644 50.50463 MgMOF74_N2 eosaro       r     07/06/2022 17:08:11 hpc@d32cepyc038.crc.nd.edu                                        1        
+    527357 50.50459 B1e1e1W0p0 ssubrama     r     07/07/2022 10:56:39 long@d32cepyc059.crc.nd.edu                                      64        
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas422.crc.nd.edu                                       12 6
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas432.crc.nd.edu                                       12 7
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas198.crc.nd.edu                                       12 10
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas196.crc.nd.edu                                       12 12
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas210.crc.nd.edu                                       12 13
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas210.crc.nd.edu                                       12 14
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas202.crc.nd.edu                                       12 15
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas202.crc.nd.edu                                       12 16
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas213.crc.nd.edu                                       12 19
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas213.crc.nd.edu                                       12 20
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas220.crc.nd.edu                                       12 21
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas220.crc.nd.edu                                       12 22
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas219.crc.nd.edu                                       12 23
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas219.crc.nd.edu                                       12 24
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas230.crc.nd.edu                                       12 25
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas230.crc.nd.edu                                       12 26
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas208.crc.nd.edu                                       12 27
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas208.crc.nd.edu                                       12 28
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas205.crc.nd.edu                                       12 30
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas224.crc.nd.edu                                       12 31
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas224.crc.nd.edu                                       12 32
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas221.crc.nd.edu                                       12 33
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas201.crc.nd.edu                                       12 36
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas203.crc.nd.edu                                       12 40
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas211.crc.nd.edu                                       12 42
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas199.crc.nd.edu                                       12 43
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas199.crc.nd.edu                                       12 44
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas226.crc.nd.edu                                       12 45
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas226.crc.nd.edu                                       12 46
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas216.crc.nd.edu                                       12 47
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas216.crc.nd.edu                                       12 48
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas217.crc.nd.edu                                       12 51
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas217.crc.nd.edu                                       12 52
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas229.crc.nd.edu                                       12 53
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas229.crc.nd.edu                                       12 54
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas207.crc.nd.edu                                       12 55
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas207.crc.nd.edu                                       12 56
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas218.crc.nd.edu                                       12 58
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas200.crc.nd.edu                                       12 59
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas200.crc.nd.edu                                       12 60
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas227.crc.nd.edu                                       12 61
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas227.crc.nd.edu                                       12 62
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas222.crc.nd.edu                                       12 63
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas222.crc.nd.edu                                       12 64
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas215.crc.nd.edu                                       12 65
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas215.crc.nd.edu                                       12 66
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas197.crc.nd.edu                                       12 71
+    526937 50.50455 C6_ENSO_De mbonas       r     07/06/2022 20:46:27 long@d12chas197.crc.nd.edu                                       12 72
+    526680 50.50448 vortex_0.0 pgu          r     07/06/2022 18:10:39 gpu@qa-v100-002.crc.nd.edu                                        1        
+    526685 50.50446 DUT-32_N2  eosaro       r     07/06/2022 18:22:25 hpc@d32cepyc034.crc.nd.edu                                        1        
+    526688 50.50445 N2_PCN61   eosaro       r     07/06/2022 18:26:05 hpc@d32cepyc028.crc.nd.edu                                        1        
+    526692 50.50444 Vortex_fit pgu          r     07/06/2022 18:31:04 gpu@qa-v100-002.crc.nd.edu                                        1        
+    526986 50.50443 TRIPEG400  sanoj        r     07/06/2022 22:26:27 hpc@d32cepyc026.crc.nd.edu                                       15        
+    526994 50.50434 TRIPEG500  sanoj        r     07/06/2022 23:05:08 hpc@d32cepyc024.crc.nd.edu                                       15        
+    526995 50.50434 TRIPVA400  sanoj        r     07/07/2022 20:43:43 hpc@d32cepyc026.crc.nd.edu                                       15        
+    526744 50.50427 DUT49_N2   eosaro       r     07/06/2022 19:40:01 hpc@d32cepyc026.crc.nd.edu                                        1        
+    526750 50.50425 UIO66_N2   eosaro       r     07/06/2022 19:50:58 hpc@d32cepyc036.crc.nd.edu                                        1        
+    526753 50.50424 ZIF-8_N2   eosaro       r     07/06/2022 19:56:20 hpc@d32cepyc038.crc.nd.edu                                        1        
+    526754 50.50423 N2MOF_177  eosaro       r     07/06/2022 19:59:27 hpc@d32cepyc042.crc.nd.edu                                        1        
+    526777 50.50415 job10      crondonm     r     07/06/2022 20:43:05 long@d12chas512.crc.nd.edu                                        1        
+    526779 50.50415 job12      crondonm     r     07/06/2022 20:43:05 long@d12chas512.crc.nd.edu                                        1        
+    526780 50.50415 job13      crondonm     r     07/06/2022 20:43:05 long@d12chas512.crc.nd.edu                                        1        
+    526783 50.50414 job16      crondonm     r     07/06/2022 20:43:05 long@d12chas512.crc.nd.edu                                        1        
+    526784 50.50414 job17      crondonm     r     07/06/2022 20:43:05 long@d12chas512.crc.nd.edu                                        1        
+    526990 50.50381 IRMOF10B_N eosaro       r     07/06/2022 22:57:45 hpc@d32cepyc042.crc.nd.edu                                        1        
+    526991 50.50381 IRMOF102_N eosaro       r     07/06/2022 22:58:42 hpc@d32cepyc036.crc.nd.edu                                        1        
+    526992 50.50381 IRMOF1010_ eosaro       r     07/06/2022 22:59:43 hpc@d32cepyc028.crc.nd.edu                                        1        
+    527922 50.50378 h2otypful  emarinri     r     07/07/2022 16:43:03 hpc@d32cepyc044.crc.nd.edu                                       64        
+    527026 50.50374 MgMOF74_CO eosaro       r     07/06/2022 23:29:25 hpc@d32cepyc042.crc.nd.edu                                        1        
+    527034 50.50373 DUT32CO2   eosaro       r     07/06/2022 23:35:11 hpc@d32cepyc036.crc.nd.edu                                        1        
+    527038 50.50372 PCN61_CO2  eosaro       r     07/06/2022 23:37:20 hpc@d32cepyc024.crc.nd.edu                                        1        
+    527039 50.50372 DUT49_CO2  eosaro       r     07/06/2022 23:39:01 hpc@d32cepyc026.crc.nd.edu                                        1        
+    527040 50.50371 UIO66_CO2  eosaro       r     07/06/2022 23:41:46 hpc@d32cepyc038.crc.nd.edu                                        1        
+    527060 50.50367 IRMOF16CO2 eosaro       r     07/06/2022 23:59:47 hpc@d32cepyc036.crc.nd.edu                                        1        
+    527594 50.50367 Ag-N3-flop cyan2        r     07/07/2022 13:03:16 long@d24cepyc059.crc.nd.edu                                      48        
+    527628 50.50360 Au-N3-flop cyan2        r     07/07/2022 13:30:52 long@d24cepyc065.crc.nd.edu                                      48        
+    527267 50.50326 enumerateS yzhang66     r     07/07/2022 09:31:54 long@d12chas367.crc.nd.edu                                       24        
+    527280 50.50321 enumerateS yzhang66     r     07/07/2022 10:55:12 long@d12chas473.crc.nd.edu                                       24        
+    527173 50.50319 trainBins  skhan22      r     07/07/2022 03:22:31 gpu@qa-rtx6k-048.crc.nd.edu                                       1        
+    528002 50.50311 B0_et1e1   ssubrama     r     07/07/2022 17:01:12 hpc@d24cepyc109.crc.nd.edu                                       48        
+    527346 50.50304 jobname    ianc         r     07/07/2022 10:52:36 long@d12chas288.crc.nd.edu                                       24        
+    528323 50.50296 low_Dn     pkakka       r     07/07/2022 22:31:56 hpc@d32cepyc003.crc.nd.edu                                       64        
+    527524 50.50291 mainbdbren cbaumeis     r     07/07/2022 12:09:29 long@d12chas427.crc.nd.edu                                       24        
+    527525 50.50291 mainbdrac  cbaumeis     r     07/07/2022 12:09:35 long@d12chas438.crc.nd.edu                                       24        
+    527526 50.50290 mainbdwti  cbaumeis     r     07/07/2022 12:51:59 long@d12chas418.crc.nd.edu                                       24        
+    527541 50.50286 Acetone-DM roconne5     r     07/07/2022 12:07:14 long@d12chas321.crc.nd.edu                                       24        
+    527543 50.50286 Acetone-DM roconne5     r     07/07/2022 12:09:32 long@d12chas322.crc.nd.edu                                       24        
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 09:13:16 long@d12chas387.crc.nd.edu                                       12 4
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 18:59:19 long@d12chas516.crc.nd.edu                                       12 369
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 19:31:14 long@d12chas531.crc.nd.edu                                       12 387
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 20:03:22 long@d12chas426.crc.nd.edu                                       12 405
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 20:19:52 long@d12chas441.crc.nd.edu                                       12 414
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 21:06:28 long@d12chas477.crc.nd.edu                                       12 441
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 21:27:16 long@d12chas502.crc.nd.edu                                       12 459
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 21:50:48 long@d12chas412.crc.nd.edu                                       12 477
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 22:03:28 long@d12chas419.crc.nd.edu                                       12 486
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 22:33:47 long@d12chas499.crc.nd.edu                                       12 504
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 22:46:14 long@d12chas471.crc.nd.edu                                       12 513
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 23:04:43 long@d12chas401.crc.nd.edu                                       12 521
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 23:22:24 long@d12chas516.crc.nd.edu                                       12 531
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 23:32:26 long@d12chas356.crc.nd.edu                                       12 540
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 23:47:11 long@d12chas502.crc.nd.edu                                       12 548
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/07/2022 23:47:42 long@d12chas421.crc.nd.edu                                       12 549
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 00:02:05 long@d12chas461.crc.nd.edu                                       12 557
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 00:12:27 long@d12chas408.crc.nd.edu                                       12 566
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 00:12:33 long@d12chas412.crc.nd.edu                                       12 567
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 00:21:38 long@d12chas377.crc.nd.edu                                       12 573
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 00:25:38 long@d12chas409.crc.nd.edu                                       12 575
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 00:26:19 long@d12chas370.crc.nd.edu                                       12 576
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 00:39:32 long@d12chas377.crc.nd.edu                                       12 584
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 00:53:36 long@d12chas461.crc.nd.edu                                       12 591
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:00:05 long@d12chas364.crc.nd.edu                                       12 593
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:00:45 long@d12chas499.crc.nd.edu                                       12 594
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:06:46 long@d12chas512.crc.nd.edu                                       12 600
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:08:04 long@d12chas376.crc.nd.edu                                       12 602
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:22:18 long@d12chas477.crc.nd.edu                                       12 609
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:31:40 long@d12chas401.crc.nd.edu                                       12 611
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:31:51 long@d12chas355.crc.nd.edu                                       12 612
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:46:59 long@d12chas471.crc.nd.edu                                       12 617
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:47:49 long@d12chas480.crc.nd.edu                                       12 618
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:48:19 long@d12chas419.crc.nd.edu                                       12 619
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 01:52:01 long@d12chas531.crc.nd.edu                                       12 621
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 02:01:32 long@d24cepyc169.crc.nd.edu                                      12 626
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 02:01:36 long@d24cepyc169.crc.nd.edu                                      12 627
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 02:03:47 long@d12chas381.crc.nd.edu                                       12 628
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 02:05:18 long@d12chas359.crc.nd.edu                                       12 629
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 02:09:41 long@d24cepyc169.crc.nd.edu                                      12 630
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 02:16:42 long@d12chas441.crc.nd.edu                                       12 632
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 02:18:24 long@d24cepyc169.crc.nd.edu                                      12 633
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 02:19:35 long@d12chas409.crc.nd.edu                                       12 634
+    527260 50.50281 MIRT_1000a kmcclur5     r     07/08/2022 02:21:24 long@d12chas387.crc.nd.edu                                       12 635
+    527311 50.50280 cool111opt sshavali     r     07/07/2022 10:22:56 long@d12chas433.crc.nd.edu                                       16        
+    527312 50.50279 cool110opt sshavali     r     07/07/2022 10:24:47 long@d12chas485.crc.nd.edu                                       16        
+    527317 50.50279 cool100opt sshavali     r     07/07/2022 10:25:34 long@d12chas114.crc.nd.edu                                       16        
+    527572 50.50276 Pd-N3-cove cyan2        r     07/07/2022 12:50:59 long@d12chas296.crc.nd.edu                                       24        
+    528187 50.50273 test       rsaxena      r     07/07/2022 19:46:31 long@d24cepyc060.crc.nd.edu                                      48        
+    528190 50.50271 Ni_POM     cwaitt       r     07/07/2022 19:53:09 long@d24cepyc058.crc.nd.edu                                      48        
+    527815 50.50264 run_small_ skim43       r     07/07/2022 15:56:51 long@d8civy091.crc.nd.edu                                        32        
+    527236 50.50258 vortex_ner ylu25        r     07/07/2022 07:43:26 gpu@qa-titanx-001.crc.nd.edu                                      1        
+    527240 50.50251 torch-lstm sbothwel     r     07/07/2022 08:16:22 gpu@qa-titanx-012.crc.nd.edu                                      1        
+    527556 50.50250 axa2e1ng12 pwang8       r     07/07/2022 13:03:06 long@d12chas415.crc.nd.edu                                       16        
+    527740 50.50248 jobname    ianc         r     07/07/2022 14:50:56 long@d12chas280.crc.nd.edu                                       24        
+    527752 50.50246 jobname    ianc         r     07/07/2022 14:59:34 long@d12chas283.crc.nd.edu                                       24        
+    527758 50.50244 jobname    ianc         r     07/07/2022 15:07:16 long@d12chas287.crc.nd.edu                                       24        
+    528289 50.50244 CHG_NN     cwaitt       r     07/07/2022 21:49:56 long@d12chas298.crc.nd.edu                                       48 1
+    528289 50.50244 CHG_NN     cwaitt       r     07/07/2022 21:49:56 long@d12chas294.crc.nd.edu                                       48 2
+    527607 50.50240 QLOGIN     cdrisko      r     07/07/2022 13:13:27 long@d12chas117.crc.nd.edu                                       16        
+    527292 50.50240 indiana    sponisc1     r     07/07/2022 09:53:46 long@d12chas481.crc.nd.edu                                        4        
+    527261 50.50239 IRMOF16_H2 eosaro       r     07/07/2022 09:08:49 hpc@d32cepyc026.crc.nd.edu                                        1        
+    527405 50.50238 Con956_Opt khandy       Rr    07/07/2022 11:06:50 long@d12chas468.crc.nd.edu                                        8        
+    527410 50.50238 Con2443_Op khandy       r     07/07/2022 11:08:06 long@d12chas521.crc.nd.edu                                        8        
+    527266 50.50238 UIO66_H2   eosaro       r     07/07/2022 09:13:01 hpc@d32cepyc038.crc.nd.edu                                        1        
+    527268 50.50236 ZIF_8_H2   eosaro       r     07/07/2022 09:19:33 hpc@d32cepyc024.crc.nd.edu                                        1        
+    527504 50.50236 Con1556_Op khandy       r     07/07/2022 11:18:25 long@d12chas525.crc.nd.edu                                        8        
+    527270 50.50234 IRMOF10_H2 eosaro       r     07/07/2022 09:28:24 hpc@d32cepyc026.crc.nd.edu                                        1        
+    527515 50.50233 Con1062_Op khandy       r     07/07/2022 11:28:04 long@d12chas462.crc.nd.edu                                        8        
+    527275 50.50233 MgMOF74_H2 eosaro       r     07/07/2022 09:34:33 hpc@d32cepyc038.crc.nd.edu                                        1        
+    527518 50.50232 Con2177_Op khandy       r     07/07/2022 11:31:44 long@d12chas462.crc.nd.edu                                        8        
+    527519 50.50232 Con1328_Op khandy       r     07/07/2022 11:31:55 long@d12chas426.crc.nd.edu                                        8        
+    527277 50.50232 MOF177_H2  eosaro       r     07/07/2022 09:37:08 hpc@d32cepyc042.crc.nd.edu                                        1        
+    527823 50.50231 OSDA_3     xgao2        r     07/07/2022 16:06:16 long@d12chas312.crc.nd.edu                                       24        
+    527833 50.50227 OSDA3_AIMD xgao2        r     07/07/2022 16:22:18 long@d12chas311.crc.nd.edu                                       24        
+    527926 50.50221 US0.6Li15C rgonza22     r     07/07/2022 16:45:06 long@d12chas016.crc.nd.edu                                       24        
+    527927 50.50221 US0.8Li15C rgonza22     r     07/07/2022 16:45:08 long@d12chas251.crc.nd.edu                                       24        
+    527928 50.50221 US1.0Li15C rgonza22     r     07/07/2022 16:45:09 long@d12chas264.crc.nd.edu                                       24        
+    527929 50.50221 US1.2Li15C rgonza22     r     07/07/2022 16:45:10 long@d12chas008.crc.nd.edu                                       24        
+    527930 50.50221 US1.4Li15C rgonza22     r     07/07/2022 16:45:11 long@d12chas275.crc.nd.edu                                       24        
+    527931 50.50221 US1.6Li15C rgonza22     r     07/07/2022 16:45:13 long@d12chas245.crc.nd.edu                                       24        
+    527932 50.50221 US1.8Li15C rgonza22     r     07/07/2022 16:45:14 long@d12chas244.crc.nd.edu                                       24        
+    527933 50.50221 US2.0Li15C rgonza22     r     07/07/2022 16:45:15 long@d12chas269.crc.nd.edu                                       24        
+    527934 50.50221 US2.2Li15C rgonza22     r     07/07/2022 16:45:16 long@d12chas273.crc.nd.edu                                       24        
+    527935 50.50221 US2.4Li15C rgonza22     r     07/07/2022 16:45:17 long@d12chas263.crc.nd.edu                                       24        
+    527936 50.50221 US2.6Li15C rgonza22     r     07/07/2022 16:45:19 long@d12chas268.crc.nd.edu                                       24        
+    527937 50.50221 US2.8Li15C rgonza22     r     07/07/2022 16:45:20 long@d12chas249.crc.nd.edu                                       24        
+    527939 50.50221 US3.0Li15C rgonza22     r     07/07/2022 16:45:21 long@d12chas250.crc.nd.edu                                       24        
+    527940 50.50221 US3.2Li15C rgonza22     r     07/07/2022 16:45:22 long@d12chas253.crc.nd.edu                                       24        
+    527941 50.50221 US3.4Li15C rgonza22     r     07/07/2022 16:45:23 long@d12chas254.crc.nd.edu                                       24        
+    527942 50.50221 US3.6Li15C rgonza22     r     07/07/2022 16:45:25 long@d12chas242.crc.nd.edu                                       24        
+    527943 50.50221 US3.8Li15C rgonza22     r     07/07/2022 16:45:26 long@d12chas270.crc.nd.edu                                       24        
+    527944 50.50221 US4.0Li15C rgonza22     r     07/07/2022 16:45:27 long@d12chas255.crc.nd.edu                                       24        
+    527945 50.50221 US0.6Li12C rgonza22     r     07/07/2022 16:46:30 long@d12chas266.crc.nd.edu                                       24        
+    527946 50.50221 US0.8Li12C rgonza22     r     07/07/2022 16:46:31 long@d12chas247.crc.nd.edu                                       24        
+    527947 50.50221 US1.0Li12C rgonza22     r     07/07/2022 16:46:32 long@d12chas241.crc.nd.edu                                       24        
+    527948 50.50221 US1.2Li12C rgonza22     r     07/07/2022 16:46:34 long@d12chas259.crc.nd.edu                                       24        
+    527949 50.50221 US1.4Li12C rgonza22     r     07/07/2022 16:46:40 long@d12chas274.crc.nd.edu                                       24        
+    527951 50.50221 US1.6Li12C rgonza22     r     07/07/2022 16:46:48 long@d12chas252.crc.nd.edu                                       24        
+    527952 50.50221 US1.8Li12C rgonza22     r     07/07/2022 16:46:49 long@d12chas010.crc.nd.edu                                       24        
+    527953 50.50221 US2.0Li12C rgonza22     r     07/07/2022 16:46:50 long@d12chas257.crc.nd.edu                                       24        
+    527954 50.50221 US2.2Li12C rgonza22     r     07/07/2022 16:46:52 long@d12chas278.crc.nd.edu                                       24        
+    527955 50.50221 US2.4Li12C rgonza22     r     07/07/2022 16:46:53 long@d12chas261.crc.nd.edu                                       24        
+    527956 50.50221 US2.6Li12C rgonza22     r     07/07/2022 16:46:55 long@d12chas260.crc.nd.edu                                       24        
+    527957 50.50221 US2.8Li12C rgonza22     r     07/07/2022 16:46:56 long@d12chas009.crc.nd.edu                                       24        
+    527958 50.50221 US3.0Li12C rgonza22     r     07/07/2022 16:46:59 long@d12chas011.crc.nd.edu                                       24        
+    527959 50.50221 US3.2Li12C rgonza22     r     07/07/2022 16:47:00 long@d12chas003.crc.nd.edu                                       24        
+    527960 50.50221 US3.4Li12C rgonza22     r     07/07/2022 16:47:02 long@d12chas267.crc.nd.edu                                       24        
+    527961 50.50221 US3.6Li12C rgonza22     r     07/07/2022 16:47:03 long@d12chas017.crc.nd.edu                                       24        
+    527962 50.50221 US3.8Li12C rgonza22     r     07/07/2022 16:47:04 long@d12chas007.crc.nd.edu                                       24        
+    527963 50.50221 US4.0Li12C rgonza22     r     07/07/2022 16:47:05 long@d12chas002.crc.nd.edu                                       24        
+    527967 50.50220 T1_exc     ianc         r     07/07/2022 16:49:59 long@d12chas285.crc.nd.edu                                       24        
+    527639 50.50219 SCAR_1.1   cayres       r     07/07/2022 16:23:42 long@d12chas423.crc.nd.edu                                       12        
+    527640 50.50219 SCAR_1.1   cayres       r     07/07/2022 18:20:22 long@d12chas375.crc.nd.edu                                       12        
+    527641 50.50219 SCAR_1.1   cayres       r     07/07/2022 18:21:35 long@d12chas386.crc.nd.edu                                       12        
+    527642 50.50219 SCAR_1.1   cayres       r     07/07/2022 18:34:29 long@d12chas468.crc.nd.edu                                       12        
+    527643 50.50219 SCAR_1.1   cayres       r     07/07/2022 18:34:48 long@d12chas431.crc.nd.edu                                       12        
+    527644 50.50219 SCAR_1.1   cayres       r     07/07/2022 18:49:09 long@d12chas411.crc.nd.edu                                       12        
+    527645 50.50219 SCAR_1.1   cayres       r     07/07/2022 18:49:09 long@d12chas411.crc.nd.edu                                       12        
+    527646 50.50219 SCAR_1.1   cayres       r     07/07/2022 18:53:48 long@d12chas505.crc.nd.edu                                       12        
+    527647 50.50219 SCAR_1.1   cayres       r     07/07/2022 19:02:20 long@d12chas506.crc.nd.edu                                       12        
+    527648 50.50219 SCAR_1.1   cayres       r     07/07/2022 19:18:15 long@d12chas524.crc.nd.edu                                       12        
+    527649 50.50219 SCAR_1.1   cayres       r     07/07/2022 19:24:17 long@d12chas525.crc.nd.edu                                       12        
+    527650 50.50219 SCAR_1.1   cayres       r     07/07/2022 19:51:44 long@d12chas481.crc.nd.edu                                       12        
+    527652 50.50219 SCAR_1.1   cayres       r     07/07/2022 20:11:25 long@d12chas381.crc.nd.edu                                       12        
+    527653 50.50219 SCAR_1.1   cayres       r     07/07/2022 20:33:02 long@d12chas384.crc.nd.edu                                       12        
+    527654 50.50219 SCAR_1.1   cayres       r     07/07/2022 20:48:26 long@d12chas469.crc.nd.edu                                       12        
+    527655 50.50219 SCAR_1.1   cayres       r     07/07/2022 20:49:23 long@d12chas366.crc.nd.edu                                       12        
+    527656 50.50219 SCAR_1.1   cayres       r     07/07/2022 20:49:23 long@d12chas366.crc.nd.edu                                       12        
+    527657 50.50219 SCAR_1.1   cayres       r     07/07/2022 20:49:23 long@d12chas456.crc.nd.edu                                       12        
+    527658 50.50219 SCAR_1.1   cayres       r     07/07/2022 20:49:23 long@d12chas456.crc.nd.edu                                       12        
+    527659 50.50219 SCAR_1.1   cayres       r     07/07/2022 20:59:55 long@d12chas364.crc.nd.edu                                       12        
+    527562 50.50216 reeses     hculber2     r     07/07/2022 12:45:20 long@d12chas355.crc.nd.edu                                        8        
+    528126 50.50210 ZD2-1      roconne5     r     07/07/2022 17:32:26 long@d12chas318.crc.nd.edu                                       24        
+    527419 50.50210 train_main cwahl2       r     07/07/2022 11:14:23 gpu@qa-1080ti-002.crc.nd.edu                                      1        
+    527420 50.50209 train_main cwahl2       r     07/07/2022 11:14:30 gpu@qa-1080ti-002.crc.nd.edu                                      1        
+    527506 50.50208 runitergms dchipman     r     07/07/2022 11:18:59 long@d12chas507.crc.nd.edu                                        1        
+    527507 50.50208 runitergms dchipman     r     07/07/2022 11:19:00 long@d12chas382.crc.nd.edu                                        1        
+    528163 50.50190 ZC4-0      roconne5     r     07/07/2022 18:58:33 long@d12chas319.crc.nd.edu                                       24        
+    527557 50.50190 x165721181 nvenkate     r     07/07/2022 12:36:54 long@d12chas431.crc.nd.edu                                        1        
+    527999 50.50187 Qr_deno    mlu          r     07/07/2022 21:01:27 long@d12chas428.crc.nd.edu                                       16        
+    527589 50.50185 SEAL_pubme kdong2       r     07/07/2022 13:46:57 gpu@qa-1080ti-003.crc.nd.edu                                      1        
+    528132 50.50177 VT-3-b     bbullard     r     07/07/2022 17:41:56 long@d12chas331.crc.nd.edu                                       16        
+    527660 50.50176 INTERACTIV wwang23      r     07/07/2022 13:36:37 long@d32cepyc054.crc.nd.edu                                       1        
+    527704 50.50168 runitergms dchipman     r     07/07/2022 14:11:02 long@d12chas486.crc.nd.edu                                        1        
+    527759 50.50154 stylegan_0 syao2        r     07/07/2022 15:08:40 gpu@qa-v100-001.crc.nd.edu                                        1        
+    527786 50.50149 stylegan_0 syao2        r     07/07/2022 15:32:13 gpu@qa-v100-001.crc.nd.edu                                        1        
+    527799 50.50147 stylegan_0 syao2        r     07/07/2022 15:39:06 gpu@qa-v100-001.crc.nd.edu                                        1        
+    527812 50.50144 stylegan_0 syao2        r     07/07/2022 15:52:11 gpu@qa-v100-001.crc.nd.edu                                        1        
+    527818 50.50142 GPBO_SA_Re mcarlozo     r     07/07/2022 16:01:32 long@d12chas382.crc.nd.edu                                        1        
+    527820 50.50142 x165722413 nvenkate     r     07/07/2022 16:02:12 long@d12chas445.crc.nd.edu                                        1        
+    527826 50.50139 pickle_dat ncortes      r     07/07/2022 16:14:47 long@d12chas376.crc.nd.edu                                        1        
+    527827 50.50138 case0_erco ncortes      r     07/07/2022 16:17:02 long@d12chas376.crc.nd.edu                                        1        
+    528341 50.50138 N3flat-Pt- cyan2        r     07/07/2022 22:57:14 long@d12chas368.crc.nd.edu                                       24        
+    528342 50.50137 N3flat-Cu- cyan2        r     07/07/2022 22:57:48 long@d12chas310.crc.nd.edu                                       24        
+    528343 50.50137 N3flat-Ni- cyan2        r     07/07/2022 22:58:04 long@d12chas440.crc.nd.edu                                       24        
+    528346 50.50136 N3flat-Ag- cyan2        r     07/07/2022 23:03:02 long@d12chas448.crc.nd.edu                                       24        
+    528348 50.50136 N3flat-Au- cyan2        r     07/07/2022 23:12:35 long@d12chas307.crc.nd.edu                                       24        
+    528349 50.50135 FIPWUYk33  sanoj        r     07/07/2022 23:12:35 long@d12chas511.crc.nd.edu                                       24        
+    528353 50.50135 FIPWUYk44  sanoj        r     07/07/2022 23:24:00 long@d12chas361.crc.nd.edu                                       24        
+    528355 50.50135 FIPWUYk55  sanoj        r     07/07/2022 23:24:09 long@d12chas520.crc.nd.edu                                       24        
+    527964 50.50131 train_anlg wfang        r     07/07/2022 16:48:21 gpu@qa-2080ti-007.crc.nd.edu                                      1        
+    527965 50.50131 water_int  emarinri     r     07/07/2022 16:48:36 gpu@qa-1080ti-008.crc.nd.edu                                      1        
+    527985 50.50129 rns-1-3+rn bdusell1     r     07/07/2022 16:55:36 gpu@qa-1080ti-013.crc.nd.edu                                      1        
+    527986 50.50129 rns-1-3+rn bdusell1     r     07/07/2022 16:55:37 gpu@qa-xp-010.crc.nd.edu                                          1        
+    527987 50.50129 rns-2-2+rn bdusell1     r     07/07/2022 16:55:39 gpu@qa-1080ti-012.crc.nd.edu                                      1        
+    527996 50.50129 job.script whu2         r     07/07/2022 16:56:40 long@d12chas504.crc.nd.edu                                        1        
+    528371 50.50129 VAHWOS01k3 sanoj        r     07/07/2022 23:28:07 long@d12chas495.crc.nd.edu                                       24        
+    527997 50.50129 job.script whu2         r     07/07/2022 16:56:57 long@d12chas504.crc.nd.edu                                        1        
+    528374 50.50129 VAHWOS01k4 sanoj        r     07/07/2022 23:28:10 long@d12chas500.crc.nd.edu                                       24        
+    528375 50.50129 VAHWOS01k5 sanoj        r     07/07/2022 23:32:26 long@d12chas425.crc.nd.edu                                       24        
+    528377 50.50128 pyraa      alangfor     r     07/07/2022 23:34:11 long@d12chas437.crc.nd.edu                                       24        
+    528004 50.50128 job.script whu2         r     07/07/2022 17:03:24 long@d12chas445.crc.nd.edu                                        1        
+    528005 50.50128 job.script whu2         r     07/07/2022 17:03:40 long@d12chas521.crc.nd.edu                                        1        
+    528006 50.50128 job.script whu2         r     07/07/2022 17:03:55 long@d12chas521.crc.nd.edu                                        1        
+    528378 50.50127 pyraa      alangfor     r     07/07/2022 23:53:59 long@d12chas449.crc.nd.edu                                       24        
+    528379 50.50127 pyraa      alangfor     r     07/08/2022 00:10:15 long@d12chas410.crc.nd.edu                                       24        
+    528380 50.50127 pyraa      alangfor     r     07/08/2022 00:26:52 long@d12chas404.crc.nd.edu                                       24        
+    528381 50.50127 pyraa      alangfor     r     07/08/2022 01:06:19 long@d12chas515.crc.nd.edu                                       24        
+    528382 50.50127 pyraa      alangfor     r     07/08/2022 01:59:31 long@d12chas373.crc.nd.edu                                       24        
+    528019 50.50125 job.script whu2         r     07/07/2022 17:16:22 long@d12chas431.crc.nd.edu                                        1        
+    528020 50.50125 job.script whu2         r     07/07/2022 17:16:43 long@d12chas431.crc.nd.edu                                        1        
+    528024 50.50124 job.script whu2         r     07/07/2022 17:20:28 long@d12chas431.crc.nd.edu                                        1        
+    528025 50.50124 job.script whu2         r     07/07/2022 17:20:52 long@d12chas431.crc.nd.edu                                        1        
+    528104 50.50123 job.script whu2         r     07/07/2022 17:23:11 long@d12chas431.crc.nd.edu                                        1        
+    528119 50.50123 job.script whu2         r     07/07/2022 17:23:44 long@d12chas439.crc.nd.edu                                        1        
+    528130 50.50120 In-between kmukherj     r     07/07/2022 17:36:00 long@d12chas400.crc.nd.edu                                        1        
+    528407 50.50117 run_mlab_a dhallack     r     07/08/2022 00:12:12 long@d32cepyc070.crc.nd.edu                                      24        
+    528147 50.50112 water_int  emarinri     r     07/07/2022 19:23:13 gpu@qa-1080ti-008.crc.nd.edu                                      1        
+    528248 50.50107 ADMMQPEA62 gbravopa     r     07/08/2022 01:03:24 long@d12chas439.crc.nd.edu                                       10 2
+    528248 50.50107 ADMMQPEA62 gbravopa     r     07/08/2022 01:03:24 long@d12chas522.crc.nd.edu                                       10 3
+    528248 50.50107 ADMMQPEA62 gbravopa     r     07/08/2022 01:03:24 long@d12chas414.crc.nd.edu                                       10 4
+    528248 50.50107 ADMMQPEA62 gbravopa     r     07/08/2022 01:03:24 long@d12chas519.crc.nd.edu                                       10 5
+    528248 50.50107 ADMMQPEA62 gbravopa     r     07/08/2022 01:03:24 long@d12chas519.crc.nd.edu                                       10 6
+    528248 50.50107 ADMMQPEA62 gbravopa     r     07/08/2022 01:03:24 long@d12chas523.crc.nd.edu                                       10 9
+    528248 50.50107 ADMMQPEA62 gbravopa     r     07/08/2022 01:03:24 long@d12chas523.crc.nd.edu                                       10 10
+    528169 50.50106 tr-30-line nvance1      r     07/07/2022 19:26:40 gpu@qa-titanx-013.crc.nd.edu                                      4 1
+    528169 50.50106 tr-30-line nvance1      r     07/07/2022 19:27:16 gpu@qa-rtx6k-017.crc.nd.edu                                       4 2
+    528169 50.50106 tr-30-line nvance1      r     07/07/2022 19:27:49 gpu@qa-xp-013.crc.nd.edu                                          4 3
+    528169 50.50106 tr-30-line nvance1      r     07/07/2022 19:28:13 gpu@qa-rtx6k-017.crc.nd.edu                                       4 4
+    528169 50.50106 tr-30-line nvance1      r     07/07/2022 19:29:05 gpu@qa-titanx-013.crc.nd.edu                                      4 5
+    528362 50.50101 portal_fra nfeng        r     07/07/2022 23:07:55 long@d12chas486.crc.nd.edu                                       16        
+    528367 50.50100 L_shape_de nfeng        r     07/07/2022 23:13:31 long@d12chas530.crc.nd.edu                                       16        
+    528183 50.50092 C_GF01_R1  pgiani       r     07/07/2022 19:36:48 hpc@d24cepyc103.crc.nd.edu                                        1        
+    528195 50.50085 QLOGIN     horshan      r     07/07/2022 20:08:01 gpu@qa-titanx-012.crc.nd.edu                                      1        
+    528253 50.50080 Batch_7_Tr fhuizar      r     07/07/2022 21:18:32 long@d12chas470.crc.nd.edu                                        4        
+    528221 50.50079 train_main cwahl2       r     07/07/2022 20:29:47 gpu@qa-1080ti-004.crc.nd.edu                                      1        
+    528223 50.50079 train_main cwahl2       r     07/07/2022 20:30:04 gpu@qa-1080ti-002.crc.nd.edu                                      1        
+    528225 50.50078 stylegan_0 syao2        r     07/07/2022 20:35:02 gpu@qa-v100-002.crc.nd.edu                                        1        
+    528226 50.50078 train_main cwahl2       r     07/07/2022 20:36:46 gpu@qa-1080ti-008.crc.nd.edu                                      1        
+    528264 50.50077 transHWR.c sgrieggs     r     07/07/2022 21:29:15 gpu@qa-titanx-001.crc.nd.edu                                      4        
+    528270 50.50069 generation yfang6       r     07/07/2022 21:30:36 long@d12chas421.crc.nd.edu                                        2 14
+    528270 50.50069 generation yfang6       r     07/07/2022 21:30:36 long@d12chas421.crc.nd.edu                                        2 15
+    528270 50.50069 generation yfang6       r     07/07/2022 21:30:36 long@d12chas403.crc.nd.edu                                        2 18
+    528270 50.50069 generation yfang6       r     07/07/2022 21:30:36 long@d12chas403.crc.nd.edu                                        2 19
+    528270 50.50069 generation yfang6       r     07/07/2022 21:30:36 long@d12chas487.crc.nd.edu                                        2 20
+    528270 50.50069 generation yfang6       r     07/07/2022 21:30:36 long@d12chas435.crc.nd.edu                                        2 23
+    528270 50.50069 generation yfang6       r     07/07/2022 21:30:36 long@d12chas429.crc.nd.edu                                        2 24
+    528270 50.50069 generation yfang6       r     07/07/2022 21:30:36 long@d12chas429.crc.nd.edu                                        2 25
+    528295 50.50067 transHWR.c sgrieggs     r     07/07/2022 22:13:30 gpu@qa-titanx-013.crc.nd.edu                                      4        
+    528255 50.50066 QLOGIN     aboyd3       r     07/07/2022 21:25:51 gpu@qa-rtx6k-017.crc.nd.edu                                       1        
+    528256 50.50066 x165724363 nvenkate     r     07/07/2022 21:27:20 long@d12chas523.crc.nd.edu                                        1        
+    528297 50.50066 acm        ytian5       r     07/07/2022 22:17:45 gpu@qa-xp-016.crc.nd.edu                                          4        
+    528259 50.50066 job.script whu2         r     07/07/2022 21:28:04 long@d12chas375.crc.nd.edu                                        1        
+    528260 50.50066 job.script whu2         r     07/07/2022 21:28:24 long@d12chas488.crc.nd.edu                                        1        
+    528261 50.50066 job.script whu2         r     07/07/2022 21:28:49 long@d12chas439.crc.nd.edu                                        1        
+    528265 50.50066 job.script whu2         r     07/07/2022 21:29:20 long@d12chas468.crc.nd.edu                                        1        
+    528266 50.50065 job.script whu2         r     07/07/2022 21:29:32 long@d12chas468.crc.nd.edu                                        1        
+    528267 50.50065 job.script whu2         r     07/07/2022 21:29:45 long@d12chas521.crc.nd.edu                                        1        
+    528271 50.50065 job.script whu2         r     07/07/2022 21:30:41 long@d12chas355.crc.nd.edu                                        1        
+    528273 50.50065 job.script whu2         r     07/07/2022 21:31:03 long@d12chas525.crc.nd.edu                                        1        
+    528274 50.50065 job.script whu2         r     07/07/2022 21:31:25 long@d12chas426.crc.nd.edu                                        1        
+    528312 50.50064 acm        ytian5       r     07/07/2022 22:24:25 gpu@qa-p100-004.crc.nd.edu                                        4        
+    528313 50.50064 acm        ytian5       r     07/07/2022 22:24:28 gpu@qa-p100-003.crc.nd.edu                                        4        
+    528314 50.50064 acm        ytian5       r     07/07/2022 22:24:30 gpu@qa-p100-006.crc.nd.edu                                        4        
+    528315 50.50064 acm        ytian5       r     07/07/2022 22:24:31 gpu@qa-p100-002.crc.nd.edu                                        4        
+    528322 50.50063 OFUWIVK33  sanoj        r     07/07/2022 22:31:16 hpc@d32cepyc024.crc.nd.edu                                        4        
+    528325 50.50062 OFUWIVK44  sanoj        r     07/07/2022 22:33:09 hpc@d32cepyc026.crc.nd.edu                                        4        
+    528330 50.50062 OFUWIVK55  sanoj        r     07/07/2022 22:34:36 hpc@d32cepyc036.crc.nd.edu                                        4        
+    528306 50.50053 train.sh   psoga        r     07/07/2022 22:20:59 gpu@qa-titanx-012.crc.nd.edu                                      1        
+    528388 50.50035 cap2       ptinsley     r     07/07/2022 23:40:41 gpu@qa-xp-014.crc.nd.edu                                          1        
+    528390 50.50035 cap8       ptinsley     r     07/07/2022 23:41:04 gpu@qa-titanx-014.crc.nd.edu                                      1        
+    528394 50.50034 cap4       ptinsley     r     07/07/2022 23:44:05 gpu@qa-xp-014.crc.nd.edu                                          1        
+    528415 50.50034 cxr        aboyd3       r     07/08/2022 00:36:24 gpu@qa-1080ti-003.crc.nd.edu                                      4 1
+    528415 50.50034 cxr        aboyd3       r     07/08/2022 00:36:24 gpu@qa-1080ti-003.crc.nd.edu                                      4 2
+    528415 50.50034 cxr        aboyd3       r     07/08/2022 00:36:24 gpu@qa-titanx-001.crc.nd.edu                                      4 3
+    528415 50.50034 cxr        aboyd3       r     07/08/2022 00:36:24 gpu@qa-titanx-013.crc.nd.edu                                      4 4
+    528415 50.50034 cxr        aboyd3       r     07/08/2022 00:36:24 gpu@qa-1080ti-008.crc.nd.edu                                      4 5
+    528415 50.50034 cxr        aboyd3       r     07/08/2022 00:36:24 gpu@qa-1080ti-004.crc.nd.edu                                      4 6
+    528415 50.50034 cxr        aboyd3       r     07/08/2022 00:36:24 gpu@qa-1080ti-004.crc.nd.edu                                      4 7
+    528415 50.50034 cxr        aboyd3       r     07/08/2022 00:36:24 gpu@qa-rtx6k-017.crc.nd.edu                                       4 8
+    528415 50.50034 cxr        aboyd3       r     07/08/2022 00:36:24 gpu@qa-xp-013.crc.nd.edu                                          4 9
+    528415 50.50034 cxr        aboyd3       r     07/08/2022 00:36:24 gpu@qa-xp-013.crc.nd.edu                                          4 10
+    528411 50.50026 cap16      ptinsley     r     07/08/2022 00:19:33 gpu@qa-titanx-014.crc.nd.edu                                      1        
+    528469 50.50023 HPOBENCH   sabraha2     r     07/08/2022 01:22:06 gpu@qa-rtx6k-044.crc.nd.edu                                       4        
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:00:35 long@d12chas308.crc.nd.edu                                        1 1
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:00:35 long@d12chas308.crc.nd.edu                                        1 2
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:00:35 long@d12chas308.crc.nd.edu                                        1 3
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:00:38 long@d12chas308.crc.nd.edu                                        1 4
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:15:39 long@d12chas297.crc.nd.edu                                        1 5
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:15:49 long@d12chas297.crc.nd.edu                                        1 6
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:15:53 long@d12chas297.crc.nd.edu                                        1 7
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:15:55 long@d12chas297.crc.nd.edu                                        1 8
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:15:55 long@d12chas297.crc.nd.edu                                        1 9
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:15:56 long@d12chas297.crc.nd.edu                                        1 10
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:15:58 long@d12chas297.crc.nd.edu                                        1 11
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:16:01 long@d12chas297.crc.nd.edu                                        1 12
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:16:03 long@d12chas297.crc.nd.edu                                        1 13
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:16:09 long@d12chas297.crc.nd.edu                                        1 14
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:16:17 long@d12chas297.crc.nd.edu                                        1 15
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:16:51 long@d12chas297.crc.nd.edu                                        1 16
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:18:45 long@d12chas293.crc.nd.edu                                        1 17
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:18:48 long@d12chas293.crc.nd.edu                                        1 18
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:18:48 long@d12chas293.crc.nd.edu                                        1 19
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:18:50 long@d12chas293.crc.nd.edu                                        1 20
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:18:53 long@d12chas293.crc.nd.edu                                        1 21
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:00 long@d12chas293.crc.nd.edu                                        1 22
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:03 long@d12chas293.crc.nd.edu                                        1 25
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:05 long@d12chas293.crc.nd.edu                                        1 26
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:06 long@d12chas293.crc.nd.edu                                        1 27
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:08 long@d12chas293.crc.nd.edu                                        1 28
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:09 long@d12chas293.crc.nd.edu                                        1 29
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:10 long@d12chas293.crc.nd.edu                                        1 30
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:10 long@d12chas293.crc.nd.edu                                        1 31
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:11 long@d12chas293.crc.nd.edu                                        1 32
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:14 long@d12chas293.crc.nd.edu                                        1 33
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:17 long@d12chas293.crc.nd.edu                                        1 34
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:18 long@d12chas293.crc.nd.edu                                        1 35
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:21 long@d12chas293.crc.nd.edu                                        1 36
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:24 long@d12chas293.crc.nd.edu                                        1 37
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:25 long@d12chas293.crc.nd.edu                                        1 38
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:25 long@d12chas293.crc.nd.edu                                        1 39
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:29 long@d12chas293.crc.nd.edu                                        1 40
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:37 long@d12chas297.crc.nd.edu                                        1 41
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:42 long@d12chas308.crc.nd.edu                                        1 42
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:43 long@d12chas308.crc.nd.edu                                        1 43
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:49 long@d12chas297.crc.nd.edu                                        1 44
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:49 long@d12chas297.crc.nd.edu                                        1 45
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:19:57 long@d12chas297.crc.nd.edu                                        1 46
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:20:01 long@d12chas297.crc.nd.edu                                        1 47
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:20:03 long@d12chas308.crc.nd.edu                                        1 48
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:20:03 long@d12chas297.crc.nd.edu                                        1 49
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:20:03 long@d12chas297.crc.nd.edu                                        1 50
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:20:03 long@d12chas297.crc.nd.edu                                        1 51
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:20:09 long@d12chas297.crc.nd.edu                                        1 52
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:20:13 long@d12chas297.crc.nd.edu                                        1 53
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:20:17 long@d12chas297.crc.nd.edu                                        1 54
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:20:22 long@d12chas297.crc.nd.edu                                        1 55
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:20:27 long@d12chas308.crc.nd.edu                                        1 56
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:22:28 long@d12chas308.crc.nd.edu                                        1 57
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:23:41 long@d12chas308.crc.nd.edu                                        1 58
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:23:55 long@d12chas308.crc.nd.edu                                        1 59
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:08 long@d12chas308.crc.nd.edu                                        1 60
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:11 long@d12chas308.crc.nd.edu                                        1 61
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:33 long@d12chas308.crc.nd.edu                                        1 62
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:42 long@d12chas308.crc.nd.edu                                        1 63
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:44 long@d12chas308.crc.nd.edu                                        1 64
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:47 long@d12chas308.crc.nd.edu                                        1 65
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:50 long@d12chas308.crc.nd.edu                                        1 66
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:52 long@d12chas308.crc.nd.edu                                        1 67
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:52 long@d12chas308.crc.nd.edu                                        1 68
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:53 long@d12chas308.crc.nd.edu                                        1 69
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:53 long@d12chas308.crc.nd.edu                                        1 70
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:57 long@d12chas308.crc.nd.edu                                        1 71
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:58 long@d12chas308.crc.nd.edu                                        1 72
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:24:59 long@d12chas299.crc.nd.edu                                        1 73
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:01 long@d12chas299.crc.nd.edu                                        1 74
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:03 long@d12chas299.crc.nd.edu                                        1 75
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:05 long@d12chas299.crc.nd.edu                                        1 76
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:06 long@d12chas299.crc.nd.edu                                        1 77
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:10 long@d12chas299.crc.nd.edu                                        1 78
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:10 long@d12chas299.crc.nd.edu                                        1 79
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:13 long@d12chas299.crc.nd.edu                                        1 80
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:21 long@d12chas299.crc.nd.edu                                        1 81
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:21 long@d12chas299.crc.nd.edu                                        1 82
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:24 long@d12chas299.crc.nd.edu                                        1 83
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:27 long@d12chas299.crc.nd.edu                                        1 84
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:29 long@d12chas299.crc.nd.edu                                        1 85
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:30 long@d12chas299.crc.nd.edu                                        1 86
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:31 long@d12chas299.crc.nd.edu                                        1 87
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:35 long@d12chas299.crc.nd.edu                                        1 88
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:36 long@d12chas299.crc.nd.edu                                        1 89
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:36 long@d12chas299.crc.nd.edu                                        1 90
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:40 long@d12chas299.crc.nd.edu                                        1 91
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:44 long@d12chas299.crc.nd.edu                                        1 92
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:51 long@d12chas299.crc.nd.edu                                        1 93
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:54 long@d12chas299.crc.nd.edu                                        1 94
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:25:58 long@d12chas299.crc.nd.edu                                        1 95
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:26:17 long@d12chas299.crc.nd.edu                                        1 96
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:28:30 long@d12chas301.crc.nd.edu                                        1 98
+    528441 50.50019 Statistics agoswami     r     07/08/2022 01:31:10 long@d12chas301.crc.nd.edu                                        1 99
+    528442 50.50019 Statistics agoswami     r     07/08/2022 02:21:11 long@d12chas293.crc.nd.edu                                        1 33
+    528442 50.50019 Statistics agoswami     r     07/08/2022 02:21:43 long@d12chas293.crc.nd.edu                                        1 34
+    528442 50.50019 Statistics agoswami     r     07/08/2022 02:22:01 long@d12chas301.crc.nd.edu                                        1 35
+    528442 50.50019 Statistics agoswami     r     07/08/2022 02:22:31 long@d12chas301.crc.nd.edu                                        1 36
+    528461 50.50018 QLOGIN     hwang21      r     07/08/2022 00:53:49 gpu@qa-p100-005.crc.nd.edu                                        1        
+    528464 50.50015 gtn-planar psoga        r     07/08/2022 01:07:29 gpu@qa-titanx-011.crc.nd.edu                                      1 1
+    528464 50.50015 gtn-planar psoga        r     07/08/2022 01:07:29 gpu@qa-1080ti-011.crc.nd.edu                                      1 4
+    528464 50.50015 gtn-planar psoga        r     07/08/2022 01:07:29 gpu@qa-1080ti-011.crc.nd.edu                                      1 5
+    528468 50.50011 A24_oxygen gliu7        r     07/08/2022 01:21:17 gpu@qa-2080ti-006.crc.nd.edu                                      1        
+    528472 50.50010 eigenvecto khart9       r     07/08/2022 01:28:34 long@d32cepyc063.crc.nd.edu                                       1        
+    528474 50.50005 lstm+lstm+ bdusell1     r     07/08/2022 01:47:25 gpu@qa-1080ti-013.crc.nd.edu                                      1        
+    528475 50.50005 lstm+lstm+ bdusell1     r     07/08/2022 01:47:26 gpu@qa-1080ti-014.crc.nd.edu                                      1        
+    528476 50.50005 gru+gru+mu bdusell1     r     07/08/2022 01:47:27 gpu@qa-xp-010.crc.nd.edu                                          1        
+    528477 50.50005 gru+gru+mu bdusell1     r     07/08/2022 01:47:28 gpu@qa-1080ti-011.crc.nd.edu                                      1        
+    528480 50.50005 jm-256+jm- bdusell1     r     07/08/2022 01:47:31 gpu@qa-1080ti-012.crc.nd.edu                                      1        
+    528481 50.50005 jm-256+jm- bdusell1     r     07/08/2022 01:47:33 gpu@qa-1080ti-013.crc.nd.edu                                      1        
+    528482 50.50005 jm-hidden+ bdusell1     r     07/08/2022 01:47:34 gpu@qa-1080ti-014.crc.nd.edu                                      1        
+    528483 50.50005 jm-hidden+ bdusell1     r     07/08/2022 01:47:35 gpu@qa-xp-010.crc.nd.edu                                          1        
+    528484 50.50005 rns-1-3+rn bdusell1     r     07/08/2022 01:47:36 gpu@qa-1080ti-012.crc.nd.edu                                      1        
+    528485 50.50005 rns-1-3+rn bdusell1     r     07/08/2022 01:47:37 gpu@qa-xp-009.crc.nd.edu                                          1        
+    528486 50.50005 rns-2-2+rn bdusell1     r     07/08/2022 01:47:38 gpu@qa-1080ti-013.crc.nd.edu                                      1        
+    528487 50.50005 rns-2-2+rn bdusell1     r     07/08/2022 01:47:39 gpu@qa-titanx-011.crc.nd.edu                                      1        
+    528488 50.50005 rns-3-3+rn bdusell1     r     07/08/2022 01:47:40 gpu@qa-1080ti-014.crc.nd.edu                                      1        
+    528490 50.50005 rns-3-3+rn bdusell1     r     07/08/2022 01:47:42 gpu@qa-xp-010.crc.nd.edu                                          1        
+    528496 50.50003 gtn-k3c-50 psoga        r     07/08/2022 01:58:27 gpu@qa-xp-009.crc.nd.edu                                          1 1
+    528496 50.50003 gtn-k3c-50 psoga        r     07/08/2022 01:58:27 gpu@qa-xp-009.crc.nd.edu                                          1 2
+    528496 50.50003 gtn-k3c-50 psoga        r     07/08/2022 01:58:27 gpu@qa-xp-009.crc.nd.edu                                          1 3
+    528496 50.50003 gtn-k3c-50 psoga        r     07/08/2022 01:58:27 gpu@qa-1080ti-001.crc.nd.edu                                      1 4
+    528496 50.50003 gtn-k3c-50 psoga        r     07/08/2022 01:59:45 gpu@qa-1080ti-012.crc.nd.edu                                      1 5
+    528499 50.50002 prep_GESTO gling        r     07/08/2022 02:03:08 long@d24cepyc139.crc.nd.edu                                       1        
+    528502 50.50001 de-en_nmt  ksible       r     07/08/2022 02:06:14 gpu@qa-1080ti-011.crc.nd.edu                                      1        
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 1
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 2
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 3
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 4
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 5
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 6
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 7
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 8
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 9
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 10
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 11
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 12
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 13
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 14
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 15
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 16
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 17
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 18
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 19
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 20
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 21
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 22
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 23
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 24
+    528505 50.50000 eigenvecto khart9       r     07/08/2022 02:09:56 long@d32cepyc063.crc.nd.edu                                       1 25
+    489774 50.58705 MLP_NeRV_M ktang2       qw    06/12/2022 05:01:58                                                                   1        
+    523288 50.51526 P030015    jxu24        qw    07/04/2022 02:21:27                                                                  48        
+    523289 50.51526 P030019    jxu24        qw    07/04/2022 02:21:58                                                                  48        
+    523310 50.51496 P040016_TC jxu24        qw    07/04/2022 04:29:46                                                                  48        
+    523764 50.51286 P090570_TC jxu24        qw    07/04/2022 19:26:01                                                                  48        
+    523766 50.51286 P090515_TC jxu24        qw    07/04/2022 19:26:55                                                                  48        
+    523767 50.51286 P090459_TC jxu24        qw    07/04/2022 19:27:32                                                                  48        
+    523585 50.51284 H6         cmichae2     qw    07/04/2022 12:56:57                                                                  24        
+    523586 50.51284 H7         cmichae2     qw    07/04/2022 12:56:58                                                                  24        
+    523587 50.51284 H8         cmichae2     qw    07/04/2022 12:56:59                                                                  24        
+    523588 50.51284 H9         cmichae2     qw    07/04/2022 12:57:01                                                                  24        
+    523773 50.51283 P030098    jxu24        qw    07/04/2022 19:38:43                                                                  48        
+    523774 50.51283 P030105    jxu24        qw    07/04/2022 19:39:06                                                                  48        
+    523775 50.51283 P034501    jxu24        qw    07/04/2022 19:39:40                                                                  48        
+    523776 50.51283 P040003    jxu24        qw    07/04/2022 19:40:01                                                                  48        
+    523777 50.51283 P040006    jxu24        qw    07/04/2022 19:40:29                                                                  48        
+    523778 50.51283 P040011    jxu24        qw    07/04/2022 19:41:03                                                                  48        
+    523779 50.51283 P040015    jxu24        qw    07/04/2022 19:41:22                                                                  48        
+    523590 50.51283 H10        cmichae2     qw    07/04/2022 13:02:09                                                                  24        
+    523591 50.51282 L1         cmichae2     qw    07/04/2022 13:06:00                                                                  24        
+    523592 50.51282 L2         cmichae2     qw    07/04/2022 13:06:01                                                                  24        
+    523593 50.51282 L3         cmichae2     qw    07/04/2022 13:06:02                                                                  24        
+    523594 50.51282 L4         cmichae2     qw    07/04/2022 13:06:04                                                                  24        
+    523595 50.51282 L5         cmichae2     qw    07/04/2022 13:06:05                                                                  24        
+    523596 50.51282 L6         cmichae2     qw    07/04/2022 13:06:06                                                                  24        
+    523597 50.51282 L7         cmichae2     qw    07/04/2022 13:06:07                                                                  24        
+    523598 50.51282 L8         cmichae2     qw    07/04/2022 13:06:08                                                                  24        
+    523599 50.51282 L9         cmichae2     qw    07/04/2022 13:06:09                                                                  24        
+    523600 50.51282 L10        cmichae2     qw    07/04/2022 13:06:10                                                                  24        
+    523781 50.51280 P040017    jxu24        qw    07/04/2022 19:51:50                                                                  48        
+    523782 50.51280 P040018    jxu24        qw    07/04/2022 19:52:11                                                                  48        
+    523783 50.51280 P040024    jxu24        qw    07/04/2022 19:52:37                                                                  48        
+    523784 50.51280 P040048    jxu24        qw    07/04/2022 19:52:58                                                                  48        
+    523785 50.51280 P040049    jxu24        qw    07/04/2022 19:53:22                                                                  48        
+    523786 50.51280 P040052    jxu24        qw    07/04/2022 19:53:43                                                                  48        
+    523787 50.51280 P040053    jxu24        qw    07/04/2022 19:54:04                                                                  48        
+    523788 50.51280 P040055    jxu24        qw    07/04/2022 19:54:26                                                                  48        
+    523789 50.51280 P040056    jxu24        qw    07/04/2022 19:54:48                                                                  48        
+    523790 50.51280 P040060    jxu24        qw    07/04/2022 19:55:12                                                                  48        
+    523791 50.51279 P040061    jxu24        qw    07/04/2022 19:55:42                                                                  48        
+    523835 50.51255 P090637_TC jxu24        qw    07/04/2022 21:38:51                                                                  48        
+    523486 50.51232 LC21_1.51  lbocciol     qw    07/04/2022 11:05:20                                                                   4 130-160:1
+    523487 50.51232 S16_1.51   lbocciol     qw    07/04/2022 11:06:24                                                                   4 10-154:1
+    523912 50.51215 BPDANP     jxu24        qw    07/05/2022 00:30:46                                                                  48        
+    523914 50.51215 BPDAATC    jxu24        qw    07/05/2022 00:31:15                                                                  48        
+    523915 50.51215 TPBO       jxu24        qw    07/05/2022 00:31:38                                                                  48        
+    523916 50.51215 PPBO       jxu24        qw    07/05/2022 00:32:03                                                                  48        
+    523917 50.51215 LTPBO      jxu24        qw    07/05/2022 00:32:28                                                                  48        
+    523918 50.51215 TPBI       jxu24        qw    07/05/2022 00:32:49                                                                  48        
+    523919 50.51215 PPBI       jxu24        qw    07/05/2022 00:33:22                                                                  48        
+    523942 50.51210 LPPBO      jxu24        qw    07/05/2022 00:52:22                                                                  48        
+    523969 50.51201 P094250_TC jxu24        qw    07/05/2022 01:33:32                                                                  48        
+    523996 50.51176 P094584_TC jxu24        qw    07/05/2022 03:19:54                                                                  48        
+    523997 50.51175 P094397_TC jxu24        qw    07/05/2022 03:20:56                                                                  48        
+    524050 50.51135 P099018_TC jxu24        qw    07/05/2022 06:13:10                                                                  48        
+    524149 50.51069 P010033_TC jxu24        qw    07/05/2022 10:57:35                                                                  48        
+    524151 50.51069 P120004_TC jxu24        qw    07/05/2022 10:58:39                                                                  48        
+    526283 50.51039 run_s8p.sh skim43       qw    07/06/2022 15:44:39                                                                 144        
+    524000 50.50989 vortex_ner ylu25        qw    07/05/2022 03:34:41                                                                   1        
+    524001 50.50989 vortex_ner ylu25        qw    07/05/2022 03:37:25                                                                   1        
+    525380 50.50930 P010090_TC jxu24        qw    07/05/2022 20:52:34                                                                  48        
+    525381 50.50930 P010089_TC jxu24        qw    07/05/2022 20:53:24                                                                  48        
+    525382 50.50929 P010086_TC jxu24        qw    07/05/2022 20:55:06                                                                  48        
+    525383 50.50929 P010081_TC jxu24        qw    07/05/2022 20:55:55                                                                  48        
+    525384 50.50929 P010043_TC jxu24        qw    07/05/2022 20:56:37                                                                  48        
+    524076 50.50925 LC21_1.51  lbocciol     qw    07/05/2022 08:59:51                                                                   4 81-91:5
+    525404 50.50917 P020008_TC jxu24        qw    07/05/2022 21:47:11                                                                  48        
+    525578 50.50813 P020009_TC jxu24        qw    07/06/2022 05:13:55                                                                  48        
+    525579 50.50813 P020011_TC jxu24        qw    07/06/2022 05:14:37                                                                  48        
+    525580 50.50812 P124411_TC jxu24        qw    07/06/2022 05:15:32                                                                  48        
+    525774 50.50737 P130001_TC jxu24        qw    07/06/2022 10:38:28                                                                  48        
+    527813 50.50701 run_pres.s skim43       qw    07/07/2022 15:52:18                                                                 144        
+    525879 50.50627 mB2D_p10_e charnish     qw    07/06/2022 11:49:40                                                                  24        
+    525818 50.50588 RH_m_10    pturner4     qw    07/06/2022 11:17:52                                                                  12        
+    527041 50.50554 P140017_TC jxu24        qw    07/06/2022 23:41:53                                                                  48        
+    527043 50.50553 P134352_TC jxu24        qw    07/06/2022 23:44:40                                                                  48        
+    527044 50.50553 P130327_TC jxu24        qw    07/06/2022 23:45:29                                                                  48        
+    527046 50.50553 P130134_TC jxu24        qw    07/06/2022 23:47:21                                                                  48        
+    527048 50.50552 P130214_TC jxu24        qw    07/06/2022 23:48:51                                                                  48        
+    527086 50.50527 P020151_TC jxu24        qw    07/07/2022 01:38:21                                                                  48        
+    527097 50.50522 P020156_TC jxu24        qw    07/07/2022 01:57:32                                                                  48        
+    526997 50.50434 TRIPVA500  sanoj        qw    07/06/2022 23:07:04                                                                  15        
+    527329 50.50399 P020195_TC jxu24        qw    07/07/2022 10:44:58                                                                  48        
+    527332 50.50399 P024516_TC jxu24        qw    07/07/2022 10:45:47                                                                  48        
+    527336 50.50399 P020177_TC jxu24        qw    07/07/2022 10:46:50                                                                  48        
+    527341 50.50398 P020157_TC jxu24        qw    07/07/2022 10:47:54                                                                  48        
+    527260 50.50281 MIRT_1000a kmcclur5     qw    07/07/2022 09:08:32                                                                  12 636-1080:1
+    528258 50.50249 P160079_TC jxu24        qw    07/07/2022 21:27:54                                                                  48        
+    528262 50.50249 P160106_TC jxu24        qw    07/07/2022 21:28:51                                                                  48        
+    528268 50.50248 P160001_TC jxu24        qw    07/07/2022 21:30:05                                                                  48        
+    528272 50.50248 P154565_TC jxu24        qw    07/07/2022 21:30:53                                                                  48        
+    528228 50.50243 LiB3O5k44  sanoj        qw    07/07/2022 20:46:54                                                                  44        
+    528405 50.50212 P169043_TC jxu24        qw    07/08/2022 00:06:51                                                                  48        
+    528406 50.50212 P164494_TC jxu24        qw    07/08/2022 00:07:32                                                                  48        
+    528470 50.50193 run2       amandal      qw    07/08/2022 01:26:00                                                                  48        
+    528501 50.50184 P030005_TC jxu24        qw    07/08/2022 02:05:27                                                                  48        
+    528276 50.50183 WUJFOWk44  sanoj        qw    07/07/2022 21:42:28                                                                  32        
+    528277 50.50183 WUJFOWk33  sanoj        qw    07/07/2022 21:43:25                                                                  32        
+    528280 50.50183 WUJFOWk55  sanoj        qw    07/07/2022 21:44:26                                                                  32        
+    528300 50.50175 SOMNUG33   sanoj        qw    07/07/2022 22:18:56                                                                  32        
+    528302 50.50174 SOMNUGk44  sanoj        qw    07/07/2022 22:19:54                                                                  32        
+    528310 50.50174 SOMNUGk55  sanoj        qw    07/07/2022 22:21:50                                                                  32        
+    527924 50.50144 S16_0.0    lbocciol     qw    07/07/2022 16:44:57                                                                   4 101-122:1
+    528383 50.50127 pyraa      alangfor     qw    07/07/2022 23:30:27                                                                  24        
+    528384 50.50127 pyraa      alangfor     qw    07/07/2022 23:30:33                                                                  24        
+    528385 50.50127 pyraa      alangfor     qw    07/07/2022 23:30:45                                                                  24        
+    528386 50.50127 pyraa      alangfor     qw    07/07/2022 23:30:52                                                                  24        
+    528387 50.50125 clamped_be nfeng        qw    07/07/2022 23:37:44                                                                  24        
+    528396 50.50123 IVAZUA01k3 sanoj        qw    07/07/2022 23:47:11                                                                  24        
+    528397 50.50123 IVAZUA01k4 sanoj        qw    07/07/2022 23:48:19                                                                  24        
+    528398 50.50122 IVAZUA01k5 sanoj        qw    07/07/2022 23:48:51                                                                  24        
+    528399 50.50122 orddis8    dengel       qw    07/07/2022 23:50:04                                                                  24        
+    528400 50.50122 orddis6    dengel       qw    07/07/2022 23:50:10                                                                  24        
+    528408 50.50116 AQOROPk33  sanoj        qw    07/08/2022 00:15:46                                                                  24        
+    528409 50.50116 AQOROPk44  sanoj        qw    07/08/2022 00:17:28                                                                  24        
+    528410 50.50116 AQOROPk55  sanoj        qw    07/08/2022 00:18:02                                                                  24        
+    528412 50.50113 crystalliz rchiluku     qw    07/08/2022 00:31:16                                                                  24        
+    528497 50.50002 just-a-tes bdusell1     qw    07/08/2022 02:01:13                                                                   1        
+    528498 50.50002 just-a-tes bdusell1     qw    07/08/2022 02:01:18                                                                   1        
+    528438 50.50000 Statistics agoswami     Eqw   07/08/2022 00:46:58                                                                   1 2-6:1,11,14,17,18,20-22:1,55,56,60,72,76,80,83,86
+    528440 50.50000 Statistics agoswami     Eqw   07/08/2022 00:47:10                                                                   1 1,10,11
+    526794 0.00000 job27      crondonm     hqw   07/06/2022 20:35:50                                                                   1        
+    526795 0.00000 job28      crondonm     hqw   07/06/2022 20:35:52                                                                   1        
+    526796 0.00000 job29      crondonm     hqw   07/06/2022 20:35:53                                                                   1        
+    526797 0.00000 job30      crondonm     hqw   07/06/2022 20:35:55                                                                   1        
+    526798 0.00000 job31      crondonm     hqw   07/06/2022 20:35:57                                                                   1        
+    526799 0.00000 job32      crondonm     hqw   07/06/2022 20:35:58                                                                   1        
+    526800 0.00000 job33      crondonm     hqw   07/06/2022 20:36:00                                                                   1        
+    526801 0.00000 job34      crondonm     hqw   07/06/2022 20:36:01                                                                   1        
+    526802 0.00000 job35      crondonm     hqw   07/06/2022 20:36:03                                                                   1        
+    526803 0.00000 job36      crondonm     hqw   07/06/2022 20:36:04                                                                   1        
+    526804 0.00000 job37      crondonm     hqw   07/06/2022 20:36:06                                                                   1        
+    526805 0.00000 job38      crondonm     hqw   07/06/2022 20:36:08                                                                   1        
+    526806 0.00000 job39      crondonm     hqw   07/06/2022 20:36:09                                                                   1        
+    526807 0.00000 job40      crondonm     hqw   07/06/2022 20:36:11                                                                   1        
+    526808 0.00000 job41      crondonm     hqw   07/06/2022 20:36:13                                                                   1        
+    526809 0.00000 job42      crondonm     hqw   07/06/2022 20:36:15                                                                   1        
+    526810 0.00000 job43      crondonm     hqw   07/06/2022 20:36:16                                                                   1        
+    526811 0.00000 job44      crondonm     hqw   07/06/2022 20:36:18                                                                   1        
+    526812 0.00000 job45      crondonm     hqw   07/06/2022 20:36:19                                                                   1        
+    526813 0.00000 job46      crondonm     hqw   07/06/2022 20:36:21                                                                   1        
+    526814 0.00000 job47      crondonm     hqw   07/06/2022 20:36:22                                                                   1        
+    526815 0.00000 job48      crondonm     hqw   07/06/2022 20:36:24                                                                   1        
+    526816 0.00000 job49      crondonm     hqw   07/06/2022 20:36:25                                                                   1        
+    526817 0.00000 job50      crondonm     hqw   07/06/2022 20:36:27                                                                   1        
+    526818 0.00000 job51      crondonm     hqw   07/06/2022 20:36:28                                                                   1        
+    526819 0.00000 job52      crondonm     hqw   07/06/2022 20:36:30                                                                   1        
+    526820 0.00000 job53      crondonm     hqw   07/06/2022 20:36:31                                                                   1        
+    526821 0.00000 job54      crondonm     hqw   07/06/2022 20:36:33                                                                   1        
+    526822 0.00000 job55      crondonm     hqw   07/06/2022 20:36:35                                                                   1        
+    526823 0.00000 job56      crondonm     hqw   07/06/2022 20:36:36                                                                   1        
+    526824 0.00000 job57      crondonm     hqw   07/06/2022 20:36:38                                                                   1        
+    526825 0.00000 job58      crondonm     hqw   07/06/2022 20:36:40                                                                   1        
+    526826 0.00000 job59      crondonm     hqw   07/06/2022 20:36:42                                                                   1        
+    526827 0.00000 job60      crondonm     hqw   07/06/2022 20:36:43                                                                   1        
+    526828 0.00000 job61      crondonm     hqw   07/06/2022 20:36:45                                                                   1        
+    526829 0.00000 job62      crondonm     hqw   07/06/2022 20:36:46                                                                   1        
+    526830 0.00000 job63      crondonm     hqw   07/06/2022 20:36:48                                                                   1        
+    526831 0.00000 job64      crondonm     hqw   07/06/2022 20:36:50                                                                   1        
+    526832 0.00000 job65      crondonm     hqw   07/06/2022 20:36:51                                                                   1        
+    526833 0.00000 job66      crondonm     hqw   07/06/2022 20:36:53                                                                   1        
+    526834 0.00000 job67      crondonm     hqw   07/06/2022 20:36:54                                                                   1        
+    526835 0.00000 job68      crondonm     hqw   07/06/2022 20:36:56                                                                   1        
+    526836 0.00000 job69      crondonm     hqw   07/06/2022 20:36:58                                                                   1        
+    526837 0.00000 job70      crondonm     hqw   07/06/2022 20:37:00                                                                   1        
+    526838 0.00000 job71      crondonm     hqw   07/06/2022 20:37:01                                                                   1        
+    526839 0.00000 job72      crondonm     hqw   07/06/2022 20:37:03                                                                   1        
+    526840 0.00000 job73      crondonm     hqw   07/06/2022 20:37:04                                                                   1        
+    526841 0.00000 job74      crondonm     hqw   07/06/2022 20:37:06                                                                   1        
+    526842 0.00000 job75      crondonm     hqw   07/06/2022 20:37:08                                                                   1        
+    526843 0.00000 job76      crondonm     hqw   07/06/2022 20:37:11                                                                   1        
+    526844 0.00000 job77      crondonm     hqw   07/06/2022 20:37:12                                                                   1        
+    526845 0.00000 job78      crondonm     hqw   07/06/2022 20:37:15                                                                   1        
+    526846 0.00000 job79      crondonm     hqw   07/06/2022 20:37:17                                                                   1        
+    526847 0.00000 job80      crondonm     hqw   07/06/2022 20:37:18                                                                   1        
+    526848 0.00000 job81      crondonm     hqw   07/06/2022 20:37:23                                                                   1        
+    526849 0.00000 job82      crondonm     hqw   07/06/2022 20:37:25                                                                   1        
+    526850 0.00000 job83      crondonm     hqw   07/06/2022 20:37:26                                                                   1        
+    526851 0.00000 job84      crondonm     hqw   07/06/2022 20:37:28                                                                   1        
+    526852 0.00000 job85      crondonm     hqw   07/06/2022 20:37:29                                                                   1        
+    526853 0.00000 job86      crondonm     hqw   07/06/2022 20:37:31                                                                   1        
+    526855 0.00000 job87      crondonm     hqw   07/06/2022 20:37:33                                                                   1        
+    526857 0.00000 job88      crondonm     hqw   07/06/2022 20:37:34                                                                   1        
+    526858 0.00000 job89      crondonm     hqw   07/06/2022 20:37:36                                                                   1        
+    526859 0.00000 job90      crondonm     hqw   07/06/2022 20:37:38                                                                   1        
+    526860 0.00000 job91      crondonm     hqw   07/06/2022 20:37:39                                                                   1        
+    526861 0.00000 job92      crondonm     hqw   07/06/2022 20:37:41                                                                   1        
+    526862 0.00000 job93      crondonm     hqw   07/06/2022 20:37:43                                                                   1        
+    526863 0.00000 job94      crondonm     hqw   07/06/2022 20:37:44                                                                   1        
+    526864 0.00000 job95      crondonm     hqw   07/06/2022 20:37:46                                                                   1        
+    526865 0.00000 job96      crondonm     hqw   07/06/2022 20:37:49                                                                   1        
+    526866 0.00000 job97      crondonm     hqw   07/06/2022 20:37:50                                                                   1        
+    526867 0.00000 job98      crondonm     hqw   07/06/2022 20:37:52                                                                   1        
+    526868 0.00000 job99      crondonm     hqw   07/06/2022 20:37:53                                                                   1        
+    526869 0.00000 job100     crondonm     hqw   07/06/2022 20:37:55                                                                   1        
+    526870 0.00000 job101     crondonm     hqw   07/06/2022 20:37:57                                                                   1        
+    526871 0.00000 job102     crondonm     hqw   07/06/2022 20:37:58                                                                   1        
+    526872 0.00000 job103     crondonm     hqw   07/06/2022 20:38:00                                                                   1        
+    526873 0.00000 job104     crondonm     hqw   07/06/2022 20:38:02                                                                   1        
+    526874 0.00000 job105     crondonm     hqw   07/06/2022 20:38:03                                                                   1        
+    526875 0.00000 job106     crondonm     hqw   07/06/2022 20:38:05                                                                   1        
+    526876 0.00000 job107     crondonm     hqw   07/06/2022 20:38:07                                                                   1        
+    526877 0.00000 job108     crondonm     hqw   07/06/2022 20:38:11                                                                   1        
+    526878 0.00000 job109     crondonm     hqw   07/06/2022 20:38:12                                                                   1        
+    526879 0.00000 job110     crondonm     hqw   07/06/2022 20:38:14                                                                   1        
+    526880 0.00000 job111     crondonm     hqw   07/06/2022 20:38:16                                                                   1        
+    526881 0.00000 job112     crondonm     hqw   07/06/2022 20:38:17                                                                   1        
+    526882 0.00000 job113     crondonm     hqw   07/06/2022 20:38:19                                                                   1        
+    526883 0.00000 job114     crondonm     hqw   07/06/2022 20:38:21                                                                   1        
+    526884 0.00000 job115     crondonm     hqw   07/06/2022 20:38:22                                                                   1        
+    526885 0.00000 job116     crondonm     hqw   07/06/2022 20:38:24                                                                   1        
+    526886 0.00000 job117     crondonm     hqw   07/06/2022 20:38:26                                                                   1        
+    526887 0.00000 job118     crondonm     hqw   07/06/2022 20:38:27                                                                   1        
+    526888 0.00000 job119     crondonm     hqw   07/06/2022 20:38:29                                                                   1        
+    526890 0.00000 job120     crondonm     hqw   07/06/2022 20:38:31                                                                   1        
+    526891 0.00000 job121     crondonm     hqw   07/06/2022 20:38:32                                                                   1        
+    526892 0.00000 job122     crondonm     hqw   07/06/2022 20:38:34                                                                   1        
+    526893 0.00000 job123     crondonm     hqw   07/06/2022 20:38:35                                                                   1        
+    526894 0.00000 job124     crondonm     hqw   07/06/2022 20:38:37                                                                   1        
+    526895 0.00000 job125     crondonm     hqw   07/06/2022 20:38:39                                                                   1        
+    526896 0.00000 job126     crondonm     hqw   07/06/2022 20:38:40                                                                   1        
+    526897 0.00000 job127     crondonm     hqw   07/06/2022 20:38:42                                                                   1        
+    526898 0.00000 job128     crondonm     hqw   07/06/2022 20:38:44                                                                   1        
+    526899 0.00000 job129     crondonm     hqw   07/06/2022 20:38:45                                                                   1        
+    526900 0.00000 job130     crondonm     hqw   07/06/2022 20:38:47                                                                   1        
+    526901 0.00000 job131     crondonm     hqw   07/06/2022 20:38:49                                                                   1        
+    526902 0.00000 job132     crondonm     hqw   07/06/2022 20:38:50                                                                   1        
+    526903 0.00000 job133     crondonm     hqw   07/06/2022 20:38:52                                                                   1        
+    526904 0.00000 job134     crondonm     hqw   07/06/2022 20:38:53                                                                   1        
+    526905 0.00000 job135     crondonm     hqw   07/06/2022 20:38:57                                                                   1        
+    526906 0.00000 job136     crondonm     hqw   07/06/2022 20:38:59                                                                   1        
+    526907 0.00000 job137     crondonm     hqw   07/06/2022 20:39:01                                                                   1        
+    526908 0.00000 job138     crondonm     hqw   07/06/2022 20:39:02                                                                   1        
+    526909 0.00000 job139     crondonm     hqw   07/06/2022 20:39:04                                                                   1        
+    526910 0.00000 job140     crondonm     hqw   07/06/2022 20:39:06                                                                   1        
+    526911 0.00000 job141     crondonm     hqw   07/06/2022 20:39:08                                                                   1        
+    526912 0.00000 job142     crondonm     hqw   07/06/2022 20:39:10                                                                   1        
+    526913 0.00000 job143     crondonm     hqw   07/06/2022 20:39:11                                                                   1        
+    526914 0.00000 job144     crondonm     hqw   07/06/2022 20:39:13                                                                   1        
+    526915 0.00000 job145     crondonm     hqw   07/06/2022 20:39:15                                                                   1        
+    526916 0.00000 job146     crondonm     hqw   07/06/2022 20:39:16                                                                   1        
+    526917 0.00000 job147     crondonm     hqw   07/06/2022 20:39:18                                                                   1        
+    526918 0.00000 job148     crondonm     hqw   07/06/2022 20:39:20                                                                   1        
+    526919 0.00000 job149     crondonm     hqw   07/06/2022 20:39:21                                                                   1        
+    526920 0.00000 job150     crondonm     hqw   07/06/2022 20:39:23                                                                   1        
+    526921 0.00000 job151     crondonm     hqw   07/06/2022 20:39:25                                                                   1        
+    526922 0.00000 job152     crondonm     hqw   07/06/2022 20:39:26                                                                   1        
+    526923 0.00000 job153     crondonm     hqw   07/06/2022 20:39:28                                                                   1        
+    526924 0.00000 job154     crondonm     hqw   07/06/2022 20:39:29                                                                   1        
+    526925 0.00000 job155     crondonm     hqw   07/06/2022 20:39:31                                                                   1        
+    526926 0.00000 job156     crondonm     hqw   07/06/2022 20:39:32                                                                   1        
+    526927 0.00000 job157     crondonm     hqw   07/06/2022 20:39:34                                                                   1        
+    526928 0.00000 job158     crondonm     hqw   07/06/2022 20:39:35                                                                   1        
+    526929 0.00000 job159     crondonm     hqw   07/06/2022 20:39:37                                                                   1        
+    526930 0.00000 job160     crondonm     hqw   07/06/2022 20:39:38                                                                   1        
+    526931 0.00000 job161     crondonm     hqw   07/06/2022 20:39:40                                                                   1        
+    526932 0.00000 job162     crondonm     hqw   07/06/2022 20:39:43                                                                   1        
+    526933 0.00000 job163     crondonm     hqw   07/06/2022 20:39:44                                                                   1        
+    528249 0.00000 ADMMQPEA62 gbravopa     hqw   07/07/2022 21:04:00                                                                   1        
+    528250 0.00000 ADMMQPEA62 gbravopa     hqw   07/07/2022 21:04:01                                                                  10 1-10:1
+    528251 0.00000 ADMMQPEA62 gbravopa     hqw   07/07/2022 21:04:03                                                                   1        
+    528442 0.00000 Statistics agoswami     qw    07/08/2022 00:47:33                                                                   1 37-100:1
+    528443 0.00000 Statistics agoswami     qw    07/08/2022 00:47:44                                                                   1 1-100:1
+    528444 0.00000 Statistics agoswami     qw    07/08/2022 00:47:52                                                                   1 1-100:1
+    528445 0.00000 Statistics agoswami     qw    07/08/2022 00:48:06                                                                   1 1-100:1
+    528446 0.00000 Statistics agoswami     qw    07/08/2022 00:48:14                                                                   1 1-100:1
+    528447 0.00000 Statistics agoswami     qw    07/08/2022 00:48:23                                                                   1 1-100:1
+    528448 0.00000 Statistics agoswami     qw    07/08/2022 00:48:34                                                                   1 1-100:1
+    528449 0.00000 Statistics agoswami     qw    07/08/2022 00:48:41                                                                   1 1-100:1
+    528450 0.00000 Statistics agoswami     qw    07/08/2022 00:48:47                                                                   1 1-100:1
+    528451 0.00000 Statistics agoswami     qw    07/08/2022 00:48:53                                                                   1 1-100:1
+    528452 0.00000 Statistics agoswami     qw    07/08/2022 00:49:08                                                                   1 1-100:1
+    528453 0.00000 Statistics agoswami     qw    07/08/2022 00:49:18                                                                   1 1-100:1
+    528454 0.00000 Statistics agoswami     qw    07/08/2022 00:49:25                                                                   1 1-100:1
+    528455 0.00000 Statistics agoswami     qw    07/08/2022 00:49:32                                                                   1 1-100:1
+    528456 0.00000 Statistics agoswami     qw    07/08/2022 00:49:42                                                                   1 1-100:1
+    528457 0.00000 Statistics agoswami     qw    07/08/2022 00:49:48                                                                   1 1-100:1
+    528458 0.00000 Statistics agoswami     qw    07/08/2022 00:49:55                                                                   1 1-100:1
+    528459 0.00000 Statistics agoswami     qw    07/08/2022 00:50:01                                                                   1 1-100:1
+    528493 0.00000 WW3_mesh4_ gling        hqw   07/08/2022 01:54:11                                                                   1        
+    528500 0.00000 GESTOFSv5_ gling        hqw   07/08/2022 02:03:09                                                                 240        
