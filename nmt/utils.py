@@ -8,8 +8,9 @@ import torch
 import torch.nn as nn
 
 import nmt.all_constants as ac
-import networkx as nx
-from scipy.sparse.linalg import eigs
+# import networkx as nx
+# from scipy.sparse.linalg import eigs
+import scipy.linalg
 
 
 def get_logger(logfile=None):
@@ -164,6 +165,18 @@ class AutomatonPELayer(nn.Module):
             adj = torch.diag(ones, 1)
         else:
             adj = torch.diag(ones, -1) + torch.diag(ones, 1)
+
+        transition_inv = torch.inverse(self.pos_transition).detach().cpu().numpy()
+        adj = adj.cpu().numpy()
+
+        z = torch.zeros(self.num_states, sentence_len-1, requires_grad=False, device=device)
+        vec_init = torch.cat((self.pos_initial, z), dim=1)
+        vec_init = vec_init.detach().cpu().numpy()
+
+        pe = scipy.linalg.solve_sylvester(transition_inv, -adj, transition_inv @ vec_init)
+        pe = torch.from_numpy(pe.T).to(device)
+        pe = self.embedding_pos_enc(pe)
+        return pe
 
         z = torch.zeros(self.num_states, sentence_len-1, requires_grad=False, device=device)
 
