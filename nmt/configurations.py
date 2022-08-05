@@ -183,7 +183,7 @@ def en2vi_directed_automaton():
     config['sine_pos'] = False
     config['automaton'] = True
     config['directed'] = True
-    config['num_states'] = 10
+    config['num_states'] = 512
     return config
 
 def en2vi_undirected_automaton():
