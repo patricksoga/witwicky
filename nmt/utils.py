@@ -5,6 +5,7 @@ import subprocess
 
 import numpy
 import torch
+import torch.nn as nn
 
 import nmt.all_constants as ac
 import networkx as nx
@@ -134,3 +135,42 @@ def gnmt_length_model(alpha):
     def f(time_step, prob):
         return prob / ((5.0 + time_step + 1.0) ** alpha / 6.0 ** alpha)
     return f
+
+class AutomatonPELayer(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.num_states = config['num_states']
+        self.directed = config['directed']
+        embed_dim = config['embed_dim']
+
+        self.embedding_pos_enc = nn.Linear(self.num_states, embed_dim)
+        self.pos_initial = nn.Parameter(torch.Tensor(self.num_states, 1), requires_grad=True)
+        self.pos_transition = nn.Parameter(torch.Tensor(self.num_states, self.num_states), requires_grad=True)
+
+        nn.init.normal_(self.pos_initial)
+        nn.init.orthogonal_(self.pos_transition)
+
+    def forward(self, sentence_len):
+        device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+        ones = torch.ones(sentence_len-1)
+        if self.directed:
+            adj = torch.diag(ones, 1)
+        else:
+            adj = torch.diag(ones, -1) + torch.diag(ones, 1)
+
+        # z = torch.zeros(self.num_states, g.num_nodes()-1, requires_grad=False, device=device)
+
+        # vec_init = torch.cat((self.pos_initial, z), dim=1)
+        vec_init = torch.cat([self.pos_initial for _ in range(adj.shape[0])], dim=1)
+        vec_init = vec_init.transpose(1, 0).flatten()
+
+        kron_prod = torch.kron(adj.reshape(adj.shape[1], adj.shape[0]), self.pos_transition)
+        B = torch.eye(kron_prod.shape[1], device=device) - kron_prod
+
+        encs = torch.linalg.solve(B, vec_init)
+        stacked_encs = torch.stack(encs.split(self.num_states), dim=1)
+        stacked_encs = stacked_encs.transpose(1, 0)
+
+        pe = self.embedding_pos_enc(stacked_encs)
+
+        return pe

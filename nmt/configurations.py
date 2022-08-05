@@ -51,6 +51,11 @@ def base_config():
     config['learned_pos']       = False
     config['sine_pos']          = False
     config['lape_pos']          = False
+
+    config['automaton'] = False
+    config['directed'] = False
+    config['num_states'] = 10
+
     # Position encoding size
     config['max_pos_length']    = 1024
     
@@ -171,6 +176,22 @@ def en2vi_lape_big_graph_ul():
     config = en2vi_sine()
     config['sine_pos']     = False
     config['big_graph_ul'] = True
+    return config
+
+def en2vi_directed_automaton():
+    config = en2vi_sine()
+    config['sine_pos'] = False
+    config['automaton'] = True
+    config['directed'] = True
+    config['num_states'] = 10
+    return config
+
+def en2vi_undirected_automaton():
+    config = en2vi_sine()
+    config['sine_pos'] = False
+    config['automaton'] = True
+    config['directed'] = False
+    config['num_states'] = 10
     return config
 
 def ar2en():
