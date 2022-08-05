@@ -165,10 +165,10 @@ class AutomatonPELayer(nn.Module):
         else:
             adj = torch.diag(ones, -1) + torch.diag(ones, 1)
 
-        # z = torch.zeros(self.num_states, g.num_nodes()-1, requires_grad=False, device=device)
+        z = torch.zeros(self.num_states, sentence_len-1, requires_grad=False, device=device)
 
-        # vec_init = torch.cat((self.pos_initial, z), dim=1)
-        vec_init = torch.cat([self.pos_initial for _ in range(adj.shape[0])], dim=1)
+        vec_init = torch.cat((self.pos_initial, z), dim=1)
+        # vec_init = torch.cat([self.pos_initial for _ in range(adj.shape[0])], dim=1)
         vec_init = vec_init.transpose(1, 0).flatten()
 
         adj = adj.reshape(adj.shape[1], adj.shape[0]).to(device)
