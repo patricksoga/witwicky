@@ -175,7 +175,7 @@ class AutomatonPELayer(nn.Module):
         kron_prod = self.kron(adj, self.pos_transition)
         B = torch.eye(kron_prod.shape[1], device=device) - kron_prod
 
-        encs = torch.solve(B, vec_init)
+        encs = torch.solve(vec_init, B)
         stacked_encs = torch.stack(encs.split(self.num_states), dim=1)
         stacked_encs = stacked_encs.transpose(1, 0)
 
