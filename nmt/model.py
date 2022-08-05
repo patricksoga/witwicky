@@ -110,8 +110,9 @@ class Model(nn.Module):
         else:
             word_embeds = word_embeds * self.embed_scale
 
-        if toks.size()[-1] > self.pos_embedding.size()[-2]:
-            ut.get_logger().error("Sentence length ({}) is longer than max_pos_length ({}); please increase max_pos_length".format(toks.size()[-1], self.pos_embedding.size()[0]))
+        if not self.automaton:
+            if toks.size()[-1] > self.pos_embedding.size()[-2]:
+                ut.get_logger().error("Sentence length ({}) is longer than max_pos_length ({}); please increase max_pos_length".format(toks.size()[-1], self.pos_embedding.size()[0]))
 
         if self.lape_pos:
             sign_flip = torch.rand(self.pos_embedding.shape[1]).to(torch.device('cuda'))
