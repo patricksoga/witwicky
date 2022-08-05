@@ -175,9 +175,11 @@ class AutomatonPELayer(nn.Module):
         kron_prod = self.kron(adj, self.pos_transition)
         B = torch.eye(kron_prod.shape[1], device=device) - kron_prod
 
-        encs = torch.solve(vec_init, B)
+        vec_init = vec_init.reshape(-1, 1)
+
+        encs, _ = torch.solve(vec_init, B)
         stacked_encs = torch.stack(encs.split(self.num_states), dim=1)
-        stacked_encs = stacked_encs.transpose(1, 0)
+        stacked_encs = stacked_encs.transpose(1, 0).squeeze(2)
 
         pe = self.embedding_pos_enc(stacked_encs)
 
