@@ -158,25 +158,43 @@ class AutomatonPELayer(nn.Module):
         m2 = mat2.size(1)
         return torch.einsum("ab,cd->acbd", mat1, mat2).view(n1*m1,  n2*m2)
 
-    def forward(self, sentence_len):
+    def get_pe(self, max_len):
         device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
-        ones = torch.ones(sentence_len-1)
+        ones = torch.ones(max_len-1)
         if self.directed:
             adj = torch.diag(ones, 1)
         else:
             adj = torch.diag(ones, -1) + torch.diag(ones, 1)
-
         transition_inv = torch.inverse(self.pos_transition).detach().cpu().numpy()
         adj = adj.cpu().numpy()
 
-        z = torch.zeros(self.num_states, sentence_len-1, requires_grad=False, device=device)
+        z = torch.zeros(self.num_states, max_len-1, requires_grad=False, device=torch.device('cpu'))
         vec_init = torch.cat((self.pos_initial, z), dim=1)
         vec_init = vec_init.detach().cpu().numpy()
 
         pe = scipy.linalg.solve_sylvester(transition_inv, -adj, transition_inv @ vec_init)
         pe = torch.from_numpy(pe.T).to(device)
-        pe = self.embedding_pos_enc(pe)
         return pe
+
+    def forward(self, sentence_len):
+        # device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+        # ones = torch.ones(sentence_len-1)
+        # if self.directed:
+        #     adj = torch.diag(ones, 1)
+        # else:
+        #     adj = torch.diag(ones, -1) + torch.diag(ones, 1)
+
+        # transition_inv = torch.inverse(self.pos_transition).detach().cpu().numpy()
+        # adj = adj.cpu().numpy()
+
+        # z = torch.zeros(self.num_states, sentence_len-1, requires_grad=False, device=device)
+        # vec_init = torch.cat((self.pos_initial, z), dim=1)
+        # vec_init = vec_init.detach().cpu().numpy()
+
+        # pe = scipy.linalg.solve_sylvester(transition_inv, -adj, transition_inv @ vec_init)
+        # pe = torch.from_numpy(pe.T).to(device)
+        # pe = self.embedding_pos_enc(pe)
+        # return pe
 
         z = torch.zeros(self.num_states, sentence_len-1, requires_grad=False, device=device)
 

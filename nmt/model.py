@@ -51,7 +51,8 @@ class Model(nn.Module):
             self.pos_embedding = ut.get_cycle_graph_lapes(embed_dim, max_pos_length)
         elif self.automaton:
             ut.get_logger().info(f"using automaton encoding, directed: {self.config['directed']}, num_states: {self.config['num_states']}")
-            self.pos_embedding = ut.AutomatonPELayer(self.config)
+            # self.pos_embedding = ut.AutomatonPELayer(self.config)
+            self.pos_embedding = ut.AutomatonPELayer(self.config).get_pe(self.config['max_pos_length'])
 
         # get word embeddings
         src_vocab_size, trg_vocab_size = ut.get_vocab_sizes(self.config)
@@ -120,9 +121,9 @@ class Model(nn.Module):
             sign_flip[sign_flip < 0.5] = -1.0
             self.pos_embedding *= sign_flip.unsqueeze(0)
 
-        if self.automaton:
-            pos_embeds = self.pos_embedding(toks.size()[1])
-            return word_embeds + pos_embeds
+        # if self.automaton:
+        #     pos_embeds = self.pos_embedding(toks.size()[1])
+        #     return word_embeds + pos_embeds
 
         pos_embeds = self.pos_embedding[:toks.size()[-1], :].unsqueeze(0) # [1, max_len, embed_dim]
         return word_embeds + pos_embeds
@@ -187,10 +188,10 @@ class Model(nn.Module):
             else:
                 word_embeds = word_embeds * self.embed_scale
             
-            if self.automaton:
-                automaton_pe = self.pos_embedding(time_step+1)
-                pos_embeds = automaton_pe[time_step, :].reshape(1, 1, -1)
-                return word_embeds + pos_embeds
+            # if self.automaton:
+            #     automaton_pe = self.pos_embedding(time_step+1)
+            #     pos_embeds = automaton_pe[time_step, :].reshape(1, 1, -1)
+            #     return word_embeds + pos_embeds
 
             pos_embeds = self.pos_embedding[time_step, :].reshape(1, 1, -1)
             return word_embeds + pos_embeds
