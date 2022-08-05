@@ -150,7 +150,7 @@ class AutomatonPELayer(nn.Module):
         nn.init.normal_(self.pos_initial)
         nn.init.orthogonal_(self.pos_transition)
 
-    def kron(mat1, mat2):
+    def kron(self, mat1, mat2):
         n1 = mat1.size(0)
         m1 = mat2.size(0)
         n2 = mat1.size(1)
