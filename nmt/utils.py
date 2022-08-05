@@ -150,6 +150,13 @@ class AutomatonPELayer(nn.Module):
         nn.init.normal_(self.pos_initial)
         nn.init.orthogonal_(self.pos_transition)
 
+    def kron(mat1, mat2):
+        n1 = mat1.size(0)
+        m1 = mat2.size(0)
+        n2 = mat1.size(1)
+        m2 = mat2.size(1)
+        return torch.einsum("ab,cd->acbd", mat1, mat2).view(n1*m1,  n2*m2)
+
     def forward(self, sentence_len):
         device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
         ones = torch.ones(sentence_len-1)
@@ -164,7 +171,8 @@ class AutomatonPELayer(nn.Module):
         vec_init = torch.cat([self.pos_initial for _ in range(adj.shape[0])], dim=1)
         vec_init = vec_init.transpose(1, 0).flatten()
 
-        kron_prod = torch.kron(adj.reshape(adj.shape[1], adj.shape[0]), self.pos_transition)
+        adj = adj.reshape(adj.shape[1], adj.shape[0])
+        kron_prod = self.kron(adj, self.pos_transition)
         B = torch.eye(kron_prod.shape[1], device=device) - kron_prod
 
         encs = torch.linalg.solve(B, vec_init)
