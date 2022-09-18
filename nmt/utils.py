@@ -168,7 +168,8 @@ class SpectralAttention(nn.Module):
     def forward(self, sentence_length):
         dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
-        eigvals, eigvecs = get_laplacian_eigs(sentence_length)
+        # eigvals, eigvecs = get_laplacian_eigs(sentence_length)
+        eigvals, eigvecs = get_laplacian_eigs(512)
 
         eigvecs = torch.from_numpy(eigvecs).float().type(dtype)
         eigvecs = F.normalize(eigvecs, p=2, dim=1, eps=1e-12, out=None)
