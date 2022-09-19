@@ -102,7 +102,7 @@ def base_config():
 
     ### Validation/stopping options
 
-    config['max_epochs']        = 1
+    config['max_epochs']        = 100
     config['validate_freq']     = 1.0 # eval every [this many] epochs
     config['val_per_epoch']     = True # if this true, we eval after every [validate_freq] epochs, otherwise by num of batches
     config['val_by_bleu']       = True

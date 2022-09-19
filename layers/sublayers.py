@@ -38,7 +38,7 @@ class Attention(nn.Module):
             q, k, v = self.linear_projection(q, k, v)
 
         q, k, v = self.split_heads(q, k, v)
-        output, att_weights = self.scaled_dot_attention(q, k, v, mask, spd_bias)
+        output, att_weights = self.scaled_dot_attention(q, k, v, mask, spd_bias=spd_bias)
         output = self.concat_heads(output)
         return self.out_proj(output), att_weights
 
