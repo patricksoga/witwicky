@@ -72,8 +72,6 @@ class Attention(nn.Module):
         if spd_bias is not None:
             src_len = q.shape[1]
             spd_bias = spd_bias[:, :src_len, :src_len]
-            print(spd_bias)
-            exit()
             att_weights = torch.bmm(q, k.transpose(1, 2)) + spd_bias
             att_weights = att_weights * self.scaling
         else:
