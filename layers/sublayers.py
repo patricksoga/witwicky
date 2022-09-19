@@ -71,7 +71,7 @@ class Attention(nn.Module):
     def scaled_dot_attention(self, q, k, v, mask, spd_bias=None):
         if spd_bias is not None:
             src_len = q.shape[1]
-            spd_bias = spd_bias[:src_len, :src_len]
+            spd_bias = spd_bias[:, :src_len, :src_len]
             print(spd_bias.shape)
             attn_weights = torch.bmm(q, k.transpose(1, 2)) + spd_bias
             attn_weights = attn_weights * self.scaling
