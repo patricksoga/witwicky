@@ -139,7 +139,7 @@ class Model(nn.Module):
         if self.config['fix_norm']:
             word_embeds = ut.normalize(word_embeds, scale=False)
         else:
-            word_embeds = word_embeds * self.embed_scate
+            word_embeds = word_embeds * self.embed_scale
 
         # if toks.size()[-1] > self.pos_embedding.size()[-2]:
         #     ut.get_logger().error("Sentence length ({}) is longer than max_pos_length ({}); please increase max_pos_length".format(toks.size()[-1], self.pos_embedding.size()[0]))
