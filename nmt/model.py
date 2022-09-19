@@ -47,7 +47,7 @@ class Model(nn.Module):
             path_embed_dim = self.config['path_embed_dim']
             centrality_embed_dim = self.config['centrality_embed_dim']
             self.path_embed = nn.Embedding(path_embed_dim, self.config['num_enc_heads'])
-            self.centrality_embed = nn.Embedding(centrality_embed_dim, embed_dim).to(torch.device('cpu'))
+            self.centrality_embed = nn.Embedding(centrality_embed_dim, embed_dim)
             self.path_graph = nx.path_graph(max_pos_length)
             self.shortest_paths = nx.floyd_warshall(self.path_graph)
 
@@ -149,11 +149,11 @@ class Model(nn.Module):
 
         word_embeds = word_embeds.to(torch.device('cpu'))
         if self.spd_centrality:
-            word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cpu')))
+            word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cpu'))
 
-            word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cpu')))
+            word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cpu'))).to(torch.device('cpu'))
 
-            word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.LongTensor([1]).to(torch.device('cpu')))
+            word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.LongTensor([1]).to(torch.device('cpu'))).to(torch.device('cpu'))
 
             return word_embeds 
 
