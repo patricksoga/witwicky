@@ -167,7 +167,6 @@ def get_rw_pos(dim, sentence_length):
     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
     pos_enc = PE.type(dtype)
-    pos_enc = pos_enc.transpose(0, 1)
 
     return pos_enc
 
