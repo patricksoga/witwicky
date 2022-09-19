@@ -171,7 +171,7 @@ class SpectralAttention(nn.Module):
         dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
         # eigvals, eigvecs = get_laplacian_eigs(sentence_length)
-        eigvals, eigvecs = get_laplacian_eigs(max_pos_length)
+        eigvals, eigvecs = get_laplacian_eigs(self.max_pos_length)
         eigvals = eigvals[: self.spectral_dim]
         eigvecs = eigvecs[:, :self.spectral_dim]
 
