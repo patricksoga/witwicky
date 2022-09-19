@@ -147,7 +147,7 @@ class Model(nn.Module):
         embeds = self.src_embedding if is_src else self.trg_embedding
         word_embeds = embeds(toks) # [bsz, max_len, embed_dim]
 
-        if self.spd_centrality:
+        if self.spd_centrality and is_src:
             word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cuda'))
 
             word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cuda'))
@@ -259,7 +259,13 @@ class Model(nn.Module):
                 word_embeds = word_embeds * self.embed_scale
 
             if self.spd_centrality:
-                return word_embeds + self.centrality_embed(torch.tensor(2, device=torch.device('cuda')))
+                word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cuda'))
+
+                word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cuda'))
+
+                word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.LongTensor([1]).to(torch.device('cuda'))).to(torch.device('cuda'))
+
+                return word_embeds 
 
             if self.spectral_attn:
                 if time_step+1 in self.spectral_cache:
