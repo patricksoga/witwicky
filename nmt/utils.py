@@ -159,7 +159,7 @@ def get_rw_pos(dim, sentence_length):
 
     PE = [torch.from_numpy(M.diagonal()).float()]
     M_power = M
-    for _ in range(sentence_length-1):
+    for _ in range(dim-1):
         M_power = M_power * M
         if type == 'partial':
             PE.append(torch.from_numpy(M_power.diagonal().todense()).float())

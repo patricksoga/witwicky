@@ -190,6 +190,7 @@ def en2vi_rw():
     config = en2vi_sine()
     config['sine_pos']              = False
     config['rw_pos']                = True
+    config['rw_pos_dim']            = 20
     return config
 
 def en2vi_spd_centrality():

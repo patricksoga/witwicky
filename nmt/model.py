@@ -39,6 +39,10 @@ class Model(nn.Module):
         self.big_graph_ul = self.config.get('big_graph_ul', None)
         self.spectral_cache = {}
 
+        if self.rw_pos:
+            rw_pos_dim = self.config['rw_pos_dim']
+            self.rw_pos_emb = nn.Linear(rw_pos_dim, embed_dim)
+
         if self.spd_centrality:
             path_embed_dim = self.config['path_embed_dim']
             centrality_embed_dim = self.config['centrality_embed_dim']
@@ -70,7 +74,7 @@ class Model(nn.Module):
             self.pos_embedding = ut.get_cycle_graph_lapes(embed_dim, max_pos_length)
         elif self.rw_pos:
             ut.get_logger().info('Using random walk positional embedding')
-            self.pos_embedding = ut.get_rw_pos(embed_dim, max_pos_length)
+            self.pos_embedding = ut.get_rw_pos(rw_pos_dim, max_pos_length)
         elif self.spd_centrality:
             ut.get_logger().info('Using shortest-path distance + node centrality embedding')
 
@@ -139,6 +143,9 @@ class Model(nn.Module):
 
         # if toks.size()[-1] > self.pos_embedding.size()[-2]:
         #     ut.get_logger().error("Sentence length ({}) is longer than max_pos_length ({}); please increase max_pos_length".format(toks.size()[-1], self.pos_embedding.size()[0]))
+
+        if self.rw_pos:
+            self.pos_embedding = self.rw_pos_emb(self.pos_embedding)
 
         if self.lape_pos:
             sign_flip = torch.rand(self.pos_embedding.shape[1]).to(torch.device('cuda'))
