@@ -96,8 +96,7 @@ class Translator(object):
         plt.close('all')
 
     def translate(self):
-        # device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-        device = torch.device('cpu')
+        device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
         model = Model(self.config).to(device)
         self.logger.info('Restore model from {}'.format(self.model_file))
         model.load_state_dict(torch.load(self.model_file))

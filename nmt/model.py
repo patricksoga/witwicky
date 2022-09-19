@@ -52,7 +52,7 @@ class Model(nn.Module):
             self.shortest_paths = nx.floyd_warshall(self.path_graph)
 
             try:
-                self.spatial_pos = torch.load('./spatial_pos.pt').to(torch.device('cpu'))
+                self.spatial_pos = torch.load('./spatial_pos.pt').to(torch.device('cuda'))
             except:
                 self.spatial_pos = {}
                 self.shortest_paths = nx.floyd_warshall(self.path_graph)
@@ -61,8 +61,7 @@ class Model(nn.Module):
                     for trg, distance in trg_dict.items():
                         self.spatial_pos[src][trg] = distance
                         self.spatial_pos[trg][src] = distance
-                # self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cuda'))
-                self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cpu')).to(torch.device('cpu'))
+                self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cuda'))
                 torch.save(self.spatial_pos, "./spatial_pos.pt")
 
         # get positonal embedding
@@ -148,13 +147,12 @@ class Model(nn.Module):
         embeds = self.src_embedding if is_src else self.trg_embedding
         word_embeds = embeds(toks) # [bsz, max_len, embed_dim]
 
-        word_embeds = word_embeds.to(torch.device('cpu'))
         if self.spd_centrality:
-            word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cpu'))).to(torch.device('cpu'))
+            word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cuda'))
 
-            word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cpu'))).to(torch.device('cpu'))
+            word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cuda'))
 
-            word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.LongTensor([1]).to(torch.device('cpu'))).to(torch.device('cpu'))
+            word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.LongTensor([1]).to(torch.device('cuda'))).to(torch.device('cuda'))
 
             return word_embeds 
 
