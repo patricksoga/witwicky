@@ -61,7 +61,8 @@ class Model(nn.Module):
                     for trg, distance in trg_dict.items():
                         self.spatial_pos[src][trg] = distance
                         self.spatial_pos[trg][src] = distance
-                self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cuda'))
+                # self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cuda'))
+                self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cpu'))
                 torch.save(self.spatial_pos, "./spatial_pos.pt")
 
         # get positonal embedding
