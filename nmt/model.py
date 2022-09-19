@@ -151,9 +151,9 @@ class Model(nn.Module):
         if self.spd_centrality:
             word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cpu'))
 
-            word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cpu'))).to(torch.device('cpu'))
+            word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cpu'))
 
-            word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.LongTensor([1]).to(torch.device('cpu'))).to(torch.device('cpu'))
+            word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.LongTensor([1]).to(torch.device('cuda'))).to(torch.device('cpu'))
 
             return word_embeds 
 
