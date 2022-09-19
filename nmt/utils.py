@@ -160,6 +160,7 @@ class SpectralAttention(nn.Module):
         lpe_n_layers = config['lpe_n_layers']
         lpe_ff_dim = config['lpe_ff_dim']
         self.spectral_dim = config['spectral_dim'] # num frequencies
+        self.max_pos_length = config['max_pos_length']
 
         # encoder_layer = nn.TransformerEncoderLayer(embed_dim, lpe_n_heads)
         # self.lpe_attn = nn.TransformerEncoder(encoder_layer, lpe_n_layers)
@@ -170,7 +171,7 @@ class SpectralAttention(nn.Module):
         dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
         # eigvals, eigvecs = get_laplacian_eigs(sentence_length)
-        eigvals, eigvecs = get_laplacian_eigs(1024)
+        eigvals, eigvecs = get_laplacian_eigs(max_pos_length)
         eigvals = eigvals[: self.spectral_dim]
         eigvecs = eigvecs[:, :self.spectral_dim]
 
@@ -180,7 +181,7 @@ class SpectralAttention(nn.Module):
 
         eigvals = torch.from_numpy(numpy.sort(numpy.abs(numpy.real(eigvals)))).type(dtype) #Abs value is taken because numpy sometimes computes the first eigenvalue approaching 0 from the negative
         eigvals = eigvals.unsqueeze(0)
-        eigvals = eigvals.repeat(sentence_length, 1).unsqueeze(2)
+        eigvals = eigvals.repeat(self.max_pos_length, 1).unsqueeze(2)
 
         lpe = torch.cat((eigvecs, eigvals), dim=2) # (Num nodes) x (Num Eigenvectors) x 2
         empty_mask = torch.isnan(lpe) # (Num nodes) x (Num Eigenvectors) x 2

@@ -180,10 +180,10 @@ def en2vi_lape_spectral_attn():
     config['sine_pos']              = False
     config['spectral_attn']         = True
     config['spectral_dim']          = 20
-    config['spectral_embed_dim']    = 32
+    config['spectral_embed_dim']    = 16
     config['lpe_n_heads']           = 4
-    config['lpe_n_layers']          = 3
-    config['lpe_ff_dim']            = 32 * 4
+    config['lpe_n_layers']          = 2
+    config['lpe_ff_dim']            = 16
     return config
 
 def ar2en():
