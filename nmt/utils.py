@@ -159,6 +159,7 @@ class SpectralAttention(nn.Module):
         lpe_n_heads = config['lpe_n_heads']
         lpe_n_layers = config['lpe_n_layers']
         lpe_ff_dim = config['lpe_ff_dim']
+        self.spectral_dim = config['spectral_dim'] # num frequencies
 
         # encoder_layer = nn.TransformerEncoderLayer(embed_dim, lpe_n_heads)
         # self.lpe_attn = nn.TransformerEncoder(encoder_layer, lpe_n_layers)
@@ -169,7 +170,9 @@ class SpectralAttention(nn.Module):
         dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
         # eigvals, eigvecs = get_laplacian_eigs(sentence_length)
-        eigvals, eigvecs = get_laplacian_eigs(512)
+        eigvals, eigvecs = get_laplacian_eigs(1024)
+        eigvals = eigvals[:, self.spectral_dim]
+        eigvecs = eigvecs[:, self.spectral_dim]
 
         eigvecs = torch.from_numpy(eigvecs).float().type(dtype)
         eigvecs = F.normalize(eigvecs, p=2, dim=1, eps=1e-12, out=None)

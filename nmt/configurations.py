@@ -179,6 +179,7 @@ def en2vi_lape_spectral_attn():
     config = en2vi_sine()
     config['sine_pos']              = False
     config['spectral_attn']         = True
+    config['spectral_dim']          = 20
     config['spectral_embed_dim']    = 32
     config['lpe_n_heads']           = 4
     config['lpe_n_layers']          = 3
