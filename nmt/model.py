@@ -154,8 +154,6 @@ class Model(nn.Module):
 
             word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.LongTensor([1]).to(torch.device('cuda')))
 
-            print('embed: ', self.centrality_embed(torch.LongTensor([1]).to(torch.device('cuda'))))
-            print('word embs: ', word_embeds)
             return word_embeds 
 
         if self.config['fix_norm']:
@@ -204,6 +202,8 @@ class Model(nn.Module):
             # spatial_pos = self.spatial_pos.type(torch.long).to(torch.device('cuda'))
             spatial_pos = self.path_embed(self.spatial_pos).permute(2, 1, 0)
 
+        # encoder_outputs = self.encoder(encoder_inputs, encoder_mask, spatial_pos)
+        print('encoder inputs: ', encoder_inputs)
         encoder_outputs = self.encoder(encoder_inputs, encoder_mask, spatial_pos)
 
         decoder_inputs = self.get_input(trg_toks, is_src=False)
