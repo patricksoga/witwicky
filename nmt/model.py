@@ -259,7 +259,7 @@ class Model(nn.Module):
                 word_embeds = word_embeds * self.embed_scale
 
             if self.spd_centrality:
-                return word_embeds + self.centrality_embed(torch.tensor(2, device=torch.device('cpu')))
+                return word_embeds + self.centrality_embed(torch.tensor(2, device=torch.device('cuda')))
 
             if self.spectral_attn:
                 if time_step+1 in self.spectral_cache:
