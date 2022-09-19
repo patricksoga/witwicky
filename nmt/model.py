@@ -50,7 +50,7 @@ class Model(nn.Module):
             ut.get_logger().info('Using lape positional embedding')
             # self.pos_embedding = ut.get_lape_encoding(embed_dim, max_pos_length, self.graph_size)
             self.LAPE = ut.LAPE(self.config)
-            self.pos_embedding = ut.LAPE.get_lape_encoding(self.config['lape_dim'], self.config['max_pos_length'])
+            self.pos_embedding = self.LAPE.get_lape_encoding(dim=self.config['lape_dim'], sentence_length=self.config['max_pos_length'])
         elif spectral_attn:
             ut.get_logger().info('Using spectral positional embedding')
             self.spectral_embedding = ut.SpectralAttention(self.config)
