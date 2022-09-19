@@ -148,7 +148,13 @@ class Model(nn.Module):
         word_embeds = embeds(toks) # [bsz, max_len, embed_dim]
 
         if self.spd_centrality:
-            return word_embeds + self.centrality_embed(torch.tensor(2, device=torch.device('cuda')))
+            word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.tensor(0, device=torch.device('cuda')))
+
+            word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.tensor(0, device=torch.device('cuda')))
+
+            word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.tensor(1, device=torch.device('cuda')))
+
+            return word_embeds 
 
         if self.config['fix_norm']:
             word_embeds = ut.normalize(word_embeds, scale=False)

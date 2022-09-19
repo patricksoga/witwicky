@@ -29,7 +29,6 @@ class Encoder(nn.Module):
 
     def forward(self, src_inputs, src_mask, spd_bias=None):
         norm_in = self.last_lnorm is not None
-        print('src inputs: ', src_inputs)
 
         x = F.dropout(src_inputs, p=self.dropout, training=self.training)
         for i in range(self.num_layers):
