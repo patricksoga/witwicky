@@ -51,14 +51,18 @@ class Model(nn.Module):
             self.path_graph = nx.path_graph(max_pos_length)
             self.shortest_paths = nx.floyd_warshall(self.path_graph)
 
-            self.spatial_pos = {}
-            self.shortest_paths = nx.floyd_warshall(self.path_graph)
-            self.spatial_pos = [[-1]*len(self.shortest_paths) for _ in range(len(self.shortest_paths))]
-            for src, trg_dict in self.shortest_paths.items():
-                for trg, distance in trg_dict.items():
-                    self.spatial_pos[src][trg] = distance
-                    self.spatial_pos[trg][src] = distance
-            self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cuda'))
+            try:
+                self.spatial_pos = torch.load('./spatial_pos.pt')
+            except:
+                self.spatial_pos = {}
+                self.shortest_paths = nx.floyd_warshall(self.path_graph)
+                self.spatial_pos = [[-1]*len(self.shortest_paths) for _ in range(len(self.shortest_paths))]
+                for src, trg_dict in self.shortest_paths.items():
+                    for trg, distance in trg_dict.items():
+                        self.spatial_pos[src][trg] = distance
+                        self.spatial_pos[trg][src] = distance
+                self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cuda'))
+                torch.save(self.spatial_pos, "./spatial_pos.pt")
 
         # get positonal embedding
         # if not learned_pos:
