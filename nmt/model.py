@@ -203,7 +203,7 @@ class Model(nn.Module):
 
             if self.lape_pos:
                 self.pos_embedding = ut.get_lape_encoding(self.config['lape_dim'], self.config['max_pos_length'])
-                self.pos_embedding = self.lape_pos_emb(self.pos_embedding)
+                self.pos_embedding = self.lape_emb(self.pos_embedding)
 
             if self.spectral_attn:
                 if time_step+1 in self.spectral_cache:
