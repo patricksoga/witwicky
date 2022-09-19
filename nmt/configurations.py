@@ -161,6 +161,7 @@ def en2vi_lape():
     config = en2vi_sine()
     config['sine_pos']          = False
     config['lape_pos']          = True
+    config['lape_dim']          = 20
     return config
 
 def en2vi_lape_big_graph():

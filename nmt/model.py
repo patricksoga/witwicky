@@ -72,6 +72,9 @@ class Model(nn.Module):
         if spectral_attn:
             self.diet_linear = nn.Linear(embed_dim, embed_dim - self.config['spectral_embed_dim'])
 
+        if lape_pos:
+            self.lape_emb = nn.Linear(self.config['lape_dim'], embed_dim)
+
         if tie_mode == ac.ALL_TIED:
             self.src_embedding.weight = self.trg_embedding.weight
 
@@ -138,6 +141,10 @@ class Model(nn.Module):
         decoder_mask = torch.triu(torch.ones((trg_toks.size()[-1], trg_toks.size()[-1])), diagonal=1).type(trg_toks.type()) == 1
         decoder_mask = decoder_mask.unsqueeze(0).unsqueeze(1)
 
+        if self.lape_pos:
+            self.pos_embedding = ut.get_lape_encoding(self.config['lape_dim'], self.config['max_pos_length'])
+            self.pos_embedding = self.lape_pos(self.pos_embedding)
+
         encoder_inputs = self.get_input(src_toks, is_src=True)
         encoder_outputs = self.encoder(encoder_inputs, encoder_mask)
 
@@ -193,6 +200,10 @@ class Model(nn.Module):
                 word_embeds = ut.normalize(word_embeds, scale=False)
             else:
                 word_embeds = word_embeds * self.embed_scale
+
+            if self.lape_pos:
+                self.pos_embedding = ut.get_lape_encoding(self.config['lape_dim'], self.config['max_pos_length'])
+                self.pos_embedding = self.lape_pos(self.pos_embedding)
 
             if self.spectral_attn:
                 if time_step+1 in self.spectral_cache:
