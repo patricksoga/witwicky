@@ -198,7 +198,7 @@ def en2vi_spd_centrality():
     config['sine_pos']              = False
     config['spd_centrality']        = True
     config['path_embed_dim']        = 100
-    config['centrality_embed_dim']  = 2
+    config['centrality_embed_dim']  = 3
     return config
 
 def ar2en():
