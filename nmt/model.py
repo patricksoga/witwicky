@@ -190,7 +190,7 @@ class Model(nn.Module):
             #         spatial_pos[trg][src] = distance
 
             # spatial_pos = self.spatial_pos.type(torch.long).to(torch.device('cuda'))
-            spatial_pos = self.path_embed(spatial_pos).permute(2, 1, 0)
+            spatial_pos = self.path_embed(self.spatial_pos).permute(2, 1, 0)
 
         encoder_outputs = self.encoder(encoder_inputs, encoder_mask, spatial_pos)
 
