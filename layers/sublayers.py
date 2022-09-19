@@ -74,6 +74,7 @@ class Attention(nn.Module):
         att_weights = att_weights.reshape(bsz_x_num_heads // self.num_heads, self.num_heads, src_len, trg_len)
 
         if mask is not None:
+            print(mask.shape)
             att_weights.masked_fill_(mask, float('-inf'))
 
         att_weights = att_weights.reshape(bsz_x_num_heads, src_len, trg_len)
