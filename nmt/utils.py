@@ -111,6 +111,29 @@ def get_cycle_graph_lapes(dim, sentence_length):
     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
     return torch.from_numpy(evecs[:dim, :sentence_length].T).type(dtype)
 
+
+class LAPE:
+    def __init__(self, config):
+        super(LAPE, self).__init__()
+        self.evals, self.evecs = get_laplacian_eigs(config['max_pos_length'])
+
+    def get_lape_encoding(self, dim, sentence_length, graph_size=None):
+        # g = nx.cycle_graph(graph_size if graph_size else sentence_length)
+        # laplacian = nx.normalized_laplacian_matrix(g)
+        # evals, evecs = numpy.linalg.eig(laplacian.A)
+        evals, evecs = self.evals, self.evecs
+        idx = evals.argsort()
+        evals, evecs = evals[idx], numpy.real(evecs[:, idx])
+        dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+        if graph_size is not None:
+            evecs = evecs[:sentence_length,1:dim+1]
+            numpy.random.shuffle(evecs)
+            pos_enc = torch.from_numpy(evecs).type(dtype)
+        else:
+            pos_enc = torch.from_numpy(evecs[:, 1:dim+1]).type(dtype)
+        return pos_enc
+
+
 def get_lape_encoding(dim, sentence_length, graph_size=None):
     # g = nx.cycle_graph(graph_size if graph_size else sentence_length)
     # laplacian = nx.normalized_laplacian_matrix(g)
@@ -161,6 +184,9 @@ class SpectralAttention(nn.Module):
         lpe_ff_dim = config['lpe_ff_dim']
         self.spectral_dim = config['spectral_dim'] # num frequencies
         self.max_pos_length = config['max_pos_length']
+        eigvals, eigvecs = get_laplacian_eigs(self.max_pos_length)
+        self.eigvals = eigvals
+        self.eigvecs = eigvecs
 
         # encoder_layer = nn.TransformerEncoderLayer(embed_dim, lpe_n_heads)
         # self.lpe_attn = nn.TransformerEncoder(encoder_layer, lpe_n_layers)
@@ -171,9 +197,9 @@ class SpectralAttention(nn.Module):
         dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
         # eigvals, eigvecs = get_laplacian_eigs(sentence_length)
-        eigvals, eigvecs = get_laplacian_eigs(self.max_pos_length)
-        eigvals = eigvals[: self.spectral_dim]
-        eigvecs = eigvecs[:, :self.spectral_dim]
+        # eigvals, eigvecs = get_laplacian_eigs(self.max_pos_length)
+        eigvals = self.eigvals[: self.spectral_dim]
+        eigvecs = self.eigvecs[:, :self.spectral_dim]
 
         eigvecs = torch.from_numpy(eigvecs).float().type(dtype)
         eigvecs = F.normalize(eigvecs, p=2, dim=1, eps=1e-12, out=None)

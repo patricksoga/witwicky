@@ -48,7 +48,9 @@ class Model(nn.Module):
             self.pos_embedding = ut.get_sine_encoding(embed_dim, max_pos_length)
         elif lape_pos:
             ut.get_logger().info('Using lape positional embedding')
-            self.pos_embedding = ut.get_lape_encoding(embed_dim, max_pos_length, self.graph_size)
+            # self.pos_embedding = ut.get_lape_encoding(embed_dim, max_pos_length, self.graph_size)
+            self.LAPE = ut.LAPE(self.config)
+            self.pos_embedding = ut.LAPE.get_lape_encoding(self.config['lape_dim'], self.config['max_pos_length'])
         elif spectral_attn:
             ut.get_logger().info('Using spectral positional embedding')
             self.spectral_embedding = ut.SpectralAttention(self.config)
@@ -142,7 +144,7 @@ class Model(nn.Module):
         decoder_mask = decoder_mask.unsqueeze(0).unsqueeze(1)
 
         if self.lape_pos:
-            self.pos_embedding = ut.get_lape_encoding(self.config['lape_dim'], self.config['max_pos_length'])
+            self.pos_embedding = self.LAPE.get_lape_encoding(self.config['lape_dim'], self.config['max_pos_length'])
             self.pos_embedding = self.lape_emb(self.pos_embedding)
 
         encoder_inputs = self.get_input(src_toks, is_src=True)
@@ -202,7 +204,7 @@ class Model(nn.Module):
                 word_embeds = word_embeds * self.embed_scale
 
             if self.lape_pos:
-                self.pos_embedding = ut.get_lape_encoding(self.config['lape_dim'], self.config['max_pos_length'])
+                self.pos_embedding = self.LAPE.get_lape_encoding(self.config['lape_dim'], self.config['max_pos_length'])
                 self.pos_embedding = self.lape_emb(self.pos_embedding)
 
             if self.spectral_attn:
