@@ -58,7 +58,7 @@ class Model(nn.Module):
                 for trg, distance in trg_dict.items():
                     self.spatial_pos[src][trg] = distance
                     self.spatial_pos[trg][src] = distance
-            self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long)
+            self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).long(torch.device('cuda'))
 
         # get positonal embedding
         # if not learned_pos:
