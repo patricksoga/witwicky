@@ -249,6 +249,10 @@ class Model(nn.Module):
                 ret = torch.cat((word_embeds, pos_embeds), dim=-1)
                 self.spectral_cache[time_step+1] = ret
                 return ret
+            
+            if self.rw_pos:
+                self.pos_embedding = ut.get_rw_pos(self.config['rw_pos_dim'], self.config['max_pos_length'])
+                self.pos_embedding = self.rw_pos_emb(self.pos_embedding)
 
             pos_embeds = self.pos_embedding[time_step, :].reshape(1, 1, -1)
             return word_embeds + pos_embeds
