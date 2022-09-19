@@ -48,7 +48,7 @@ class Model(nn.Module):
             centrality_embed_dim = self.config['centrality_embed_dim']
             self.path_embed = nn.Embedding(path_embed_dim, self.config['num_enc_heads'])
             self.centrality_embed = nn.Embedding(centrality_embed_dim, embed_dim)
-            self.cycle_graph = nx.cycle_graph(max_pos_length)
+            self.path_graph = nx.path_graph(max_pos_length)
 
         # get positonal embedding
         # if not learned_pos:
@@ -134,7 +134,7 @@ class Model(nn.Module):
         word_embeds = embeds(toks) # [bsz, max_len, embed_dim]
 
         if self.spd_centrality:
-            word_embeds += self.centrality_embed(torch.tensor(2, device=torch.device('cuda')))
+            return word_embeds + self.centrality_embed(torch.tensor(2, device=torch.device('cuda')))
 
         if self.config['fix_norm']:
             word_embeds = ut.normalize(word_embeds, scale=False)
@@ -172,7 +172,7 @@ class Model(nn.Module):
 
         spatial_pos = None
         if self.spd_centrality:
-            shortest_paths = nx.floyd_warshall(self.cycle_graph)
+            shortest_paths = nx.floyd_warshall(self.path_graph)
             spatial_pos = [[-1]*len(shortest_paths) for _ in range(len(shortest_paths))]
             for src, trg_dict in shortest_paths.items():
                 for trg, distance in trg_dict.items():
