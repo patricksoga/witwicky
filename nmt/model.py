@@ -190,7 +190,6 @@ class Model(nn.Module):
 
         encoder_inputs = self.get_input(src_toks, is_src=True)
 
-        print('encoder inputs: ', encoder_inputs)
         spatial_pos = None
         if self.spd_centrality:
             # shortest_paths = nx.floyd_warshall(self.path_graph)
