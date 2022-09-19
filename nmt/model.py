@@ -28,7 +28,7 @@ class Model(nn.Module):
         lape_pos = self.config['lape_pos']
         spectral_attn = self.config['spectral_attn']
         rw_pos = self.config['rw_pos']
-        spd_centrality = self.config['spd_cent']
+        spd_centrality = self.config['spd_centrality']
 
         self.lape_pos = lape_pos
         self.spectral_attn = spectral_attn
