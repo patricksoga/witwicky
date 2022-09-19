@@ -47,7 +47,7 @@ class Model(nn.Module):
             path_embed_dim = self.config['path_embed_dim']
             centrality_embed_dim = self.config['centrality_embed_dim']
             self.path_embed = nn.Embedding(path_embed_dim, self.config['num_enc_heads'])
-            self.centrality_embed = nn.Embedding(centrality_embed_dim, embed_dim)
+            self.centrality_embed = nn.Embedding(centrality_embed_dim, embed_dim).to(torch.device('cpu'))
             self.path_graph = nx.path_graph(max_pos_length)
             self.shortest_paths = nx.floyd_warshall(self.path_graph)
 
