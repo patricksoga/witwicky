@@ -48,7 +48,7 @@ class Model(nn.Module):
             centrality_embed_dim = self.config['centrality_embed_dim']
             self.path_embed = nn.Embedding(path_embed_dim, self.config['num_enc_heads'])
             self.centrality_embed = nn.Embedding(centrality_embed_dim, embed_dim)
-            self.path_graph = nx.path_graph(max_pos_length)
+            self.path_graph = nx.path_graph(self.config['path_embed_dim'])
             self.shortest_paths = nx.floyd_warshall(self.path_graph)
 
             try:
@@ -192,6 +192,7 @@ class Model(nn.Module):
 
         encoder_inputs = self.get_input(src_toks, is_src=True)
 
+        print('encoder inputs: ', encoder_inputs)
         spatial_pos = None
         if self.spd_centrality:
             # shortest_paths = nx.floyd_warshall(self.path_graph)
@@ -205,7 +206,6 @@ class Model(nn.Module):
             spatial_pos = self.path_embed(self.spatial_pos).permute(2, 1, 0)
 
         # encoder_outputs = self.encoder(encoder_inputs, encoder_mask, spatial_pos)
-        print('encoder inputs: ', encoder_inputs)
         encoder_outputs = self.encoder(encoder_inputs, encoder_mask, spatial_pos)
 
         decoder_inputs = self.get_input(trg_toks, is_src=False)
