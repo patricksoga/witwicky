@@ -172,7 +172,7 @@ class SpectralAttention(nn.Module):
         # eigvals, eigvecs = get_laplacian_eigs(sentence_length)
         eigvals, eigvecs = get_laplacian_eigs(1024)
         eigvals = eigvals[: self.spectral_dim]
-        eigvecs = eigvecs[:, self.spectral_dim]
+        eigvecs = eigvecs[:, :self.spectral_dim]
 
         eigvecs = torch.from_numpy(eigvecs).float().type(dtype)
         eigvecs = F.normalize(eigvecs, p=2, dim=1, eps=1e-12, out=None)
