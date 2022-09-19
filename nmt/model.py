@@ -46,7 +46,7 @@ class Model(nn.Module):
         if self.spd_centrality:
             path_embed_dim = self.config['path_embed_dim']
             centrality_embed_dim = self.config['centrality_embed_dim']
-            self.path_embed = nn.Embedding(path_embed_dim, self.config['num_enc_heads'])
+            self.path_embed = nn.Embedding(path_embed_dim, 1)
             self.centrality_embed = nn.Embedding(centrality_embed_dim, embed_dim)
             self.path_graph = nx.path_graph(self.config['path_embed_dim'])
             self.shortest_paths = nx.floyd_warshall(self.path_graph)
