@@ -145,7 +145,7 @@ class Model(nn.Module):
         #     ut.get_logger().error("Sentence length ({}) is longer than max_pos_length ({}); please increase max_pos_length".format(toks.size()[-1], self.pos_embedding.size()[0]))
 
         if self.rw_pos:
-            print(self.pos_embedding.shape)
+            self.pos_embedding = ut.get_rw_pos(self.config['rw_pos_dim'], self.config['max_pos_length'])
             self.pos_embedding = self.rw_pos_emb(self.pos_embedding)
 
         if self.lape_pos:
