@@ -52,7 +52,7 @@ class Model(nn.Module):
             self.shortest_paths = nx.floyd_warshall(self.path_graph)
 
             try:
-                self.spatial_pos = torch.load('./spatial_pos.pt')
+                self.spatial_pos = torch.load('./spatial_pos.pt').to(torch.device('cpu'))
             except:
                 self.spatial_pos = {}
                 self.shortest_paths = nx.floyd_warshall(self.path_graph)
@@ -62,7 +62,7 @@ class Model(nn.Module):
                         self.spatial_pos[src][trg] = distance
                         self.spatial_pos[trg][src] = distance
                 # self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cuda'))
-                self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cpu')).abs(torch.device('cpu'))
+                self.spatial_pos = torch.from_numpy(np.array(self.spatial_pos)).type(torch.long).to(torch.device('cpu')).to(torch.device('cpu'))
                 torch.save(self.spatial_pos, "./spatial_pos.pt")
 
         # get positonal embedding
