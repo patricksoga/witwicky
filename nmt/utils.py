@@ -162,10 +162,11 @@ def get_rw_pos(dim, sentence_length):
     for _ in range(sentence_length-1):
         M_power = M_power * M
         if type == 'partial':
-            PE.append(torch.from_numpy(M_power.diagonal()).float())
+            PE.append(torch.from_numpy(M_power.diagonal().todense()).float())
         else:
             PE.append(torch.from_numpy(M_power.todense()).float())
-    PE = torch.stack(PE,dim=-1)
+
+    PE = torch.stack(PE, dim=-1)
     dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
 
     pos_enc = PE.type(dtype)
