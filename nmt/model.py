@@ -251,6 +251,9 @@ class Model(nn.Module):
             else:
                 word_embeds = word_embeds * self.embed_scale
 
+            if self.spd_centrality:
+                return word_embeds + self.centrality_embed(torch.tensor(2, device=torch.device('cuda')))
+
             if self.spectral_attn:
                 if time_step+1 in self.spectral_cache:
                     # since every sentence lies on the same kind of graph, we cache calculated PEs
