@@ -1,5 +1,5 @@
 import torch
-from torch import nn
+from torch import LongTensor, nn
 from torch.nn import Parameter
 import torch.nn.functional as F
 from layers import Encoder, Decoder
@@ -148,11 +148,11 @@ class Model(nn.Module):
         word_embeds = embeds(toks) # [bsz, max_len, embed_dim]
 
         if self.spd_centrality:
-            word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.tensor(0, device=torch.device('cuda')))
+            word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.tensor(0, device=torch.device('cuda')).type(torch.LongTensor))
 
-            word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.tensor(0, device=torch.device('cuda')))
+            word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.tensor(0, device=torch.device('cuda')).type(torch.LongTensor))
 
-            word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.tensor(1, device=torch.device('cuda')))
+            word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.tensor(1, device=torch.device('cuda')).type(torch.LongTensor))
 
             return word_embeds 
 
