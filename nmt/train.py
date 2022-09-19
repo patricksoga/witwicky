@@ -26,8 +26,7 @@ class Trainer(object):
         self.num_preload = args.num_preload
         self.logger = ut.get_logger(self.config['log_file'])
 
-        # self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-        self.device = torch.device('cpu')
+        self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
         self.normalize_loss = self.config['normalize_loss']
         self.patience = self.config['patience']
