@@ -92,7 +92,8 @@ class Validator(object):
         total_smoothed_loss = 0.
         total_weight = 0.
 
-        device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        # device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        self.device = torch.device('cpu')
         with torch.no_grad():
             for batch_data in self.data_manager.get_batch(mode=ac.VALIDATING):
                 src_toks, trg_toks, targets = batch_data
@@ -125,7 +126,8 @@ class Validator(object):
 
     def evaluate_bleu(self, model):
         model.eval()
-        device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        # device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        self.device = torch.device('cpu')
 
         val_trans_out = self.val_trans_out
         val_beam_out = self.val_beam_out
@@ -300,7 +302,8 @@ class Validator(object):
     def translate(self, model, input_file):
         model.eval()
 
-        device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        # device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        self.device = torch.device('cpu')
         # Very redundant
         best_trans_file = input_file + '.best_trans'
         beam_trans_file = input_file + '.beam_trans'
