@@ -27,7 +27,7 @@ class Encoder(nn.Module):
         else:
             return x
 
-    def forward(self, src_inputs, src_mask):
+    def forward(self, src_inputs, src_mask, spd_bias=None):
         norm_in = self.last_lnorm is not None
 
         x = F.dropout(src_inputs, p=self.dropout, training=self.training)
@@ -38,7 +38,7 @@ class Encoder(nn.Module):
 
             residual = x
             x = self.maybe_layernorm(x, lnorms[0], norm_in)
-            x, _ = self_att(q=x, k=x, v=x, mask=src_mask)
+            x, _ = self_att(q=x, k=x, v=x, mask=src_mask, spd_bias=spd_bias)
             x = residual + F.dropout(x, p=self.dropout, training=self.training)
             x = self.maybe_layernorm(x, lnorms[0], not norm_in)
 

@@ -21,7 +21,7 @@ class Attention(nn.Module):
         # output linear projection
         self.out_proj = nn.Linear(embed_dim, embed_dim, bias=True)
 
-    def forward(self, q, k, v, mask, do_proj=True):
+    def forward(self, q, k, v, mask, do_proj=True, spd_bias=None):
         """Calculate multiheaded attention
         Work for both self-/enc-dec attention
         Always requires mask:
@@ -38,7 +38,7 @@ class Attention(nn.Module):
             q, k, v = self.linear_projection(q, k, v)
 
         q, k, v = self.split_heads(q, k, v)
-        output, att_weights = self.scaled_dot_attention(q, k, v, mask)
+        output, att_weights = self.scaled_dot_attention(q, k, v, mask, spd_bias)
         output = self.concat_heads(output)
         return self.out_proj(output), att_weights
 
@@ -68,8 +68,13 @@ class Attention(nn.Module):
         v = _split_and_transpose(v)
         return q, k, v
 
-    def scaled_dot_attention(self, q, k, v, mask):
-        att_weights = torch.bmm(q, k.transpose(1, 2)) * self.scaling
+    def scaled_dot_attention(self, q, k, v, mask, spd_bias=None):
+        if spd_bias is not None:
+            attn_weights = torch.bmm(q, k.transpose(1, 2)) + spd_bias
+            attn_weights = attn_weights * self.scaling
+        else:
+            att_weights = torch.bmm(q, k.transpose(1, 2)) * self.scaling
+
         bsz_x_num_heads, src_len, trg_len = att_weights.size()
         att_weights = att_weights.reshape(bsz_x_num_heads // self.num_heads, self.num_heads, src_len, trg_len)
 

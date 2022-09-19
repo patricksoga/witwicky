@@ -150,6 +150,27 @@ def gnmt_length_model(alpha):
         return prob / ((5.0 + time_step + 1.0) ** alpha / 6.0 ** alpha)
     return f
 
+def get_rw_pos(dim, sentence_length):
+    g = dgl.from_networkx(nx.cycle_graph(sentence_length))
+    A = g.adjacency_matrix(scipy_fmt="csr")
+    Dinv = sp.diags(dgl.backend.asnumpy(g.in_degrees()).clip(1) ** -1.0, dtype=float) # D^-1
+    RW = A * Dinv  
+    M = RW
+
+    PE = [torch.from_numpy(M.diagonal()).float()]
+    M_power = M
+    for _ in range(sentence_length-1):
+        M_power = M_power * M
+        if type == 'partial':
+            PE.append(torch.from_numpy(M_power.diagonal()).float())
+        else:
+            PE.append(torch.from_numpy(M_power).float())
+    PE = torch.stack(PE,dim=-1)
+    dtype = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+
+    pos_enc = PE.type(dtype)
+
+    return pos_enc
 
 class SpectralAttention(nn.Module):
     def __init__(self, config):

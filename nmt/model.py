@@ -6,6 +6,8 @@ from layers import Encoder, Decoder
 import nmt.all_constants as ac
 import nmt.utils as ut
 
+import numpy as np
+import networkx as nx
 
 class Model(nn.Module):
     """Model"""
@@ -25,13 +27,24 @@ class Model(nn.Module):
         sine_pos = self.config['sine_pos']
         lape_pos = self.config['lape_pos']
         spectral_attn = self.config['spectral_attn']
+        rw_pos = self.config['rw_pos']
+        spd_centrality = self.config['spd_cent']
 
         self.lape_pos = lape_pos
         self.spectral_attn = spectral_attn
+        self.rw_pos = rw_pos
+        self.spd_centrality = spd_centrality
         self.max_pos_length = max_pos_length
         self.graph_size = self.config.get('graph_size', None)
         self.big_graph_ul = self.config.get('big_graph_ul', None)
         self.spectral_cache = {}
+
+        if self.spd_centrality:
+            path_embed_dim = self.config['path_embed_dim']
+            centrality_embed_dim = self.config['centrality_embed_dim']
+            self.path_embed = nn.Embedding(path_embed_dim, self.config['num_enc_heads'])
+            self.centrality_embed = nn.Embedding(centrality_embed_dim, embed_dim)
+            self.cycle_graph = nx.cycle_graph(max_pos_length)
 
         # get positonal embedding
         # if not learned_pos:
@@ -55,6 +68,11 @@ class Model(nn.Module):
         elif self.big_graph_ul:
             ut.get_logger().info('Using big cycle graph positional embedding (unnormalized Laplacian)')
             self.pos_embedding = ut.get_cycle_graph_lapes(embed_dim, max_pos_length)
+        elif self.rw_pos:
+            ut.get_logger().info('Using random walk positional embedding')
+            self.pos_embedding = ut.get_rw_pos(embed_dim, max_pos_length)
+        elif self.spd_centrality:
+            ut.get_logger().info('Using shortest-path distance + node centrality embedding')
 
         # get word embeddings
         src_vocab_size, trg_vocab_size = ut.get_vocab_sizes(self.config)
@@ -110,6 +128,10 @@ class Model(nn.Module):
     def get_input(self, toks, is_src=True):
         embeds = self.src_embedding if is_src else self.trg_embedding
         word_embeds = embeds(toks) # [bsz, max_len, embed_dim]
+
+        if self.spd_centrality:
+            word_embeds += self.centrality_embed(2)
+
         if self.config['fix_norm']:
             word_embeds = ut.normalize(word_embeds, scale=False)
         else:
@@ -139,7 +161,21 @@ class Model(nn.Module):
         decoder_mask = decoder_mask.unsqueeze(0).unsqueeze(1)
 
         encoder_inputs = self.get_input(src_toks, is_src=True)
-        encoder_outputs = self.encoder(encoder_inputs, encoder_mask)
+
+        spatial_pos = None
+        if self.spd_centrality:
+            shortest_paths = nx.floyd_warshall(self.cycle_graph)
+            spatial_pos = [[-1]*len(shortest_paths) for _ in range(len(shortest_paths))]
+            for src, trg_dict in shortest_paths.items():
+                for trg, distance in trg_dict.items():
+                    spatial_pos[src][trg] = distance
+                    spatial_pos[trg][src] = distance
+
+            spatial_pos = torch.from_numpy(np.array(spatial_pos))
+            spatial_pos = spatial_pos.type(torch.long)
+            spatial_pos = self.path_embed(spatial_pos).permute(2, 1, 0)
+
+        encoder_outputs = self.encoder(encoder_inputs, encoder_mask, spatial_pos)
 
         decoder_inputs = self.get_input(trg_toks, is_src=False)
         decoder_outputs = self.decoder(decoder_inputs, decoder_mask, encoder_outputs, encoder_mask)
