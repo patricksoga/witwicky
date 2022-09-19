@@ -189,11 +189,9 @@ class SpectralAttention(nn.Module):
         lpe[empty_mask] = 0 # (Num nodes) x (Num Eigenvectors) x 2
         lpe = torch.transpose(lpe, 0 ,1) # (Num Eigenvectors) x (Num nodes) x 2
         lpe = self.linear(lpe) # (Num Eigenvectors) x (Num nodes) x PE_dim
-        print(lpe.shape)
-        print(empty_mask)
-        print(empty_mask.shape)
 
-        lpe = self.lpe_attn(lpe, empty_mask[:,:,0])
+        # lpe = self.lpe_attn(lpe, empty_mask[:,:,0])
+        lpe = self.lpe_attn(lpe)
 
         #remove masked sequences
         lpe[torch.transpose(empty_mask, 0 ,1)[:,:,0]] = float('nan')
