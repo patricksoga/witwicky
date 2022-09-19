@@ -154,6 +154,8 @@ class Model(nn.Module):
 
             word_embeds[:, 1:-1, :] = word_embeds[:, 0:-2, :] + self.centrality_embed(torch.LongTensor([1]).to(torch.device('cuda')))
 
+            print('embed: ', self.centrality_embed(torch.LongTensor([1]).to(torch.device('cuda'))))
+            print('word embs: ', word_embeds)
             return word_embeds 
 
         if self.config['fix_norm']:
