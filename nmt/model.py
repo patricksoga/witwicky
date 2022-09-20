@@ -147,7 +147,7 @@ class Model(nn.Module):
         embeds = self.src_embedding if is_src else self.trg_embedding
         word_embeds = embeds(toks) # [bsz, max_len, embed_dim]
 
-        if self.spd_centrality and is_src:
+        if self.spd_centrality:
             word_embeds[:, 0, :] = word_embeds[:, 0, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cuda'))
 
             word_embeds[:, -1, :] = word_embeds[:, -1, :] + self.centrality_embed(torch.LongTensor([0]).to(torch.device('cuda'))).to(torch.device('cuda'))
